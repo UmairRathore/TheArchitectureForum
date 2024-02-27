@@ -1,0 +1,22 @@
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Links Of CSS File -->
+<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/flaticon.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/remixicon.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/meanmenu.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/metismenu.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/font-awesome.min.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/editor.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="{{asset('frontend/assets/images/favicon.png')}}">
+<!-- Title -->
+<title>The Architecture Forum - @yield('title')</title>
