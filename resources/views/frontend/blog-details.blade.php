@@ -19,7 +19,7 @@
                         <ul>
                             <li>
                                 <a href="blog.html" class="user-id">
-                                    <img src="assets/images/blog/user-1.jpg" alt="Image">
+                                    <img src="{{asset('assets/images/blog/user-1.jpg')}}" alt="Image">
                                     <span>Marissa Cress</span>
                                 </a>
                             </li>
@@ -43,7 +43,7 @@
                         <p>Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.</p>
                         <p>Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus   et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada.</p>
 
-                        <img src="assets/images/blog/blog-1.jpg" alt="Image">
+                        <img src="{{asset('assets/images/blog/blog-1.jpg')}}" alt="Image">
 
                         <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
 

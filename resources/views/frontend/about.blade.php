@@ -16,7 +16,7 @@
 
                 <div class="col-lg-5">
                     <div class="about-banner-img">
-                        <img src="assets/images/banner-img.png" alt="Image">
+                        <img src="{{asset('assets/images/banner-img.png')}}" alt="Image">
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="why-choose-img">
-                        <img src="assets/images/choose-img.png" alt="Image">
+                        <img src="{{asset('assets/images/choose-img.png')}}" alt="Image">
                     </div>
                 </div>
 
@@ -93,22 +93,22 @@
         <div class="container">
             <div class="partner-slide owl-carousel owl-theme">
                 <div class="partner-item">
-                    <img src="assets/images/partner/partner-1.png" alt="Image">
+                    <img src="{{asset('assets/images/partner/partner-1.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="assets/images/partner/partner-2.png" alt="Image">
+                    <img src="{{asset('assets/images/partner/partner-2.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="assets/images/partner/partner-3.png" alt="Image">
+                    <img src="{{asset('assets/images/partner/partner-3.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="assets/images/partner/partner-4.png" alt="Image">
+                    <img src="{{asset('assets/images/partner/partner-4.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="assets/images/partner/partner-5.png" alt="Image">
+                    <img src="{{asset('assets/images/partner/partner-5.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="assets/images/partner/partner-6.png" alt="Image">
+                    <img src="{{asset('assets/images/partner/partner-6.png')}}" alt="Image">
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="assets/images/team/team-1.jpg" alt="Image">
+                        <img src="{{asset('assets/images/team/team-1.jpg')}}" alt="Image">
                         <h3>Guillermo Brand</h3>
                         <span>CEO</span>
                         <ul class="d-flex justify-content-between align-items-center">
@@ -153,7 +153,7 @@
 
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="assets/images/team/team-2.jpg" alt="Image">
+                        <img src="{{asset('assets/images/team/team-2.jpg')}}" alt="Image">
                         <h3>Phyllis Cassidy</h3>
                         <span>Writer</span>
                         <ul class="d-flex justify-content-between align-items-center">
@@ -181,7 +181,7 @@
 
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="assets/images/team/team-3.jpg" alt="Image">
+                        <img src="{{asset('assets/images/team/team-3.jpg')}}" alt="Image">
                         <h3>Ian Martin</h3>
                         <span>Manager</span>
                         <ul class="d-flex justify-content-between align-items-center">
@@ -209,7 +209,7 @@
 
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="assets/images/team/team-4.jpg" alt="Image">
+                        <img src="{{asset('assets/images/team/team-4.jpg')}}" alt="Image">
                         <h3>Regina Mccloy</h3>
                         <span>Writer</span>
                         <ul class="d-flex justify-content-between align-items-center">

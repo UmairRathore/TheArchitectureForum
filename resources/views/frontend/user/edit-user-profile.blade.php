@@ -191,7 +191,7 @@
                     <div class="edit-profile-area">
                         <div class="profile-content d-flex justify-content-between align-items-center">
                             <div class="profile-img">
-                                <img src="assets/images/user/profile-img.jpg" alt="Image">
+                                <img src="{{asset('assets/images/user/profile-img.jpg')}}" alt="Image">
                                 <h3>Rosemary Hamm</h3>
                                 <span>Member since 1 years ago</span>
                                 <span>Last seen this week</span>
@@ -233,7 +233,7 @@
                                         <h3>Public information</h3>
 
                                         <div class="information d-flex align-items-center">
-                                            <img src="assets/images/user/profile-img.jpg" alt="Image">
+                                            <img src="{{asset('assets/images/user/profile-img.jpg')}}" alt="Image">
 
                                             <div class="file-upload-account-info">
                                                 <input type="file" name="file" id="file-2" class="inputfile">

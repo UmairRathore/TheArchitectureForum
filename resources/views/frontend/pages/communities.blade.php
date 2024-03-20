@@ -212,7 +212,7 @@
                         <div class="row justify-content-center">
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/programing.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/programing.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Programmers</a>
                                     </h3>
@@ -227,7 +227,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/education.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/education.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Education</a>
                                     </h3>
@@ -242,7 +242,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/graphic-design.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/graphic-design.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Graphic design</a>
                                     </h3>
@@ -257,7 +257,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/woman.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/woman.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Physical fitness</a>
                                     </h3>
@@ -272,7 +272,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/language.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/language.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Language</a>
                                     </h3>
@@ -287,7 +287,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/history.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/history.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">History</a>
                                     </h3>
@@ -302,7 +302,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/sports.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/sports.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Sports</a>
                                     </h3>
@@ -317,7 +317,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/computer-science.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/computer-science.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Computer science</a>
                                     </h3>
@@ -332,7 +332,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/management.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/management.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Management</a>
                                     </h3>
@@ -347,7 +347,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/technology.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/technology.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Technology</a>
                                     </h3>
@@ -362,7 +362,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/company.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/company.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Company</a>
                                     </h3>
@@ -377,7 +377,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/data-science.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/data-science.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Data science</a>
                                     </h3>
@@ -392,7 +392,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/analytics.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/analytics.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Analytics</a>
                                     </h3>
@@ -407,7 +407,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="assets/images/communities/video-production.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/video-production.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Video production</a>
                                     </h3>
@@ -422,7 +422,7 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box mb-0">
-                                    <img src="assets/images/communities/engineering.png" alt="Image">
+                                    <img src="{{asset('assets/images/communities/engineering.png')}}" alt="Image">
                                     <h3>
                                         <a href="communities.html">Engineering</a>
                                     </h3>
@@ -571,35 +571,35 @@
                                 <ul>
                                     <li>
                                         <a href="groups.html">
-                                            <img src="assets/images/user/user-8.jpg" alt="Image">
+                                            <img src="{{asset('assets/images/user/user-8.jpg')}}" alt="Image">
                                             <p>Yong Spears <span>(5k Points)</span></p>
                                             <span>99 Questions</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="groups.html">
-                                            <img src="assets/images/user/user-9.jpg" alt="Image">
+                                            <img src="{{asset('assets/images/user/user-9.jpg')}}" alt="Image">
                                             <p>Denise Jones <span>(4k Points)</span></p>
                                             <span>85 Questions</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="groups.html">
-                                            <img src="assets/images/user/user-10.jpg" alt="Image">
+                                            <img src="{{asset('assets/images/user/user-10.jpg')}}" alt="Image">
                                             <p>Dennis Rogers <span>(3k Points)</span></p>
                                             <span>80 Questions</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="groups.html">
-                                            <img src="assets/images/user/user-11.jpg" alt="Image">
+                                            <img src="{{asset('assets/images/user/user-11.jpg')}}" alt="Image">
                                             <p>Naomi Barnett <span>(1k Points)</span></p>
                                             <span>60 Questions</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="groups.html">
-                                            <img src="assets/images/user/user-12.jpg" alt="Image">
+                                            <img src="{{asset('assets/images/user/user-12.jpg')}}" alt="Image">
                                             <p>Mary Wenger <span>(952 Points)</span></p>
                                             <span>50 Questions</span>
                                         </a>
@@ -611,7 +611,7 @@
                         <div class="right-siderbar-common">
                             <div class="ads">
                                 <a href="communities.html">
-                                    <img src="assets/images/ad.jpg" alt="Image">
+                                    <img src="{{asset('assets/images/ad.jpg')}}" alt="Image">
                                 </a>
 
                                 <a href="communities.html" class="default-btn">

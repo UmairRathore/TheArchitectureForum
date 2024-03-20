@@ -39,14 +39,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
                         <a href="blog-details.html">
-                            <img src="assets/images/blog/blog-1.jpg" alt="Image">
+                            <img src="{{asset('assets/images/blog/blog-1.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
                                     <a href="blog.html">
-                                        <img src="assets/images/blog/user-1.jpg" alt="Image">
+                                        <img src="{{asset('assets/images/blog/user-1.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -69,14 +69,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
                         <a href="blog-details.html">
-                            <img src="assets/images/blog/blog-2.jpg" alt="Image">
+                            <img src="{{asset('assets/images/blog/blog-2.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
                                     <a href="blog.html">
-                                        <img src="assets/images/blog/user-2.jpg" alt="Image">
+                                        <img src="{{asset('assets/images/blog/user-2.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -99,14 +99,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
                         <a href="blog-details.html">
-                            <img src="assets/images/blog/blog-3.jpg" alt="Image">
+                            <img src="{{asset('assets/images/blog/blog-3.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
                                     <a href="blog.html">
-                                        <img src="assets/images/blog/user-3.jpg" alt="Image">
+                                        <img src="{{asset('assets/images/blog/user-3.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -129,14 +129,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
                         <a href="blog-details.html">
-                            <img src="assets/images/blog/blog-4.jpg" alt="Image">
+                            <img src="{{asset('assets/images/blog/blog-4.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
                                     <a href="blog.html">
-                                        <img src="assets/images/blog/user-4.jpg" alt="Image">
+                                        <img src="{{asset('assets/images/blog/user-4.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -159,14 +159,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
                         <a href="blog-details.html">
-                            <img src="assets/images/blog/blog-5.jpg" alt="Image">
+                            <img src="{{asset('assets/images/blog/blog-5.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
                                     <a href="blog.html">
-                                        <img src="assets/images/blog/user-5.jpg" alt="Image">
+                                        <img src="{{asset('assets/images/blog/user-5.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -189,14 +189,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
                         <a href="blog-details.html">
-                            <img src="assets/images/blog/blog-6.jpg" alt="Image">
+                            <img src="{{asset('assets/images/blog/blog-6.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
                                     <a href="blog.html">
-                                        <img src="assets/images/blog/user-6.jpg" alt="Image">
+                                        <img src="{{asset('assets/images/blog/user-6.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>

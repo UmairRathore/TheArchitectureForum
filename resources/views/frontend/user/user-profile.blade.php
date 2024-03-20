@@ -192,7 +192,7 @@
                     <div class="user-profile-area">
                         <div class="profile-content d-flex justify-content-between align-items-center">
                             <div class="profile-img">
-                                <img src="assets/images/user/profile-img.jpg" alt="Image">
+                                <img src="{{asset('assets/images/user/profile-img.jpg')}}" alt="Image">
                                 <h3>Rosemary Hamm</h3>
                                 <span>Member since 1 years ago</span>
                                 <span>Last seen this week</span>
@@ -250,7 +250,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="assets/images/badges/badges-3.png" alt="Image">
+                                        <img src="{{asset('assets/images/badges/badges-3.png')}}" alt="Image">
                                         <h3>Bronze badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>
@@ -258,7 +258,7 @@
 
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="assets/images/badges/badges-4.png" alt="Image">
+                                        <img src="{{asset('assets/images/badges/badges-4.png')}}" alt="Image">
                                         <h3>Silver badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>
@@ -266,7 +266,7 @@
 
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="assets/images/badges/badges-5.png" alt="Image">
+                                        <img src="{{asset('assets/images/badges/badges-5.png')}}" alt="Image">
                                         <h3>Gold badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>
@@ -274,7 +274,7 @@
 
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="assets/images/badges/badges-6.png" alt="Image">
+                                        <img src="{{asset('assets/images/badges/badges-6.png')}}" alt="Image">
                                         <h3>Platinum badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -27,10 +28,11 @@ class LoginController extends Controller
         if (Auth::guard('user')->check() && auth('user')->user()->role_id == 1) /* admin */ {
             return redirect('/dashboard');
         } elseif (Auth::guard('user')->check() && auth('user')->user()->role_id == 2) /* user */ {
-            return redirect()->route('edit.user.profile', ['id' => \auth()->user()->id]);
+            return redirect('/');;
         }
+        return response('sad');
 
-        return view('auth.login');
+//        return view('auth.login');
     }
 
     public function postLogin(Request $request)
@@ -46,26 +48,15 @@ class LoginController extends Controller
             $user = auth('user')->user();
 
             if ($user->role_id == 1) {
-                return view('backend.index');
+                return redirect('/dashboard');
             }
             if ($user->role_id == 2) {
-                $isEmailVerified = EmailVerify::where('email', $user->email)->exists();
+                $isEmailVerified = User::where('email_verified_at','=',Null)->exists();
                 if (!$isEmailVerified) {
                     Auth::guard('user')->logout();
                     return redirect()->back()->with('message', 'Your email is not verified.');
                 }
 
-                $memorial = UserMemorial::select('users.*', 'users.id as user_id', 'user_memorials.*')
-                    ->where('keeper_id', $user->id)
-                    ->join('users', 'users.id', '=', 'user_memorials.memorial_user_id')->first();
-                if ($memorial) {
-
-                    return redirect()->route('profile', ['id' => $memorial->memorial_user_id]);
-                } else {
-
-
-                    return redirect()->route('Creatememorial', ['id' => $user->id]);
-                }
             }
 
         }
