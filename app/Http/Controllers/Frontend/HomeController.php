@@ -56,67 +56,67 @@ class HomeController extends Controller
 
     public function activity ( )
     {
-        return view ('frontend.activity');
+        return view ('frontend.pages.activity');
     }
 
     public function badges ( )
     {
-        return view ('frontend.badges');
+        return view ('frontend.pages.badges');
     }
 
 
     public function referral ( )
     {
-        return view ('frontend.referral');
+        return view ('frontend.pages.referral');
     }
 
 
 
     public function tags ( )
     {
-        return view ('frontend.tags');
+        return view ('frontend.pages.tags');
     }
 
 
 
     public function faq ( )
     {
-        return view ('frontend.faq');
+        return view ('frontend.pages.faq');
     }
 
 
 
     public function groups ( )
     {
-        return view ('frontend.groups');
+        return view ('frontend.pages.groups');
     }
 
 
 
     public function technology ( )
     {
-        return view ('frontend.technology');
+        return view ('frontend.pages.technology');
     }
 
 
 
     public function polls ( )
     {
-        return view ('frontend.polls');
+        return view ('frontend.pages.polls');
     }
 
 
 
     public function communities ( )
     {
-        return view ('frontend.communities');
+        return view ('frontend.pages.communities');
     }
 
 
 
     public function education ( )
     {
-        return view ('frontend.education');
+        return view ('frontend.pages.education');
     }
 
 
@@ -176,7 +176,7 @@ class HomeController extends Controller
 
     public function mostVisitedAnswered ( )
     {
-        return view ('frontend.answers.mostVisitedAnswered');
+        return view ('frontend.answers.most-visited');
     }
 
 

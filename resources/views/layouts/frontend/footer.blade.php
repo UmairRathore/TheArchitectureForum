@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget style-two">
-                    <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Image">
+                    <a href="{{asset('index')}}">
+                        <img src="{{asset('frontend/assets/images/logo.png')}}" alt="Image">
                     </a>
 
                     <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.</p>
@@ -18,16 +18,16 @@
 
                     <ul class="import-link">
                         <li>
-                            <a href="about.html">About us</a>
+                            <a href="{{asset('about')}}">About us</a>
                         </li>
                         <li>
-                            <a href="contact-us.html">Contact us</a>
+                            <a href="{{asset('contact-us')}}">Contact us</a>
                         </li>
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a href="{{asset('blog')}}">Blog</a>
                         </li>
                         <li>
-                            <a href="user.html">User</a>
+                            <a href="{{asset('user')}}">User</a>
                         </li>
                     </ul>
                 </div>
@@ -39,16 +39,16 @@
 
                     <ul class="import-link">
                         <li>
-                            <a href="ask-questions.html">Ask question</a>
+                            <a href="{{asset('ask-questions')}}">Ask question</a>
                         </li>
                         <li>
-                            <a href="faq.html">FAQs</a>
+                            <a href="{{asset('faq')}}">FAQs</a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html">Privacy policy</a>
+                            <a href="{{asset('privacy-policy')}}">Privacy policy</a>
                         </li>
                         <li>
-                            <a href="terms-conditions.html">Terms & Conditions</a>
+                            <a href="{{asset('terms-conditions')}}">Terms & Conditions</a>
                         </li>
                     </ul>
                 </div>
@@ -98,7 +98,7 @@
         </div>
     </div>
     <div class="footer-shape">
-        <img src="assets/images/footer-shape.png" alt="Image">
+        <img src="{{asset('frontend/assets/images/footer-shape.png')}}" alt="Image">
     </div>
 </div>
 <!-- End Footer Area -->

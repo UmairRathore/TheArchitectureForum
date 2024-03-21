@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 //BACKEND
-Route::get('/dashboard',[DashboardController::class, 'index'])->name('home');
+Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
 
 
 

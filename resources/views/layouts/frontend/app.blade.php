@@ -73,7 +73,7 @@
                         <div class="col-12">
                             <div class="login-action">
 										<span class="forgot-login">
-											<a href="register.html">Forgot Password?</a>
+											<a href="{{asset('forgetpassword')}}">Forgot Password?</a>
 										</span>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                         </div>
 
                         <div class="col-12">
-                            <p class="create">Don't have an account? <a href="user-profile.html">Join us </a></p>
+                            <p class="create">Don't have an account? <a href="{{route('user.profile')}}">Join us </a></p>
                         </div>
                     </div>
                 </form>
@@ -148,7 +148,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        I agree to the <a href="terms-conditions.html">Terms of Use</a> and <a href="privacy-policy.html">Privacy Policy</a>
+                                        I agree to the <a href="{{route('terms.conditions')}}">Terms of Use</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
                                     </label>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
                         </div>
 
                         <div class="col-12">
-                            <p class="create">Already on disilab?  <a href="login.html">Login</a></p>
+                            <p class="create">Already on disilab?  <a href="{{route('login')}}">Login</a></p>
                         </div>
                     </div>
                 </form>
@@ -215,7 +215,7 @@
                         <div class="col-12">
                             <div class="login-action">
 										<span class="forgot-login">
-											<a href="register.html">Forgot Password?</a>
+											<a href="{{asset('forgetpassword')}}">Forgot Password?</a>
 										</span>
                             </div>
                         </div>
@@ -227,7 +227,7 @@
                         </div>
 
                         <div class="col-12">
-                            <p class="create">Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+                            <p class="create">Don't have an account? <a href="{{route('usersignup')}}">Sign Up</a></p>
                         </div>
                     </div>
                 </form>
@@ -290,7 +290,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault-2">
                                     <label class="form-check-label" for="flexCheckDefault-2">
-                                        I agree to the <a href="terms-conditions.html">Terms of Use</a> and <a href="privacy-policy.html">Privacy Policy</a>
+                                        I agree to the <a href="{{route('terms.conditions')}}">Terms of Use</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
                                     </label>
                                 </div>
                             </div>
@@ -303,7 +303,7 @@
                         </div>
 
                         <div class="col-12">
-                            <p class="create">Already on disilab?  <a href="login.html">Login</a></p>
+                            <p class="create">Already on disilab?  <a href="{{route('login')}}">Login</a></p>
                         </div>
                     </div>
                 </form>
