@@ -18,7 +18,7 @@
                     <div class="middull-content">
                         <ul class="page-nish">
                             <li>
-                                <a href="../../html/frontendhtml/pify/index.html">
+                                <a href="{{route('home')}}">
                                     <i class="ri-home-8-line"></i>
                                     Home
                                 </a>

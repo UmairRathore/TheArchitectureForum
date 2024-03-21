@@ -39,7 +39,7 @@
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
                                         <a href="{{route('user')}}">
-                                            <img src="{{asset('assets/images/user/user-1.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
                                         </a>
                                     </div>
 
@@ -142,7 +142,7 @@
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
                                         <a href="{{route('user')}}">
-                                            <img src="{{asset('assets/images/user/user-2.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/user-2.jpg')}}" alt="Image">
                                         </a>
                                     </div>
 
@@ -245,7 +245,7 @@
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
                                         <a href="{{route('user')}}">
-                                            <img src="{{asset('assets/images/user/user-3.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/user-3.jpg')}}" alt="Image">
                                         </a>
                                     </div>
 
@@ -348,7 +348,7 @@
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
                                         <a href="{{route('user')}}">
-                                            <img src="{{asset('assets/images/user/user-4.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/user-4.jpg')}}" alt="Image">
                                         </a>
                                     </div>
 
@@ -451,7 +451,7 @@
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
                                         <a href="{{route('user')}}">
-                                            <img src="{{asset('assets/images/user/user-5.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/user-5.jpg')}}" alt="Image">
                                         </a>
                                     </div>
 
@@ -554,7 +554,7 @@
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
                                         <a href="{{route('user')}}">
-                                            <img src="{{asset('assets/images/user/user-6.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/user-6.jpg')}}" alt="Image">
                                         </a>
                                     </div>
 
@@ -658,7 +658,7 @@
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
                                         <a href="{{route('user')}}">
-                                            <img src="{{asset('assets/images/user/user-7.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/user-7.jpg')}}" alt="Image">
                                         </a>
                                     </div>
 

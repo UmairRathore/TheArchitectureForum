@@ -19,7 +19,7 @@
                 <div class="page-title-list">
                     <ul>
                         <li>
-                            <a href="../../html/frontendhtml/pify/index.html">Home</a>
+                            <a href="{{route('home')}}">Home</a>
                         </li>
                         <li class="active">
                             Login

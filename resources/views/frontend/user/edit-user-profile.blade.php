@@ -17,7 +17,7 @@
                     <div class="edit-profile-area">
                         <div class="profile-content d-flex justify-content-between align-items-center">
                             <div class="profile-img">
-                                <img src="{{asset('assets/images/user/profile-img.jpg')}}" alt="Image">
+                                <img src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image">
                                 <h3>Rosemary Hamm</h3>
                                 <span>Member since 1 years ago</span>
                                 <span>Last seen this week</span>
@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="edit-btn">
-                                <a href="edit-profile.html" class="default-btn">Edit profile</a>
+                                <a href="{{route('user.edit.profile')}}" class="default-btn">Edit profile</a>
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@
                                         <h3>Public information</h3>
 
                                         <div class="information d-flex align-items-center">
-                                            <img src="{{asset('assets/images/user/profile-img.jpg')}}" alt="Image">
+                                            <img src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image">
 
                                             <div class="file-upload-account-info">
                                                 <input type="file" name="file" id="file-2" class="inputfile">
@@ -317,7 +317,7 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                <a href="index.html" class="default-btn">
+                                                <a href="{{route('home')}}" class="default-btn">
                                                     Delete
                                                 </a>
                                             </li>

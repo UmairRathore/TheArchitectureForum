@@ -19,7 +19,7 @@
                     <div class="middull-content">
                         <ul class="page-nish">
                             <li>
-                                <a href="index.html">
+                                <a href="{{route('home')}}">
                                     <i class="ri-home-8-line"></i>
                                     Home
                                 </a>
@@ -43,12 +43,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-15.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-15.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Marilyn Grant</a>
+                                                    <a href="{{route('user.profile')}}">Marilyn Grant</a>
                                                 </h3>
                                                 <p>United Kingdom</p>
                                             </div>
@@ -59,7 +59,7 @@
                                                 <p><span>394</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -69,12 +69,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-16.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-16.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Jeremy Conant</a>
+                                                    <a href="{{route('user.profile')}}">Jeremy Conant</a>
                                                 </h3>
                                                 <p>Italy</p>
                                             </div>
@@ -85,7 +85,7 @@
                                                 <p><span>333</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -95,12 +95,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-17.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-17.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Amy Stearns</a>
+                                                    <a href="{{route('user.profile')}}">Amy Stearns</a>
                                                 </h3>
                                                 <p>California</p>
                                             </div>
@@ -111,7 +111,7 @@
                                                 <p><span>318</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -121,12 +121,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-18.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-18.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Alpha Gabriel</a>
+                                                    <a href="{{route('user.profile')}}">Alpha Gabriel</a>
                                                 </h3>
                                                 <p>Seattle, USA</p>
                                             </div>
@@ -137,7 +137,7 @@
                                                 <p><span>14</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -147,12 +147,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-19.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-19.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Darlene Robles</a>
+                                                    <a href="{{route('user.profile')}}">Darlene Robles</a>
                                                 </h3>
                                                 <p>Australia</p>
                                             </div>
@@ -163,7 +163,7 @@
                                                 <p><span>44</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -173,12 +173,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-20.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-20.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Joan Jones</a>
+                                                    <a href="{{route('user.profile')}}">Joan Jones</a>
                                                 </h3>
                                                 <p>Thailand</p>
                                             </div>
@@ -189,7 +189,7 @@
                                                 <p><span>84</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -199,12 +199,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-21.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-21.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Gordon Wasser</a>
+                                                    <a href="{{route('user.profile')}}">Gordon Wasser</a>
                                                 </h3>
                                                 <p>Virginia Beach</p>
                                             </div>
@@ -215,7 +215,7 @@
                                                 <p><span>94</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -225,12 +225,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-22.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-22.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Charles Shaw</a>
+                                                    <a href="{{route('user.profile')}}">Charles Shaw</a>
                                                 </h3>
                                                 <p>Nederland</p>
                                             </div>
@@ -241,7 +241,7 @@
                                                 <p><span>33</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -251,12 +251,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-23.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-23.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Keith Fisher</a>
+                                                    <a href="{{route('user.profile')}}">Keith Fisher</a>
                                                 </h3>
                                                 <p>United Kingdom</p>
                                             </div>
@@ -267,7 +267,7 @@
                                                 <p><span>312</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -277,12 +277,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-24.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-24.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">John Mathis</a>
+                                                    <a href="{{route('user.profile')}}">John Mathis</a>
                                                 </h3>
                                                 <p>Seattle, USA</p>
                                             </div>
@@ -293,7 +293,7 @@
                                                 <p><span>39</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -303,12 +303,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-25.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-25.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Emma Desai</a>
+                                                    <a href="{{route('user.profile')}}">Emma Desai</a>
                                                 </h3>
                                                 <p>Trent, USA</p>
                                             </div>
@@ -319,7 +319,7 @@
                                                 <p><span>54</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -329,12 +329,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-26.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-26.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Stephen Felix</a>
+                                                    <a href="{{route('user.profile')}}">Stephen Felix</a>
                                                 </h3>
                                                 <p>Edinburgh, UK</p>
                                             </div>
@@ -345,7 +345,7 @@
                                                 <p><span>34</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -355,12 +355,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-27.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-27.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Darrell Elia</a>
+                                                    <a href="{{route('user.profile')}}">Darrell Elia</a>
                                                 </h3>
                                                 <p>Russia</p>
                                             </div>
@@ -371,7 +371,7 @@
                                                 <p><span>34</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -381,12 +381,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-28.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-28.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Ellen Jasper</a>
+                                                    <a href="{{route('user.profile')}}">Ellen Jasper</a>
                                                 </h3>
                                                 <p>Ireland</p>
                                             </div>
@@ -397,7 +397,7 @@
                                                 <p><span>94</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -407,12 +407,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-29.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-29.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Kevin Paul</a>
+                                                    <a href="{{route('user.profile')}}">Kevin Paul</a>
                                                 </h3>
                                                 <p>Chile</p>
                                             </div>
@@ -423,7 +423,7 @@
                                                 <p><span>99</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -433,12 +433,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-30.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-30.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Randall Bell</a>
+                                                    <a href="{{route('user.profile')}}">Randall Bell</a>
                                                 </h3>
                                                 <p>Philadelphia</p>
                                             </div>
@@ -449,7 +449,7 @@
                                                 <p><span>59</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -459,12 +459,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-30.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-30.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Kim Perez</a>
+                                                    <a href="{{route('user.profile')}}">Kim Perez</a>
                                                 </h3>
                                                 <p>Italy</p>
                                             </div>
@@ -475,7 +475,7 @@
                                                 <p><span>77</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -485,12 +485,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-31.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-31.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Amanda Hess</a>
+                                                    <a href="{{route('user.profile')}}">Amanda Hess</a>
                                                 </h3>
                                                 <p>USA</p>
                                             </div>
@@ -501,7 +501,7 @@
                                                 <p><span>259</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -511,12 +511,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-32.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-32.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Eileen Lynch</a>
+                                                    <a href="{{route('user.profile')}}">Eileen Lynch</a>
                                                 </h3>
                                                 <p>Netherlands</p>
                                             </div>
@@ -527,7 +527,7 @@
                                                 <p><span>394</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -537,12 +537,12 @@
                                     <div class="single-new-user">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
-                                                <img src="{{asset('assets/images/user/user-33.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-33.jpg')}}" alt="Image">
                                             </div>
 
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    <a href="user-profile.html">Terry Speer</a>
+                                                    <a href="{{route('user.profile')}}">Terry Speer</a>
                                                 </h3>
                                                 <p>United States</p>
                                             </div>
@@ -553,7 +553,7 @@
                                                 <p><span>357</span> questions</p>
                                             </li>
                                             <li>
-                                                <a href="user-profile.html" class="default-btn">Follow</a>
+                                                <a href="{{route('user.profile')}}" class="default-btn">Follow</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -561,14 +561,14 @@
 
                                 <div class="col-12">
                                     <div class="pagination-area mt-0">
-                                        <a href="user.html" class="next page-numbers">
+                                        <a href="{{route('user')}}" class="next page-numbers">
                                             <i class="ri-arrow-left-line"></i>
                                         </a>
                                         <span class="page-numbers current" aria-current="page">1</span>
-                                        <a href="user.html" class="page-numbers">2</a>
-                                        <a href="user.html" class="page-numbers">3</a>
+                                        <a href="{{route('user')}}" class="page-numbers">2</a>
+                                        <a href="{{route('user')}}" class="page-numbers">3</a>
 
-                                        <a href="user.html" class="next page-numbers">
+                                        <a href="{{route('user')}}" class="next page-numbers">
                                             <i class="ri-arrow-right-line"></i>
                                         </a>
                                     </div>

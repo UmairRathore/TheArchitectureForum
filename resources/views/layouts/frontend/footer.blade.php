@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget style-two">
-                    <a href="{{asset('index')}}">
-                        <img src="{{asset('frontend/assets/images/logo.png')}}" alt="Image">
+                    <a href="{{route('home')}}">
+                        <img src="{{asset('frontend/assets/images/logo.jpg')}}" alt="Image">
                     </a>
 
                     <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.</p>
@@ -18,16 +18,16 @@
 
                     <ul class="import-link">
                         <li>
-                            <a href="{{asset('about')}}">About us</a>
+                            <a href="{{route('about')}}">About us</a>
                         </li>
                         <li>
-                            <a href="{{asset('contact-us')}}">Contact us</a>
+                            <a href="{{route('contact.us')}}">Contact us</a>
                         </li>
                         <li>
-                            <a href="{{asset('blog')}}">Blog</a>
+                            <a href="{{route('blog')}}">Blog</a>
                         </li>
                         <li>
-                            <a href="{{asset('user')}}">User</a>
+                            <a href="{{route('user')}}">User</a>
                         </li>
                     </ul>
                 </div>
@@ -39,16 +39,16 @@
 
                     <ul class="import-link">
                         <li>
-                            <a href="{{asset('ask-questions')}}">Ask question</a>
+                            <a href="{{route('ask.questions')}}">Ask question</a>
                         </li>
                         <li>
-                            <a href="{{asset('faq')}}">FAQs</a>
+                            <a href="{{route('faq')}}">FAQs</a>
                         </li>
                         <li>
-                            <a href="{{asset('privacy-policy')}}">Privacy policy</a>
+                            <a href="{{route('privacy.policy')}}">Privacy policy</a>
                         </li>
                         <li>
-                            <a href="{{asset('terms-conditions')}}">Terms & Conditions</a>
+                            <a href="{{route('terms.conditions')}}">Terms & Conditions</a>
                         </li>
                     </ul>
                 </div>
@@ -109,7 +109,7 @@
         <div class="copy-right-content">
             <div class="row">
                 <div class="col-lg-6 col-md-8">
-                    <p>© Pify is Proudly Owned by <a href="https://envytheme.com/" target="_blank">EnvyTheme.com</a></p>
+{{--                    <p>© Pify is Proudly Owned by <a href="https://envytheme.com/" target="_blank">EnvyTheme.com</a></p>--}}
                 </div>
                 <div class="col-lg-6 col-md-4">
                     <div class="language">

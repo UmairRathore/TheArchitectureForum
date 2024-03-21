@@ -17,7 +17,7 @@
                     <div class="middull-content">
                         <ul class="page-nish">
                             <li>
-                                <a href="../../html/frontendhtml/pify/index.html">
+                                <a href="{{route('home')}}">
                                     <i class="ri-home-8-line"></i>
                                     Home
                                 </a>
@@ -38,9 +38,9 @@
                         <div class="row justify-content-center">
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/programing.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/programing.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Programmers</a>
+                                        <a href="{{route('communities')}}">Programmers</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -53,9 +53,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/education.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/education.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Education</a>
+                                        <a href="{{route('communities')}}">Education</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -68,9 +68,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/graphic-design.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/graphic-design.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Graphic design</a>
+                                        <a href="{{route('communities')}}">Graphic design</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -83,9 +83,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/woman.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/woman.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Physical fitness</a>
+                                        <a href="{{route('communities')}}">Physical fitness</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -98,9 +98,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/language.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/language.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Language</a>
+                                        <a href="{{route('communities')}}">Language</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -113,9 +113,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/history.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/history.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">History</a>
+                                        <a href="{{route('communities')}}">History</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -128,9 +128,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/sports.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/sports.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Sports</a>
+                                        <a href="{{route('communities')}}">Sports</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -143,9 +143,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/computer-science.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/computer-science.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Computer science</a>
+                                        <a href="{{route('communities')}}">Computer science</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -158,9 +158,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/management.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/management.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Management</a>
+                                        <a href="{{route('communities')}}">Management</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -173,9 +173,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/technology.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/technology.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Technology</a>
+                                        <a href="{{route('communities')}}">Technology</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -188,9 +188,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/company.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/company.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Company</a>
+                                        <a href="{{route('communities')}}">Company</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -203,9 +203,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/data-science.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/data-science.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Data science</a>
+                                        <a href="{{route('communities')}}">Data science</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -218,9 +218,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/analytics.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/analytics.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Analytics</a>
+                                        <a href="{{route('communities')}}">Analytics</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -233,9 +233,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box">
-                                    <img src="{{asset('assets/images/communities/video-production.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/video-production.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Video production</a>
+                                        <a href="{{route('communities')}}">Video production</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>
@@ -248,9 +248,9 @@
 
                             <div class="col-xl-4 col-sm-6">
                                 <div class="single-communities-box mb-0">
-                                    <img src="{{asset('assets/images/communities/engineering.png')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/communities/engineering.png')}}" alt="Image">
                                     <h3>
-                                        <a href="communities.html">Engineering</a>
+                                        <a href="{{route('communities')}}">Engineering</a>
                                     </h3>
                                     <ul class="d-flex justify-content-between">
                                         <li>538 Followers</li>

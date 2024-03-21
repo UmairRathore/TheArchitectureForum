@@ -17,16 +17,16 @@
                     <div class="page-title-content-list">
                         <ul>
                             <li>
-                                <a href="all-queations.html">6 Questions</a>
+                                <a href="{{asset('all.questions')}}">6 Questions</a>
                             </li>
                             <li>
-                                <a href="best-answered.html">2 Answers</a>
+                                <a href="{{asset('best.answered')}}">2 Answers</a>
                             </li>
                             <li>
-                                <a href="user-profile.html">486 Followers</a>
+                                <a href="{{asset('user.profile')}}">486 Followers</a>
                             </li>
                             <li>
-                                <a href="user-profile.html">Follow</a>
+                                <a href="{{asset('user.profile')}}">Follow</a>
                             </li>
                             <li>
                                 <ul class="qa-share">

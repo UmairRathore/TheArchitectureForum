@@ -17,6 +17,6 @@
 <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="{{asset('frontend/assets/images/favicon.png')}}">
+<link rel="icon" type="image/png" href="{{asset('frontend/assets/images/logo.jpg')}}">
 <!-- Title -->
 <title>The Architecture Forum - @yield('title')</title>

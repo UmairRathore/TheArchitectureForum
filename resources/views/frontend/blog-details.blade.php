@@ -19,7 +19,7 @@
                         <ul>
                             <li>
                                 <a href="blog.html" class="user-id">
-                                    <img src="{{asset('assets/images/blog/user-1.jpg')}}" alt="Image">
+                                    <img src="{{asset('frontend/assets/images/blog/user-1.jpg')}}" alt="Image">
                                     <span>Marissa Cress</span>
                                 </a>
                             </li>
@@ -43,7 +43,7 @@
                         <p>Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit.</p>
                         <p>Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus   et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada.</p>
 
-                        <img src="{{asset('assets/images/blog/blog-1.jpg')}}" alt="Image">
+                        <img src="{{asset('frontend/assets/images/blog/blog-1.jpg')}}" alt="Image">
 
                         <p>Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
 
@@ -167,49 +167,49 @@
 
                                 <ul>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             Technology
                                             <span>3</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             Business
                                             <span>5</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             Creative
                                             <span>8</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             Lifestyle
                                             <span>2</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             News
                                             <span>9</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             Photography
                                             <span>6</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             Inspiration
                                             <span>2</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-details.html">
+                                        <a href="{{route('blog.details')}}">
                                             Project management
                                             <span>1</span>
                                         </a>
@@ -227,28 +227,28 @@
 
                                 <ul>
                                     <li>
-                                        <a href="most-answered.html">
+                                        <a href="{{route('most.answered')}}">
                                             What could be UX design software?
                                         </a>
-                                        <p>8 hours ago by <a href="user.html">Alan Woodson</a></p>
+                                        <p>8 hours ago by <a href="{{route('user')}}">Alan Woodson</a></p>
                                     </li>
                                     <li>
-                                        <a href="most-answered.html">
+                                        <a href="{{route('most.answered')}}">
                                             All the new features that have been used in Windows 11
                                         </a>
-                                        <p>11 hours ago by <a href="user.html">Juan McPhail</a></p>
+                                        <p>11 hours ago by <a href="{{route('user')}}">Juan McPhail</a></p>
                                     </li>
                                     <li>
-                                        <a href="most-answered.html">
+                                        <a href="{{route('most.answered')}}">
                                             What is the most important thing in learning design?
                                         </a>
-                                        <p>11 hours ago by <a href="user.html">Vickie White</a></p>
+                                        <p>11 hours ago by <a href="{{route('user')}}">Vickie White</a></p>
                                     </li>
                                     <li>
-                                        <a href="most-answered.html">
+                                        <a href="{{route('most.answered')}}">
                                             Which language is the most popular in the web right now?
                                         </a>
-                                        <p>13 hours ago by <a href="user.html">Jose Merz</a></p>
+                                        <p>13 hours ago by <a href="{{route('user')}}">Jose Merz</a></p>
                                     </li>
                                 </ul>
                             </div>

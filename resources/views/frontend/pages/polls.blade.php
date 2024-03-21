@@ -18,7 +18,7 @@
                     <div class="middull-content">
                         <ul class="page-nish">
                             <li>
-                                <a href="../../html/frontendhtml/pify/index.html">
+                                <a href="{{route('home')}}">
                                     <i class="ri-home-8-line"></i>
                                     Home
                                 </a>
@@ -40,8 +40,8 @@
                             <div class="single-qa-box like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="user.html">
-                                            <img src="{{asset('assets/images/user/user-1.jpg')}}" alt="Image">
+                                        <a href="{{route('user')}}">
+                                            <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
                                         </a>
 
                                         <div class="donet-like-list">
@@ -62,21 +62,21 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="user.html">Teresa Klein</a>
+                                                <a href="{{route('user')}}">Teresa Klein</a>
                                             </li>
                                             <li>
                                                 <span>Latest Answer: 14 hours ago</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="tags.html" class="graphic">
+                                                <a href="{{route('tags')}}" class="graphic">
                                                     Graphic design
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
-                                            <a href="queations-details.html">
+                                            <a href="{{route('questions')}}">
                                                 If you open Illustrator by dragging the Photoshop file, why it becomes a JPG file
                                             </a>
                                         </h3>
@@ -85,30 +85,30 @@
 
                                         <ul class="tag-list">
                                             <li>
-                                                <a href="tags.html">Discussion</a>
+                                                <a href="{{route('tags')}}">Discussion</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Photoshop</a>
+                                                <a href="{{route('tags')}}">Photoshop</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Analytics</a>
+                                                <a href="{{route('tags')}}">Analytics</a>
                                             </li>
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="polls.html">
+                                                    <a href="{{route('polls')}}">
                                                         24 Vote
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-answered.html">
+                                                    <a href="{{route('most.answered')}}">
                                                         2 Answer
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-visited.html">
+                                                    <a href="{{route('most.visited.answered')}}">
                                                         658 Views
                                                     </a>
                                                 </li>
@@ -146,7 +146,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="most-answered.html" class="default-btn">
+                                            <a href="{{route('most.answered')}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -157,8 +157,8 @@
                             <div class="single-qa-box like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="user.html">
-                                            <img src="{{asset('assets/images/user/user-2.jpg')}}" alt="Image">
+                                        <a href="{{route('user')}}">
+                                            <img src="{{asset('frontend/assets/images/user/user-2.jpg')}}" alt="Image">
                                         </a>
 
                                         <div class="donet-like-list">
@@ -179,21 +179,21 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="user.html">Adam  Garrison</a>
+                                                <a href="{{route('user')}}">Adam  Garrison</a>
                                             </li>
                                             <li>
                                                 <span>Latest Answer: 15 hours ago</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="tags.html" class="graphic">
+                                                <a href="{{route('tags')}}" class="graphic">
                                                     Programming
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
-                                            <a href="queations-details.html">
+                                            <a href="{{route('questions')}}">
                                                 Teaching high school students various computer systems is a resource for the future
                                             </a>
                                         </h3>
@@ -202,30 +202,30 @@
 
                                         <ul class="tag-list">
                                             <li>
-                                                <a href="tags.html">Discussion</a>
+                                                <a href="{{route('tags')}}">Discussion</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Language</a>
+                                                <a href="{{route('tags')}}">Language</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Analytics</a>
+                                                <a href="{{route('tags')}}">Analytics</a>
                                             </li>
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="polls.html">
+                                                    <a href="{{route('polls')}}">
                                                         2 Vote
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-answered.html">
+                                                    <a href="{{route('most.answered')}}">
                                                         1 Answer
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-visited.html">
+                                                    <a href="{{route('most.visited.answered')}}">
                                                         647 Views
                                                     </a>
                                                 </li>
@@ -263,7 +263,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="most-answered.html" class="default-btn">
+                                            <a href="{{route('most.answered')}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -274,8 +274,8 @@
                             <div class="single-qa-box like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="user.html">
-                                            <img src="{{asset('assets/images/user/user-3.jpg')}}" alt="Image">
+                                        <a href="{{route('user')}}">
+                                            <img src="{{asset('frontend/assets/images/user/user-3.jpg')}}" alt="Image">
                                         </a>
 
                                         <div class="donet-like-list">
@@ -296,21 +296,21 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="user.html">Yvonne Cox</a>
+                                                <a href="{{route('user')}}">Yvonne Cox</a>
                                             </li>
                                             <li>
                                                 <span>Latest Answer: 16 hours ago</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="tags.html" class="graphic">
+                                                <a href="{{route('tags')}}" class="graphic">
                                                     Conversion
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
-                                            <a href="queations-details.html">
+                                            <a href="{{route('questions')}}">
                                                 Here are some examples of how to prevent Kindle ebook text images from expanding from a PDF file.
                                             </a>
                                         </h3>
@@ -319,30 +319,30 @@
 
                                         <ul class="tag-list">
                                             <li>
-                                                <a href="tags.html">Discussion</a>
+                                                <a href="{{route('tags')}}">Discussion</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Language</a>
+                                                <a href="{{route('tags')}}">Language</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Analytics</a>
+                                                <a href="{{route('tags')}}">Analytics</a>
                                             </li>
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="polls.html">
+                                                    <a href="{{route('polls')}}">
                                                         24 Vote
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-answered.html">
+                                                    <a href="{{route('most.answered')}}">
                                                         1 Answer
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-visited.html">
+                                                    <a href="{{route('most.visited.answered')}}">
                                                         658 Views
                                                     </a>
                                                 </li>
@@ -380,7 +380,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="most-answered.html" class="default-btn">
+                                            <a href="{{route('most.answered')}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -391,8 +391,8 @@
                             <div class="single-qa-box like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="user.html">
-                                            <img src="{{asset('assets/images/user/user-4.jpg')}}" alt="Image">
+                                        <a href="{{route('user')}}">
+                                            <img src="{{asset('frontend/assets/images/user/user-4.jpg')}}" alt="Image">
                                         </a>
 
                                         <div class="donet-like-list">
@@ -413,21 +413,21 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="user.html">Nelson Koch</a>
+                                                <a href="{{route('user')}}">Nelson Koch</a>
                                             </li>
                                             <li>
                                                 <span>Latest Answer: 14 hours ago</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="tags.html" class="graphic">
+                                                <a href="{{route('tags')}}" class="graphic">
                                                     Graphic design
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
-                                            <a href="queations-details.html">
+                                            <a href="{{route('questions')}}">
                                                 If you open Illustrator by dragging the Photoshop file, why it becomes a JPG file
                                             </a>
                                         </h3>
@@ -436,30 +436,30 @@
 
                                         <ul class="tag-list">
                                             <li>
-                                                <a href="tags.html">Discussion</a>
+                                                <a href="{{route('tags')}}">Discussion</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Language</a>
+                                                <a href="{{route('tags')}}">Language</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Analytics</a>
+                                                <a href="{{route('tags')}}">Analytics</a>
                                             </li>
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="polls.html">
+                                                    <a href="{{route('polls')}}">
                                                         43 Vote
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-answered.html">
+                                                    <a href="{{route('most.answered')}}">
                                                         4 Answer
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-visited.html">
+                                                    <a href="{{route('most.visited.answered')}}">
                                                         974 Views
                                                     </a>
                                                 </li>
@@ -497,7 +497,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="most-answered.html" class="default-btn">
+                                            <a href="{{route('most.answered')}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -508,8 +508,8 @@
                             <div class="single-qa-box like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="user.html">
-                                            <img src="{{asset('assets/images/user/user-5.jpg')}}" alt="Image">
+                                        <a href="{{route('user')}}">
+                                            <img src="{{asset('frontend/assets/images/user/user-5.jpg')}}" alt="Image">
                                         </a>
 
                                         <div class="donet-like-list">
@@ -530,21 +530,21 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="user.html">James Sardina</a>
+                                                <a href="{{route('user')}}">James Sardina</a>
                                             </li>
                                             <li>
                                                 <span>Latest Answer: 19 hours ago</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="tags.html" class="graphic">
+                                                <a href="{{route('tags')}}" class="graphic">
                                                     Language
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
-                                            <a href="queations-details.html">
+                                            <a href="{{route('questions')}}">
                                                 In the case of a human being, learning how many languages is logical is mentioned
                                             </a>
                                         </h3>
@@ -553,30 +553,30 @@
 
                                         <ul class="tag-list">
                                             <li>
-                                                <a href="tags.html">Discussion</a>
+                                                <a href="{{route('tags')}}">Discussion</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Language</a>
+                                                <a href="{{route('tags')}}">Language</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Analytics</a>
+                                                <a href="{{route('tags')}}">Analytics</a>
                                             </li>
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="polls.html">
+                                                    <a href="{{route('polls')}}">
                                                         35 Vote
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-answered.html">
+                                                    <a href="{{route('most.answered')}}">
                                                         3 Answer
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-visited.html">
+                                                    <a href="{{route('most.visited.answered')}}">
                                                         735 Views
                                                     </a>
                                                 </li>
@@ -614,7 +614,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="most-answered.html" class="default-btn">
+                                            <a href="{{route('most.answered')}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -625,8 +625,8 @@
                             <div class="single-qa-box like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="user.html">
-                                            <img src="{{asset('assets/images/user/user-6.jpg')}}" alt="Image">
+                                        <a href="{{route('user')}}">
+                                            <img src="{{asset('frontend/assets/images/user/user-6.jpg')}}" alt="Image">
                                         </a>
 
                                         <div class="donet-like-list">
@@ -647,21 +647,21 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="user.html">Judith Maddox</a>
+                                                <a href="{{route('user')}}">Judith Maddox</a>
                                             </li>
                                             <li>
                                                 <span>Latest Answer: 14 hours ago</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="tags.html" class="graphic">
+                                                <a href="{{route('tags')}}" class="graphic">
                                                     Graphic design
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
-                                            <a href="queations-details.html">
+                                            <a href="{{route('questions')}}">
                                                 Why do people of different countries celebrate their New Year in different ways?
                                             </a>
                                         </h3>
@@ -670,31 +670,31 @@
 
                                         <ul class="tag-list">
                                             <li>
-                                                <a href="tags.html">Discussion</a>
+                                                <a href="{{route('tags')}}">Discussion</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">l
+                                                <a href="{{route('tags')}}">l
                                                     Language</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Analytics</a>
+                                                <a href="{{route('tags')}}">Analytics</a>
                                             </li>
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="polls.html">
+                                                    <a href="{{route('polls')}}">
                                                         32 Vote
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-answered.html">
+                                                    <a href="{{route('most.answered')}}">
                                                         2 Answer
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-visited.html">
+                                                    <a href="{{route('most.visited.answered')}}">
                                                         374 Views
                                                     </a>
                                                 </li>
@@ -732,7 +732,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="most-answered.html" class="default-btn">
+                                            <a href="{{route('most.answered')}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -743,8 +743,8 @@
                             <div class="single-qa-box like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="user.html">
-                                            <img src="{{asset('assets/images/user/user-7.jpg')}}" alt="Image">
+                                        <a href="{{route('user')}}">
+                                            <img src="{{asset('frontend/assets/images/user/user-7.jpg')}}" alt="Image">
                                         </a>
 
                                         <div class="donet-like-list">
@@ -765,21 +765,21 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="user.html">Rick Thrasher</a>
+                                                <a href="{{route('user')}}">Rick Thrasher</a>
                                             </li>
                                             <li>
                                                 <span>Latest Answer: 22 hours ago</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="tags.html" class="graphic">
+                                                <a href="{{route('tags')}}" class="graphic">
                                                     Language
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
-                                            <a href="queations-details.html">
+                                            <a href="{{route('questions')}}">
                                                 What is the requirement of a student's e-book for conducting educational activities?
                                             </a>
                                         </h3>
@@ -788,30 +788,30 @@
 
                                         <ul class="tag-list">
                                             <li>
-                                                <a href="tags.html">Discussion</a>
+                                                <a href="{{route('tags')}}">Discussion</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Language</a>
+                                                <a href="{{route('tags')}}">Language</a>
                                             </li>
                                             <li>
-                                                <a href="tags.html">Analytics</a>
+                                                <a href="{{route('tags')}}">Analytics</a>
                                             </li>
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="polls.html">
+                                                    <a href="{{route('polls')}}">
                                                         24 Vote
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-answered.html">
+                                                    <a href="{{route('most.answered')}}">
                                                         1 Answer
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="most-visited.html">
+                                                    <a href="{{route('most.visited.answered')}}">
                                                         658 Views
                                                     </a>
                                                 </li>
@@ -849,7 +849,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="most-answered.html" class="default-btn">
+                                            <a href="{{route('most.answered')}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -858,14 +858,14 @@
                             </div>
 
                             <div class="pagination-area">
-                                <a href="polls.html" class="next page-numbers">
+                                <a href="{{route('polls')}}" class="next page-numbers">
                                     <i class="ri-arrow-left-line"></i>
                                 </a>
                                 <span class="page-numbers current" aria-current="page">1</span>
-                                <a href="polls.html" class="page-numbers">2</a>
-                                <a href="polls.html" class="page-numbers">3</a>
+                                <a href="{{route('polls')}}" class="page-numbers">2</a>
+                                <a href="{{route('polls')}}" class="page-numbers">3</a>
 
-                                <a href="polls.html" class="next page-numbers">
+                                <a href="{{route('polls')}}" class="next page-numbers">
                                     <i class="ri-arrow-right-line"></i>
                                 </a>
                             </div>

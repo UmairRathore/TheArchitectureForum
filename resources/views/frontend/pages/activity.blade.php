@@ -18,7 +18,7 @@
                     <div class="summary-area">
                         <div class="profile-content d-flex justify-content-between align-items-center">
                             <div class="profile-img">
-                                <img src="{{asset('assets/images/user/profile-img.jpg')}}" alt="Image">
+                                <img src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image">
                                 <h3>Rosemary Hamm</h3>
                                 <span>Member since 1 years ago</span>
                                 <span>Last seen this week</span>
@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="edit-btn">
-                                <a href="../../html/frontendhtml/pify/edit-profile.html" class="default-btn">Edit profile</a>
+                                <a href="{{route('edit.profile')}}" class="default-btn">Edit profile</a>
                             </div>
                         </div>
 
@@ -84,42 +84,42 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Answers (0)</h3>
-                                                <p>You have not <a href="all-queations.html">answered</a> any questions</p>
+                                                <p>You have not <a href="{{route('all.questions')}}">answered</a> any questions</p>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Badges (0)</h3>
-                                                <p>You have no <a href="all-queations.html">badges</a></p>
+                                                <p>You have no <a href="{{route('all.questions')}}">badges</a></p>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Questions (0)</h3>
-                                                <p>You have not asked any <a href="all-queations.html">questions</a></p>
+                                                <p>You have not asked any <a href="{{route('all.questions')}}">questions</a></p>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Bookmarks (0)</h3>
-                                                <p>You have no <a href="all-queations.html">bookmarked</a> questions.</p>
+                                                <p>You have no <a href="{{route('all.questions')}}">bookmarked</a> questions.</p>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>following posts (12)</h3>
-                                                <p>You are  <a href="all-queations.html">following 12 posts.</a></p>
+                                                <p>You are  <a href="{{route('all.questions')}}">following 12 posts.</a></p>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Active bounties (0)</h3>
-                                                <p>You have no <a href="all-queations.html">active bounties</a></p>
+                                                <p>You have no <a href="{{route('all.questions')}}">active bounties</a></p>
                                             </div>
                                         </div>
 
@@ -133,21 +133,21 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Votes (0)</h3>
-                                                <p>You have not cast any <a href="all-queations.html">votes</a></p>
+                                                <p>You have not cast any <a href="{{route('all.questions')}}">votes</a></p>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Tags (0)</h3>
-                                                <p>You have not participated in any <a href="all-queations.html">tags</a></p>
+                                                <p>You have not participated in any <a href="{{route('all.questions')}}">tags</a></p>
                                             </div>
                                         </div>
 
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Reputation (1)</h3>
-                                                <p>You have no recent <a href="all-queations.html">reputation</a> changes</p>
+                                                <p>You have no recent <a href="{{route('all.questions')}}">reputation</a> changes</p>
                                             </div>
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Answers (0)</h3>
-                                                <p>You have not <a href="all-queations.html">answered</a> any questions</p>
+                                                <p>You have not <a href="{{route('all.questions')}}">answered</a> any questions</p>
                                             </div>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Questions (0)</h3>
-                                                <p>You have not asked any <a href="all-queations.html">questions</a></p>
+                                                <p>You have not asked any <a href="{{route('all.questions')}}">questions</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -180,7 +180,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Tags (0)</h3>
-                                                <p>You have not participated in any <a href="all-queations.html">tags</a></p>
+                                                <p>You have not participated in any <a href="{{route('all.questions')}}">tags</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -191,7 +191,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Badges (0)</h3>
-                                                <p>You have no <a href="badges.html">badges</a></p>
+                                                <p>You have no <a href="{{route('badges')}}">badges</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -202,7 +202,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Bookmarks (0)</h3>
-                                                <p>You have no <a href="badges.html">bookmarked</a> questions.</p>
+                                                <p>You have no <a href="{{route('badges')}}">bookmarked</a> questions.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -224,7 +224,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>following posts (12)</h3>
-                                                <p>You are  <a href="user-profile.html">following 12 posts.</a></p>
+                                                <p>You are  <a href="{{route('user.profile')}}">following 12 posts.</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -235,7 +235,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Active bounties (0)</h3>
-                                                <p>You have no <a href="all-queations.html">active bounties</a></p>
+                                                <p>You have no <a href="{{route('all.questions')}}">active bounties</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +246,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Votes (0)</h3>
-                                                <p>You have not cast any <a href="most-visited.html">votes</a></p>
+                                                <p>You have not cast any <a href="{{route('most.visited')}}">votes</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -257,7 +257,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Reputation (1)</h3>
-                                                <p>You have no recent <a href="all-queations.html">reputation</a> changes</p>
+                                                <p>You have no recent <a href="{{route('all.questions')}}">reputation</a> changes</p>
                                             </div>
                                         </div>
                                     </div>

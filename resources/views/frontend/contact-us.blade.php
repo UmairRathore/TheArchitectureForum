@@ -17,7 +17,7 @@
                     <div class="page-title-list">
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="{{route('home')}}">Home</a>
                             </li>
                             <li class="active">
                                 Contact us
@@ -94,7 +94,7 @@
                                                 >
 
                                                 <label class="form-check-label" for="gridCheck">
-                                                    I agree to the <a href="terms-conditions.html">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>
+                                                    I agree to the <a href="{{route('terms.conditions')}}">Terms</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
                                                 </label>
                                                 <div class="help-block with-errors gridCheck-error"></div>
                                             </div>

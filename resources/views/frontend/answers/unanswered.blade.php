@@ -16,7 +16,7 @@
                     <div class="middull-content">
                         <ul class="page-nish">
                             <li>
-                                <a href="index.html">
+                                <a href="{{route('home')}}">
                                     <i class="ri-home-8-line"></i>
                                     Home
                                 </a>
@@ -63,7 +63,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-1.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -180,7 +180,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-2.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-2.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -297,7 +297,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-3.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-3.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -414,7 +414,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-4.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-4.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -531,7 +531,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-5.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-5.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -648,7 +648,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-6.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-6.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -766,7 +766,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-7.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-7.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -898,7 +898,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-1.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
                                             </a>
                                         </div>
 
@@ -1001,7 +1001,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-2.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-2.jpg')}}" alt="Image">
                                             </a>
                                         </div>
 
@@ -1104,7 +1104,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-3.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-3.jpg')}}" alt="Image">
                                             </a>
                                         </div>
 
@@ -1207,7 +1207,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-4.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-4.jpg')}}" alt="Image">
                                             </a>
                                         </div>
 
@@ -1310,7 +1310,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-5.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-5.jpg')}}" alt="Image">
                                             </a>
                                         </div>
 
@@ -1413,7 +1413,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-6.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-6.jpg')}}" alt="Image">
                                             </a>
                                         </div>
 
@@ -1517,7 +1517,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-7.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-7.jpg')}}" alt="Image">
                                             </a>
                                         </div>
 
@@ -1643,7 +1643,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-1.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -1758,7 +1758,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-2.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-2.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -1873,7 +1873,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-3.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-3.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -1988,7 +1988,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-4.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-4.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2103,7 +2103,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-5.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-5.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2218,7 +2218,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-6.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-6.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2334,7 +2334,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-7.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-7.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2464,7 +2464,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-1.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2582,7 +2582,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-2.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-2.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2700,7 +2700,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-3.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-3.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2818,7 +2818,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-4.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-4.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -2936,7 +2936,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-5.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-5.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -3054,7 +3054,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-6.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-6.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">
@@ -3173,7 +3173,7 @@
                                     <div class="d-flex">
                                         <div class="link-unlike flex-shrink-0">
                                             <a href="user.html">
-                                                <img src="{{asset('assets/images/user/user-7.jpg')}}" alt="Image">
+                                                <img src="{{asset('frontend/assets/images/user/user-7.jpg')}}" alt="Image">
                                             </a>
 
                                             <div class="donet-like-list">

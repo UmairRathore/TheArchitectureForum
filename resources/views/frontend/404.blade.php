@@ -35,9 +35,9 @@
     <div class="error-area ptb-100">
         <div class="container">
             <div class="error-content">
-                <img src="assets/images/404.png" alt="Image">
+                <img src="{{asset('frontend/assets/images/404.png')}}" alt="Image">
 
-                <a href="index.html" class="default-btn">
+                <a href="{{route('home')}}" class="default-btn">
                     Go To Home
                 </a>
             </div>

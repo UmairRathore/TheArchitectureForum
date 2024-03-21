@@ -1,28 +1,28 @@
 @extends('layouts.frontend.app')
 
 @section('content')
-    <!-- Start About Banner Area -->
-    <div class="about-banner-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <div class="about-banner-content">
-                        <span class="top-title">Who we are</span>
-                        <h2>Our job is to empower the world through the development of technology through combined knowledge.</h2>
-                        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus magna.</p>
-                        <p>Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
-                    </div>
-                </div>
+{{--    <!-- Start About Banner Area -->--}}
+{{--    <div class="about-banner-area">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row align-items-center">--}}
+{{--                <div class="col-lg-7">--}}
+{{--                    <div class="about-banner-content">--}}
+{{--                        <span class="top-title">Who we are</span>--}}
+{{--                        <h2>Our job is to empower the world through the development of technology through combined knowledge.</h2>--}}
+{{--                        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus magna.</p>--}}
+{{--                        <p>Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="col-lg-5">
-                    <div class="about-banner-img">
-                        <img src="{{asset('assets/images/banner-img.png')}}" alt="Image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End About Banner Area -->
+{{--                <div class="col-lg-5">--}}
+{{--                    <div class="about-banner-img">--}}
+{{--                        <img src="{{asset('frontend/assets/images/banner-img.png')}}" alt="Image">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    <!-- End About Banner Area -->--}}
 
     <!-- Start Monthly User Area -->
     <div class="monthly-user-area">
@@ -61,7 +61,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="why-choose-img">
-                        <img src="{{asset('assets/images/choose-img.png')}}" alt="Image">
+                        <img src="{{asset('frontend/assets/images/choose-img.png')}}" alt="Image">
                     </div>
                 </div>
 
@@ -93,22 +93,22 @@
         <div class="container">
             <div class="partner-slide owl-carousel owl-theme">
                 <div class="partner-item">
-                    <img src="{{asset('assets/images/partner/partner-1.png')}}" alt="Image">
+                    <img src="{{asset('frontend/assets/images/partner/partner-1.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="{{asset('assets/images/partner/partner-2.png')}}" alt="Image">
+                    <img src="{{asset('frontend/assets/images/partner/partner-2.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="{{asset('assets/images/partner/partner-3.png')}}" alt="Image">
+                    <img src="{{asset('frontend/assets/images/partner/partner-3.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="{{asset('assets/images/partner/partner-4.png')}}" alt="Image">
+                    <img src="{{asset('frontend/assets/images/partner/partner-4.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="{{asset('assets/images/partner/partner-5.png')}}" alt="Image">
+                    <img src="{{asset('frontend/assets/images/partner/partner-5.png')}}" alt="Image">
                 </div>
                 <div class="partner-item">
-                    <img src="{{asset('assets/images/partner/partner-6.png')}}" alt="Image">
+                    <img src="{{asset('frontend/assets/images/partner/partner-6.png')}}" alt="Image">
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="{{asset('assets/images/team/team-1.jpg')}}" alt="Image">
+                        <img src="{{asset('frontend/assets/images/team/team-1.jpg')}}" alt="Image">
                         <h3>Guillermo Brand</h3>
                         <span>CEO</span>
                         <ul class="d-flex justify-content-between align-items-center">
@@ -153,7 +153,7 @@
 
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="{{asset('assets/images/team/team-2.jpg')}}" alt="Image">
+                        <img src="{{asset('frontend/assets/images/team/team-2.jpg')}}" alt="Image">
                         <h3>Phyllis Cassidy</h3>
                         <span>Writer</span>
                         <ul class="d-flex justify-content-between align-items-center">
@@ -181,7 +181,7 @@
 
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="{{asset('assets/images/team/team-3.jpg')}}" alt="Image">
+                        <img src="{{asset('frontend/assets/images/team/team-3.jpg')}}" alt="Image">
                         <h3>Ian Martin</h3>
                         <span>Manager</span>
                         <ul class="d-flex justify-content-between align-items-center">
@@ -209,7 +209,7 @@
 
                 <div class="col-xl-3 col-md-6">
                     <div class="single-team-item">
-                        <img src="{{asset('assets/images/team/team-4.jpg')}}" alt="Image">
+                        <img src="{{asset('frontend/assets/images/team/team-4.jpg')}}" alt="Image">
                         <h3>Regina Mccloy</h3>
                         <span>Writer</span>
                         <ul class="d-flex justify-content-between align-items-center">

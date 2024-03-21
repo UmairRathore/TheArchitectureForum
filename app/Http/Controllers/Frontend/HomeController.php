@@ -141,7 +141,7 @@ class HomeController extends Controller
 
     public function userEditProfile ( )
     {
-        return view ('frontend.user.user-edit-profile');
+        return view ('frontend.user.edit-user-profile');
     }
 
 

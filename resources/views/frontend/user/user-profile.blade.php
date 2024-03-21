@@ -15,10 +15,10 @@
                 </div>
 
                 <div class="col-lg-9">
-                    <div class="user-profile-area">
+                    <div class="user.profile-area">
                         <div class="profile-content d-flex justify-content-between align-items-center">
                             <div class="profile-img">
-                                <img src="{{asset('assets/images/user/profile-img.jpg')}}" alt="Image">
+                                <img src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image">
                                 <h3>Rosemary Hamm</h3>
                                 <span>Member since 1 years ago</span>
                                 <span>Last seen this week</span>
@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="edit-btn">
-                                <a href="edit-profile.html" class="default-btn">Edit profile</a>
+                                <a href="{{route('user.edit.profile')}}" class="default-btn">Edit profile</a>
                             </div>
                         </div>
 
@@ -76,7 +76,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="{{asset('assets/images/badges/badges-3.png')}}" alt="Image">
+                                        <img src="{{asset('frontend/assets/images/badges/badges-3.png')}}" alt="Image">
                                         <h3>Bronze badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>
@@ -84,7 +84,7 @@
 
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="{{asset('assets/images/badges/badges-4.png')}}" alt="Image">
+                                        <img src="{{asset('frontend/assets/images/badges/badges-4.png')}}" alt="Image">
                                         <h3>Silver badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>
@@ -92,7 +92,7 @@
 
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="{{asset('assets/images/badges/badges-5.png')}}" alt="Image">
+                                        <img src="{{asset('frontend/assets/images/badges/badges-5.png')}}" alt="Image">
                                         <h3>Gold badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>
@@ -100,7 +100,7 @@
 
                                 <div class="col-xl-3 col-sm-6">
                                     <div class="single-badges-box">
-                                        <img src="{{asset('assets/images/badges/badges-6.png')}}" alt="Image">
+                                        <img src="{{asset('frontend/assets/images/badges/badges-6.png')}}" alt="Image">
                                         <h3>Platinum badges</h3>
                                         <p>Sed porttitor lectus nibh. Nulla porttitor accumsan.</p>
                                     </div>
@@ -111,7 +111,7 @@
                         <div class="top-tags">
                             <div class="tag-title d-flex justify-content-between">
                                 <h3>Top tags</h3>
-                                <a href="tags.html" class="read-more">View all tags</a>
+                                <a href="{{route('tags')}}" class="read-more">View all tags</a>
                             </div>
 
                             <ul>
@@ -190,7 +190,7 @@
                                                 <span class="count">21</span>
                                                 <span>What could be UX design software?</span>
                                             </div>
-                                            <p><span>8 hours ago</span> by <a href="user-profile.html">Alan Woodson</a></p>
+                                            <p><span>8 hours ago</span> by <a href="{{route('user.profile')}}">Alan Woodson</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -198,7 +198,7 @@
                                                 <span class="count">5</span>
                                                 <span>What is the most important thing in learning design?</span>
                                             </div>
-                                            <p><span>10 hours ago</span> by <a href="user-profile.html">Juan McPhail</a></p>
+                                            <p><span>10 hours ago</span> by <a href="{{route('user.profile')}}">Juan McPhail</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -206,7 +206,7 @@
                                                 <span class="count">13</span>
                                                 <span>All the new features that have been used in Windows 11</span>
                                             </div>
-                                            <p><span>11 hours ago</span> by <a href="user-profile.html">Vickie White</a></p>
+                                            <p><span>11 hours ago</span> by <a href="{{route('user.profile')}}">Vickie White</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -214,7 +214,7 @@
                                                 <span class="count">10</span>
                                                 <span>Which language is the most popular in the web right now?</span>
                                             </div>
-                                            <p><span>13 hours ago</span> by <a href="user-profile.html">Jose Merz</a></p>
+                                            <p><span>13 hours ago</span> by <a href="{{route('user.profile')}}">Jose Merz</a></p>
                                         </li>
                                     </ul>
                                 </div>
@@ -227,7 +227,7 @@
                                                 <span class="count">21</span>
                                                 <span>What could be UX design software?</span>
                                             </div>
-                                            <p><span>8 hours ago</span> by <a href="user-profile.html">Alan Woodson</a></p>
+                                            <p><span>8 hours ago</span> by <a href="{{route('user.profile')}}">Alan Woodson</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -235,7 +235,7 @@
                                                 <span class="count">5</span>
                                                 <span>What is the most important thing in learning design?</span>
                                             </div>
-                                            <p><span>10 hours ago</span> by <a href="user-profile.html">Juan McPhail</a></p>
+                                            <p><span>10 hours ago</span> by <a href="{{route('user.profile')}}">Juan McPhail</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -243,7 +243,7 @@
                                                 <span class="count">13</span>
                                                 <span>All the new features that have been used in Windows 11</span>
                                             </div>
-                                            <p><span>11 hours ago</span> by <a href="user-profile.html">Vickie White</a></p>
+                                            <p><span>11 hours ago</span> by <a href="{{route('user.profile')}}">Vickie White</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -251,7 +251,7 @@
                                                 <span class="count">10</span>
                                                 <span>Which language is the most popular in the web right now?</span>
                                             </div>
-                                            <p><span>13 hours ago</span> by <a href="user-profile.html">Jose Merz</a></p>
+                                            <p><span>13 hours ago</span> by <a href="{{route('user.profile')}}">Jose Merz</a></p>
                                         </li>
                                     </ul>
                                 </div>
@@ -263,7 +263,7 @@
                                                 <span class="count">21</span>
                                                 <span>What could be UX design software?</span>
                                             </div>
-                                            <p><span>8 hours ago</span> by <a href="user-profile.html">Alan Woodson</a></p>
+                                            <p><span>8 hours ago</span> by <a href="{{route('user.profile')}}">Alan Woodson</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -271,7 +271,7 @@
                                                 <span class="count">5</span>
                                                 <span>What is the most important thing in learning design?</span>
                                             </div>
-                                            <p><span>10 hours ago</span> by <a href="user-profile.html">Juan McPhail</a></p>
+                                            <p><span>10 hours ago</span> by <a href="{{route('user.profile')}}">Juan McPhail</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -279,7 +279,7 @@
                                                 <span class="count">13</span>
                                                 <span>All the new features that have been used in Windows 11</span>
                                             </div>
-                                            <p><span>11 hours ago</span> by <a href="user-profile.html">Vickie White</a></p>
+                                            <p><span>11 hours ago</span> by <a href="{{route('user.profile')}}">Vickie White</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -287,7 +287,7 @@
                                                 <span class="count">10</span>
                                                 <span>Which language is the most popular in the web right now?</span>
                                             </div>
-                                            <p><span>13 hours ago</span> by <a href="user-profile.html">Jose Merz</a></p>
+                                            <p><span>13 hours ago</span> by <a href="{{route('user.profile')}}">Jose Merz</a></p>
                                         </li>
                                     </ul>
                                 </div>
@@ -299,7 +299,7 @@
                                                 <span class="count">21</span>
                                                 <span>What could be UX design software?</span>
                                             </div>
-                                            <p><span>8 hours ago</span> by <a href="user-profile.html">Alan Woodson</a></p>
+                                            <p><span>8 hours ago</span> by <a href="{{route('user.profile')}}">Alan Woodson</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -307,7 +307,7 @@
                                                 <span class="count">5</span>
                                                 <span>What is the most important thing in learning design?</span>
                                             </div>
-                                            <p><span>10 hours ago</span> by <a href="user-profile.html">Juan McPhail</a></p>
+                                            <p><span>10 hours ago</span> by <a href="{{route('user.profile')}}">Juan McPhail</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -315,7 +315,7 @@
                                                 <span class="count">13</span>
                                                 <span>All the new features that have been used in Windows 11</span>
                                             </div>
-                                            <p><span>11 hours ago</span> by <a href="user-profile.html">Vickie White</a></p>
+                                            <p><span>11 hours ago</span> by <a href="{{route('user.profile')}}">Vickie White</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -323,7 +323,7 @@
                                                 <span class="count">10</span>
                                                 <span>Which language is the most popular in the web right now?</span>
                                             </div>
-                                            <p><span>13 hours ago</span> by <a href="user-profile.html">Jose Merz</a></p>
+                                            <p><span>13 hours ago</span> by <a href="{{route('user.profile')}}">Jose Merz</a></p>
                                         </li>
                                     </ul>
                                 </div>
@@ -335,7 +335,7 @@
                                                 <span class="count">21</span>
                                                 <span>What could be UX design software?</span>
                                             </div>
-                                            <p><span>8 hours ago</span> by <a href="user-profile.html">Alan Woodson</a></p>
+                                            <p><span>8 hours ago</span> by <a href="{{route('user.profile')}}">Alan Woodson</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -343,7 +343,7 @@
                                                 <span class="count">5</span>
                                                 <span>What is the most important thing in learning design?</span>
                                             </div>
-                                            <p><span>10 hours ago</span> by <a href="user-profile.html">Juan McPhail</a></p>
+                                            <p><span>10 hours ago</span> by <a href="{{route('user.profile')}}">Juan McPhail</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -351,7 +351,7 @@
                                                 <span class="count">13</span>
                                                 <span>All the new features that have been used in Windows 11</span>
                                             </div>
-                                            <p><span>11 hours ago</span> by <a href="user-profile.html">Vickie White</a></p>
+                                            <p><span>11 hours ago</span> by <a href="{{route('user.profile')}}">Vickie White</a></p>
                                         </li>
                                         <li class="d-flex justify-content-between">
                                             <div class="top-posts-list">
@@ -359,7 +359,7 @@
                                                 <span class="count">10</span>
                                                 <span>Which language is the most popular in the web right now?</span>
                                             </div>
-                                            <p><span>13 hours ago</span> by <a href="user-profile.html">Jose Merz</a></p>
+                                            <p><span>13 hours ago</span> by <a href="{{route('user.profile')}}">Jose Merz</a></p>
                                         </li>
                                     </ul>
                                 </div>

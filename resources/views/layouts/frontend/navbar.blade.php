@@ -3,7 +3,7 @@
         <div class="mobile-responsive-menu">
             <div class="logo">
                 <a href="{{route('home')}}">
-                    <img src="{{asset('frontend/assets/images/logo.png')}}" alt="logo">
+                    <img src="{{asset('frontend/assets/images/logo.jpg')}}" alt="logo">
                 </a>
             </div>
         </div>
@@ -14,7 +14,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="{{route('home')}}">
-                <img src="{{asset('frontend/assets/images/logo.png')}}" alt="logo">
+                <img src="{{asset('frontend/assets/images/logo.jpg')}}" alt="logo">
             </a>
 
             <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -25,28 +25,28 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{asset('about')}}" class="nav-link">
+                        <a href="{{route('about')}}" class="nav-link">
                             About Us
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link dropdown-toggle">
-                            Blog
-                        </a>
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="#" class="nav-link dropdown-toggle">--}}
+{{--                            Blog--}}
+{{--                        </a>--}}
 
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="{{asset('blog')}}" class="nav-link">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{asset('blog-details')}}" class="nav-link">Blog Details</a>
-                            </li>
-                        </ul>
-                    </li>
+{{--                        <ul class="dropdown-menu">--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('blog')}}" class="nav-link">Blog</a>--}}
+{{--                            </li>--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('blog.details')}}" class="nav-link">Blog Details</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 
                     <li class="nav-item">
-                        <a href="{{asset('contact-us')}}" class="nav-link">Contact Us</a>
+                        <a href="{{route('contact.us')}}" class="nav-link">Contact Us</a>
                     </li>
 
                     <li class="nav-item">
@@ -56,22 +56,22 @@
 
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a href="{{asset('activity')}}" class="nav-link">Activity</a>
+                                <a href="{{route('activity')}}" class="nav-link">Activity</a>
+                            </li>
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('referral')}}" class="nav-link">Referrals</a>--}}
+{{--                            </li>--}}
+                            <li class="nav-item">
+                                <a href="{{route('privacy.policy')}}" class="nav-link">Privacy Policy</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{asset('referrals')}}" class="nav-link">Referrals</a>
+                                <a href="{{route('terms.conditions')}}" class="nav-link">Terms & Conditions</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{asset('privacy.policy')}}" class="nav-link">Privacy Policy</a>
+                                <a href="{{route('coming.soon')}}" class="nav-link">Coming Soon</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{asset('terms.conditions')}}" class="nav-link">Terms & Conditions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{asset('coming.soon')}}" class="nav-link">Coming Soon</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{asset('404')}}" class="nav-link">404 Page</a>
+                                <a href="{{route('notFound')}}" class="nav-link">404 Page</a>
                             </li>
                         </ul>
                     </li>
@@ -89,12 +89,12 @@
                             </form>
                         </li>
                         <li>
-                            <a href="{{asset('log-in')}}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">
+                            <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">
                                 Log in
                             </a>
                         </li>
                         <li>
-                            <a href="{{asset('sign-up')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                            <a href="{{route('usersignup')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
                                 Sign up
                             </a>
                         </li>
@@ -129,12 +129,12 @@
                             </form>
                         </li>
                         <li>
-                            <a href="{{asset('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-3" class="active">
+                            <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-3" class="active">
                                 Log in
                             </a>
                         </li>
                         <li>
-                            <a href="{{asset('usersignup')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-4">
+                            <a href="{{route('usersignup')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-4">
                                 Sign up
                             </a>
                         </li>

@@ -19,7 +19,7 @@
                     <div class="page-title-list">
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="{{('home')}}">Home</a>
                             </li>
                             <li class="active">
                                 Blog
@@ -38,15 +38,15 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
-                        <a href="blog-details.html">
-                            <img src="{{asset('assets/images/blog/blog-1.jpg')}}" alt="Image">
+                        <a href="{{route('blog.details')}}">
+                            <img src="{{asset('frontend/assets/images/blog/blog-1.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
-                                    <a href="blog.html">
-                                        <img src="{{asset('assets/images/blog/user-1.jpg')}}" alt="Image">
+                                    <a href="{{route('blog')}}">
+                                        <img src="{{asset('frontend/assets/images/blog/user-1.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -56,7 +56,7 @@
                             </ul>
 
                             <h3>
-                                <a href="blog-details.html">
+                                <a href="{{route('blog.details')}}">
                                     Top 7 server hosting platforms for everyone
                                 </a>
                             </h3>
@@ -68,15 +68,15 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
-                        <a href="blog-details.html">
-                            <img src="{{asset('assets/images/blog/blog-2.jpg')}}" alt="Image">
+                        <a href="{{route('blog.details')}}">
+                            <img src="{{asset('frontend/assets/images/blog/blog-2.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
-                                    <a href="blog.html">
-                                        <img src="{{asset('assets/images/blog/user-2.jpg')}}" alt="Image">
+                                    <a href="{{route('blog')}}">
+                                        <img src="{{asset('frontend/assets/images/blog/user-2.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -86,7 +86,7 @@
                             </ul>
 
                             <h3>
-                                <a href="blog-details.html">
+                                <a href="{{route('blog.details')}}">
                                     Mapping the path from the new journey
                                 </a>
                             </h3>
@@ -98,15 +98,15 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
-                        <a href="blog-details.html">
-                            <img src="{{asset('assets/images/blog/blog-3.jpg')}}" alt="Image">
+                        <a href="{{route('blog.details')}}">
+                            <img src="{{asset('frontend/assets/images/blog/blog-3.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
-                                    <a href="blog.html">
-                                        <img src="{{asset('assets/images/blog/user-3.jpg')}}" alt="Image">
+                                    <a href="{{route('blog')}}">
+                                        <img src="{{asset('frontend/assets/images/blog/user-3.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -116,7 +116,7 @@
                             </ul>
 
                             <h3>
-                                <a href="blog-details.html">
+                                <a href="{{route('blog.details')}}">
                                     How you can write social questions and answers
                                 </a>
                             </h3>
@@ -128,15 +128,15 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
-                        <a href="blog-details.html">
-                            <img src="{{asset('assets/images/blog/blog-4.jpg')}}" alt="Image">
+                        <a href="{{route('blog.details')}}">
+                            <img src="{{asset('frontend/assets/images/blog/blog-4.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
-                                    <a href="blog.html">
-                                        <img src="{{asset('assets/images/blog/user-4.jpg')}}" alt="Image">
+                                    <a href="{{route('blog')}}">
+                                        <img src="{{asset('frontend/assets/images/blog/user-4.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -146,7 +146,7 @@
                             </ul>
 
                             <h3>
-                                <a href="blog-details.html">
+                                <a href="{{route('blog.details')}}">
                                     This is the important thing when I write social questions and answers
                                 </a>
                             </h3>
@@ -158,15 +158,15 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
-                        <a href="blog-details.html">
-                            <img src="{{asset('assets/images/blog/blog-5.jpg')}}" alt="Image">
+                        <a href="{{route('blog.details')}}">
+                            <img src="{{asset('frontend/assets/images/blog/blog-5.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
-                                    <a href="blog.html">
-                                        <img src="{{asset('assets/images/blog/user-5.jpg')}}" alt="Image">
+                                    <a href="{{route('blog')}}">
+                                        <img src="{{asset('frontend/assets/images/blog/user-5.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -176,7 +176,7 @@
                             </ul>
 
                             <h3>
-                                <a href="blog-details.html">
+                                <a href="{{route('blog.details')}}">
                                     How do we fix WordPress security issues without any hassle
                                 </a>
                             </h3>
@@ -188,15 +188,15 @@
 
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-single-item">
-                        <a href="blog-details.html">
-                            <img src="{{asset('assets/images/blog/blog-6.jpg')}}" alt="Image">
+                        <a href="{{route('blog.details')}}">
+                            <img src="{{asset('frontend/assets/images/blog/blog-6.jpg')}}" alt="Image">
                         </a>
 
                         <div class="blog-content">
                             <ul>
                                 <li>
-                                    <a href="blog.html">
-                                        <img src="{{asset('assets/images/blog/user-6.jpg')}}" alt="Image">
+                                    <a href="{{route('blog')}}">
+                                        <img src="{{asset('frontend/assets/images/blog/user-6.jpg')}}" alt="Image">
                                         <span>Marissa Cress</span>
                                     </a>
                                 </li>
@@ -206,7 +206,7 @@
                             </ul>
 
                             <h3>
-                                <a href="blog-details.html">
+                                <a href="{{route('blog.details')}}">
                                     Adding over a million subscribers across Daily Social Questions and Answers
                                 </a>
                             </h3>
@@ -218,14 +218,14 @@
 
                 <div class="col-lg-12">
                     <div class="pagination-area mt-0 mb-0">
-                        <a href="blog.html" class="next page-numbers">
+                        <a href="{{route('blog')}}" class="next page-numbers">
                             <i class="ri-arrow-left-line"></i>
                         </a>
                         <span class="page-numbers current" aria-current="page">1</span>
-                        <a href="blog.html" class="page-numbers">2</a>
-                        <a href="blog.html" class="page-numbers">3</a>
+                        <a href="{{route('blog')}}" class="page-numbers">2</a>
+                        <a href="{{route('blog')}}" class="page-numbers">3</a>
 
-                        <a href="blog.html" class="next page-numbers">
+                        <a href="{{route('blog')}}" class="next page-numbers">
                             <i class="ri-arrow-right-line"></i>
                         </a>
                     </div>
