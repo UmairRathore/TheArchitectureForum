@@ -47,10 +47,6 @@ Route::get('/email/verify/{email}/{token}', [RegisterationController::class, 've
 
 
 
-
-
-
-
 //Frontend
 
 //    Frontend MAIN
