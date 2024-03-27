@@ -9,14 +9,17 @@
             <div class="category">
                 <h3>
                     <i class="ri-list-unordered"></i>
-                    Categories
+                    Topics
+                    <?php
+                           $topics = \App\Models\Topic::all();
+                    ?>
                 </h3>
 
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>Select category</option>
-                    <option value="1">Discussion</option>
-                    <option value="2">Language</option>
-                    <option value="3">Analytics</option>
+                    <option selected disabled>Select category</option>
+                  @foreach($topics as $topic)
+                        <option value="{{$topic->id}}">{{$topic->title}}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -125,59 +128,30 @@
                 <h3>
                     <i class="ri-discuss-line"></i>
                     Top members
+                <?php
+                    $users = \App\Models\User::all();
+                    ?>
                 </h3>
 
                 <ul>
+                    @foreach($users as $user)
                     <li>
                         <a href="{{route('groups')}}">
-                            <img src="{{asset('frontend/assets/images/user/user-8.jpg')}}" alt="Image">
-                            <p>Yong Spears <span>(5k Points)</span></p>
+                            @if($user->profile_image)
+                            <img src="{{asset($user->profile_image)}}" alt="Image" style="max-height: 30px;">
+                            @else
+                            <img src="{{asset('frontend/assets/images/user/user-8.jpg')}}" alt="Image" style="max-height: 30px;">
+                            @endif
+                            <p>{{$user->name}} <span>(5k Points)</span></p>
                             <span>99 Questions</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{route('groups')}}">
-                            <img src="{{asset('frontend/assets/images/user/user-9.jpg')}}" alt="Image">
-                            <p>Denise Jones <span>(4k Points)</span></p>
-                            <span>85 Questions</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('groups')}}">
-                            <img src="{{asset('frontend/assets/images/user/user-10.jpg')}}" alt="Image">
-                            <p>Dennis Rogers <span>(3k Points)</span></p>
-                            <span>80 Questions</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('groups')}}">
-                            <img src="{{asset('frontend/assets/images/user/user-11.jpg')}}" alt="Image">
-                            <p>Naomi Barnett <span>(1k Points)</span></p>
-                            <span>60 Questions</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('groups')}}">
-                            <img src="{{asset('frontend/assets/images/user/user-12.jpg')}}" alt="Image">
-                            <p>Mary Wenger <span>(952 Points)</span></p>
-                            <span>50 Questions</span>
-                        </a>
-                    </li>
+                        @endforeach
+
                 </ul>
             </div>
         </div>
 
-        <div class="right-siderbar-common">
-            <div class="ads">
-                <a href="{{route('most.detail.answered')}}">
-                    <img src="{{asset('frontend/assets/images/ad.jpg')}}" alt="Image">
-                </a>
-
-                <a href="{{route('most.detail.answered')}}" class="default-btn">
-                    Learn More
-                </a>
-            </div>
-        </div>
 
         <div class="right-siderbar-common">
             <div class="trending-tags">
@@ -185,53 +159,17 @@
                     <i class="ri-price-tag-3-line"></i>
                     Trending Tags
                 </h3>
-
+<?php
+                $tags = \App\Models\Tags::all();
+                ?>
                 <ul>
+                    @foreach($tags as $tag)
                     <li>
                         <a href="{{route('tags')}}">
-                            discussion
+                            {{$tag->title}}
                         </a>
                     </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            analytics
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            company
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            life
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            computer
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            interview
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            grammer
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            convertion
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{route('tags')}}">
-                            google
-                        </a>
-                    </li>
+                   @endforeach
                 </ul>
             </div>
         </div>
