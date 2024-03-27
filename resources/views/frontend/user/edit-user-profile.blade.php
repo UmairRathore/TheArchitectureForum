@@ -40,13 +40,13 @@
                                     <button class="nav-link" id="change-password-tab" data-bs-toggle="tab" data-bs-target="#change-password" type="button" role="tab" aria-controls="change-password" aria-selected="false">Change Password</button>
                                 </li>
 
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="email-settings-tab" data-bs-toggle="tab" data-bs-target="#email-settings" type="button" role="tab" aria-controls="email-settings" aria-selected="false">Email Settings</button>
-                                </li>
+{{--                                <li class="nav-item" role="presentation">--}}
+{{--                                    <button class="nav-link" id="email-settings-tab" data-bs-toggle="tab" data-bs-target="#email-settings" type="button" role="tab" aria-controls="email-settings" aria-selected="false">Email Settings</button>--}}
+{{--                                </li>--}}
 
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="privacy-tab" data-bs-toggle="tab" data-bs-target="#privacy" type="button" role="tab" aria-controls="privacy" aria-selected="false">Privacy</button>
-                                </li>
+{{--                                <li class="nav-item" role="presentation">--}}
+{{--                                    <button class="nav-link" id="privacy-tab" data-bs-toggle="tab" data-bs-target="#privacy" type="button" role="tab" aria-controls="privacy" aria-selected="false">Privacy</button>--}}
+{{--                                </li>--}}
 
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="delete-account-tab" data-bs-toggle="tab" data-bs-target="#delete-account" type="button" role="tab" aria-controls="delete-account" aria-selected="false">Delete Account</button>
@@ -55,7 +55,7 @@
 
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active edit-profile" id="edit-profile" role="tabpanel" aria-labelledby="edit-profile-tab">
-                                    <div class="public-information">
+                                    <div class="public-information" style="margin-bottom: 5px">
                                         <h3>Public information</h3>
 
                                         <div class="information d-flex align-items-center">
@@ -123,6 +123,7 @@
                                                 </div>
                                             </div>
                                         </form>
+
                                     </div>
                                 </div>
 
@@ -153,155 +154,155 @@
                                     </div>
                                 </div>
 
-                                <div class="tab-pane fade edit-profile" id="email-settings" role="tabpanel" aria-labelledby="email-settings-tab">
-                                    <div class="public-information">
-                                        <h3>Email settings</h3>
+{{--                                <div class="tab-pane fade edit-profile" id="email-settings" role="tabpanel" aria-labelledby="email-settings-tab">--}}
+{{--                                    <div class="public-information">--}}
+{{--                                        <h3>Email settings</h3>--}}
 
-                                        <form class="edeite-content">
-                                            <div class="form-group email-save">
-                                                <label>Email Address</label>
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Rosemary@gmail.com">
+{{--                                        <form class="edeite-content">--}}
+{{--                                            <div class="form-group email-save">--}}
+{{--                                                <label>Email Address</label>--}}
+{{--                                                <input type="email" class="form-control" name="email" id="email" placeholder="Rosemary@gmail.com">--}}
 
-                                                <button class="default-btn">Save change</button>
-                                            </div>
+{{--                                                <button class="default-btn">Save change</button>--}}
+{{--                                            </div>--}}
 
-                                            <ul class="email-settings">
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-1" checked>
-                                                        <label class="form-check-label" for="flexCheckDefault-1">
-                                                            New products and feature updates, as well as occasional company announcements
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-2" checked>
-                                                        <label class="form-check-label" for="flexCheckDefault-2">
-                                                            Timely advice and reminders to help you make the most of our feature
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-3" checked>
-                                                        <label class="form-check-label" for="flexCheckDefault-3">
-                                                            An email rounding up the best news from the world of software development
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-4" checked>
-                                                        <label class="form-check-label" for="flexCheckDefault-4">
-                                                            Notifications about bounties, reputation and more. Hint: sometimes involves swag.
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-5">
-                                                        <label class="form-check-label" for="flexCheckDefault-5">
-                                                            Invitations to participate in surveys, usability tests, and more. Only a few per year.
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-6">
-                                                        <label class="form-check-label" for="flexCheckDefault-6">
-                                                            Occasional emails highlighting special jobs and companies
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-7" checked>
-                                                        <label class="form-check-label" for="flexCheckDefault-7">
-                                                            Do you like to unsubscribe from all the mails?
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-8" checked>
-                                                        <label class="form-check-label" for="flexCheckDefault-8">
-                                                            Do you like to get mails when new replies are added to your answers?
-                                                        </label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </form>
-                                    </div>
-                                </div>
+{{--                                            <ul class="email-settings">--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-1" checked>--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-1">--}}
+{{--                                                            New products and feature updates, as well as occasional company announcements--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-2" checked>--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-2">--}}
+{{--                                                            Timely advice and reminders to help you make the most of our feature--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-3" checked>--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-3">--}}
+{{--                                                            An email rounding up the best news from the world of software development--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-4" checked>--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-4">--}}
+{{--                                                            Notifications about bounties, reputation and more. Hint: sometimes involves swag.--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-5">--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-5">--}}
+{{--                                                            Invitations to participate in surveys, usability tests, and more. Only a few per year.--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-6">--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-6">--}}
+{{--                                                            Occasional emails highlighting special jobs and companies--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-7" checked>--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-7">--}}
+{{--                                                            Do you like to unsubscribe from all the mails?--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                                <li>--}}
+{{--                                                    <div class="form-check">--}}
+{{--                                                        <input class="form-check-input" type="checkbox"  id="flexCheckDefault-8" checked>--}}
+{{--                                                        <label class="form-check-label" for="flexCheckDefault-8">--}}
+{{--                                                            Do you like to get mails when new replies are added to your answers?--}}
+{{--                                                        </label>--}}
+{{--                                                    </div>--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
+{{--                                        </form>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
-                                <div class="tab-pane fade edit-profile" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">
-                                    <div class="public-information">
-                                        <h3>Privacy Settings</h3>
+{{--                                <div class="tab-pane fade edit-profile" id="privacy" role="tabpanel" aria-labelledby="privacy-tab">--}}
+{{--                                    <div class="public-information">--}}
+{{--                                        <h3>Privacy Settings</h3>--}}
 
-                                        <form class="edeite-content">
-                                            <div class="form-group">
-                                                <label>Profile Picture</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Email</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Country</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Phone</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Gender</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Social links</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Website</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Biography</label>
-                                                <select class="form-select form-control" aria-label="Default select example">
-                                                    <option selected>Visibility</option>
-                                                    <option value="1">Hidden</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group mb-0">
-                                                <button class="default-btn">Save</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+{{--                                        <form class="edeite-content">--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Profile Picture</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Email</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Country</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Phone</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Gender</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Social links</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Website</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group">--}}
+{{--                                                <label>Biography</label>--}}
+{{--                                                <select class="form-select form-control" aria-label="Default select example">--}}
+{{--                                                    <option selected>Visibility</option>--}}
+{{--                                                    <option value="1">Hidden</option>--}}
+{{--                                                </select>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="form-group mb-0">--}}
+{{--                                                <button class="default-btn">Save</button>--}}
+{{--                                            </div>--}}
+{{--                                        </form>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
 
                                 <div class="tab-pane fade edit-profile" id="delete-account" role="tabpanel" aria-labelledby="delete-account-tab">
                                     <div class="public-information">
@@ -331,6 +332,7 @@
             </div>
         </div>
     </div>
+
     <!-- End Mail Content Area -->
 
 
