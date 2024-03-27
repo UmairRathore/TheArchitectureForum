@@ -25,13 +25,7 @@
                             </li>
                         </ul>
 
-                        <form class="aq-form">
-                            <i class="ri-search-line"></i>
-                            <input type="text" class="form-control" placeholder="Have a question? Ask or enter a search">
-                            <button class="aq-btn">
-                                Ask Question
-                            </button>
-                        </form>
+
 
                         <ul class="nav nav-tabs questions-tabs d-flex justify-content-between" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
