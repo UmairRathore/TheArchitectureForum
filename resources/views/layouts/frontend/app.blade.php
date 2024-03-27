@@ -227,7 +227,7 @@
                         </div>
 
                         <div class="col-12">
-                            <p class="create">Don't have an account? <a href="{{route('usersignup')}}">Sign Up</a></p>
+                            <p class="create">Don't have an account? <a href="{{route('register')}}">Sign Up</a></p>
                         </div>
                     </div>
                 </form>
