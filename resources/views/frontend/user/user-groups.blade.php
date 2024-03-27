@@ -29,13 +29,7 @@
                             </li>
                         </ul>
 
-                        <form class="aq-form">
-                            <i class="ri-search-line"></i>
-                            <input type="text" class="form-control" placeholder="Have a question? Ask or enter a search">
-                            <button class="aq-btn">
-                                Ask Question
-                            </button>
-                        </form>
+
 
                         <div class="group-content">
                             <div class="row justify-content-center">
