@@ -35,11 +35,108 @@
 
 <!-- Start Mail Content Area -->
 <div class="main-content-area ptb-100">
+    <div class="container" style="margin-bottom: 20px">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="{{asset('frontend/assets/images/badges/badges-1.png')}}" class="card-img-top" alt="Image 1" style="max-width: 35%; height: 50%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Question 1</h5>
+                                    <p class="card-text">Answer of the this question is no 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="{{asset('frontend/assets/images/badges/badges-1.png')}}" class="card-img-top" alt="Image 1" style="max-width: 35%; height: 50%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Question 2</h5>
+                                    <p class="card-text">Answer of the this question is no 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <img src="{{asset('frontend/assets/images/badges/badges-1.png')}}" class="card-img-top" alt="Image 1" style="max-width: 35%; height: 50%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Question 1</h5>
+                                    <p class="card-text">Answer of the this question is no 2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+<div>
+
+
+</div>
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
                 <div class="sidebar-menu-wrap">
                     @include('layouts.frontend.components.leftSideBar')
+                </div>
+            </div>
+            <div class="modal fade" id="askQuestionModal" tabindex="-1" aria-labelledby="askQuestionModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="askQuestionModalLabel">Create a Question</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body mx-auto" style="padding: 20px; text-align: center;">
+                            <form class="your-answer-form">
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" class="form-control" id="title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="category">Category</label>
+                                    <select class="form-select form-control" id="category" aria-label="Default select example">
+                                        <option selected>Select category</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tags">Tags (Add up to 5 tags to describe what your question is about)</label>
+                                    <input type="text" class="form-control" id="tags">
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <div id="txtEditor"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="file-upload-account-info">
+                                        <input type="file" name="file" id="file-2" class="inputfile">
+                                        <label class="upload">
+                                            <i class="ri-link"></i>
+                                            Upload Photo
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary" style="background-color: black; color: white; border-block-color: black">Post your answer</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -48,7 +145,7 @@
                     <form class="aq-form">
                         <i class="ri-search-line"></i>
                         <input type="text" class="form-control" placeholder="Have a question? Ask or enter a search">
-                        <button class="aq-btn">
+                        <button type="button" class="aq-btn" data-bs-toggle="modal" data-bs-target="#askQuestionModal">
                             Ask Question
                         </button>
                     </form>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -81,43 +82,11 @@ class HomeController extends Controller
 
     public function faq ( )
     {
-        return view ('frontend.pages.faq');
+        $faqs = Faq::all();
+        return view('frontend.pages.faq', compact('faqs'));
     }
 
 
-
-    public function groups ( )
-    {
-        return view ('frontend.pages.groups');
-    }
-
-
-
-    public function technology ( )
-    {
-        return view ('frontend.pages.technology');
-    }
-
-
-
-    public function polls ( )
-    {
-        return view ('frontend.pages.polls');
-    }
-
-
-
-    public function communities ( )
-    {
-        return view ('frontend.pages.communities');
-    }
-
-
-
-    public function education ( )
-    {
-        return view ('frontend.pages.education');
-    }
 
 
     public function user ( )
