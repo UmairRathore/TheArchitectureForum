@@ -39,10 +39,10 @@
                                 <input type="hidden" name="id" value="{{$admin->id}}">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="first_name">First Name</label>
+                                        <label for="fname">First Name</label>
                                         <div class="input-group">
-                                            <input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror"  value="{{$admin->first_name}}" placeholder="Enter First Name" >
-                                            @error('first_name')
+                                            <input type="text" name="fname" class="form-control @error('fname') is-invalid @enderror"  value="{{$admin->fname}}" placeholder="Enter First Name" >
+                                            @error('fname')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -50,10 +50,10 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="last_name">Last Name</label>
+                                        <label for="lname">Last Name</label>
                                         <div class="input-group">
-                                            <input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" value="{{$admin->last_name}}" placeholder="Enter Last Name" >
-                                            @error('last_name')
+                                            <input type="text" name="lname" class="form-control @error('lname') is-invalid @enderror" value="{{$admin->lname}}" placeholder="Enter Last Name" >
+                                            @error('lname')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
