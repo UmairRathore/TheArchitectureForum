@@ -6,7 +6,7 @@ is the file you need to edit to change the look of the template.
 
 This files table contents are outlined below>>>>>
 
-******************************************* 
+*******************************************
 ** - DEFAULT AREA STYLE - **
 
 ** - Default Btn Area Style
@@ -78,7 +78,7 @@ a {
 	}
 }
 button {
-    outline: 0 !important; 
+    outline: 0 !important;
 	box-shadow: none;
 	border: none;
 	padding: 0;
@@ -104,7 +104,7 @@ p {
 	&:last-child {
         margin-bottom: 0;
     }
-} 
+}
 img {
     max-width: 100%;
     height: auto;
@@ -135,7 +135,7 @@ img {
         box-shadow: unset;
     }
 }
-textarea {   
+textarea {
     &.form-control {
         height: auto;
     }
@@ -236,7 +236,7 @@ Section Title Area Style*/
 	}
 	h2 {
 		font-size: 35px;
-		margin-bottom: 20px; 
+		margin-bottom: 20px;
 		span {
 			color: $main-color;
 		}
@@ -295,7 +295,7 @@ Navbar Area Style
         position: fixed;
 		animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 	}
-} 
+}
 .desktop-nav {
     padding: {
         top: 0;
@@ -461,7 +461,7 @@ Navbar Area Style
                                     top: 0;
                                     opacity: 0;
                                     visibility: hidden;
-        
+
                                     li {
                                         a {
                                             color: $black-color;
@@ -477,7 +477,7 @@ Navbar Area Style
                                             li {
                                                 a {
                                                     color: $black-color;
-                                                    
+
                                                     &:hover, &:focus, &.active {
                                                         color: $main-color;
                                                     }
@@ -490,7 +490,7 @@ Navbar Area Style
                                                     li {
                                                         a {
                                                             color: $black-color;
-                                                            
+
                                                             &:hover, &:focus, &.active {
                                                                 color: $main-color;
                                                             }
@@ -503,7 +503,7 @@ Navbar Area Style
                                                             li {
                                                                 a {
                                                                     color: $black-color;
-                                                                    
+
                                                                     &:hover, &:focus, &.active {
                                                                         color: $main-color;
                                                                     }
@@ -1220,7 +1220,7 @@ Left SIdebar Area Style
 				background: #888;
 			}
 			/* Handle on hover */
-			&::-webkit-scrollbar-thumb:hover {  
+			&::-webkit-scrollbar-thumb:hover {
 				background: #555;
 			}
 			li {
@@ -1680,7 +1680,7 @@ Right Sidebar Area Style
 					}
 				}
 			}
-			
+
 		}
 		.answer-count {
 			ul {
@@ -1981,7 +1981,7 @@ Communities Area Style
 Page Title Area Style
 ======================================================*/
 .page-title-area {
-	background-color: #e8f4f4;
+	background-color: #ffffff;
 	.page-title-content {
 		position: relative;
 		h2 {
@@ -3108,7 +3108,7 @@ About Area CSS
 	margin-top: -100px;
 	.col-lg-4 {
 		&:last-child {
-			.single-monthly-item { 
+			.single-monthly-item {
 				&::before {
 					display: none;
 				}
@@ -3348,9 +3348,9 @@ About Area CSS
 	}
 }
 
-/* 
+/*
 Main Contact Area Style
-=====================================================*/ 
+=====================================================*/
 .contact-form {
 	background-color: $white-color;
 	h2 {
@@ -4131,9 +4131,9 @@ User Area CSS
 	}
 }
 
-/* 
+/*
 Main Content Text Style
-=====================================================*/ 
+=====================================================*/
 .main-content-text {
 	h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 15px;
@@ -4219,7 +4219,7 @@ Main Content Text Style
 		max-width: 860px;
 		margin: auto;
 	}
-	
+
 }
 
 /*
@@ -4425,7 +4425,7 @@ Preloader Area Style*/
 }
 
 /*
-Go Top Style*/ 
+Go Top Style*/
 .go-top {
 	position: fixed;
 	cursor: pointer;
@@ -4515,7 +4515,7 @@ Go Top Style*/
 		right: 3%;
 		top: 84%;
 		transform: scale(1);
-	} 
+	}
 }
 
 /*
