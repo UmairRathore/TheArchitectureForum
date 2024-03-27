@@ -3,7 +3,7 @@
         <div class="mobile-responsive-menu">
             <div class="logo">
                 <a href="{{route('home')}}">
-                    <img src="{{asset('frontend/assets/images/logo.jpg')}}" alt="logo">
+                    <img src="{{asset('frontend/assets/logo.jpg')}}" alt="logo">
                 </a>
             </div>
         </div>
@@ -13,8 +13,10 @@
 <div class="desktop-nav">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="{{route('home')}}">
-                <img src="{{asset('frontend/assets/images/logo.jpg')}}" alt="logo">
+            <a class="navbar-brand" href="{{ route('home') }}">
+                <div style="background-color: white; padding: 5px;">
+                    <img src="{{ asset('frontend/assets/logo.jpg') }}" alt="logo" style="max-height: 30px;">
+                </div>
             </a>
 
             <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -55,9 +57,9 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="{{route('activity')}}" class="nav-link">Activity</a>
-                            </li>
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('activity')}}" class="nav-link">Activity</a>--}}
+{{--                            </li>--}}
 {{--                            <li class="nav-item">--}}
 {{--                                <a href="{{route('referral')}}" class="nav-link">Referrals</a>--}}
 {{--                            </li>--}}
@@ -88,16 +90,25 @@
                                 </button>
                             </form>
                         </li>
+                        @if(auth()->user()->role == 'admin')
+
+                            <li>
+                                <a href="{{route('backend.index')}}">
+                                   Dashboard
+                                </a>
+                            </li>
+                        @else
                         <li>
                             <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">
                                 Log in
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('usersignup')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                            <a href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
                                 Sign up
                             </a>
                         </li>
+                            @endif
                     </ul>
                 </div>
             </div>
@@ -134,7 +145,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('usersignup')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-4">
+                            <a href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-4">
                                 Sign up
                             </a>
                         </li>
