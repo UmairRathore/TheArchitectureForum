@@ -91,7 +91,7 @@
                         </div>
                         <div class="ms-panel-body">
                             <div class="table-responsive">
-                                <table id="userlist" class="table table-striped thead-primary w-100">
+                                <table id="datatable" class="table table-striped thead-primary w-100">
                                     @if(Session('info_deleted'))
                                         <div class="alert alert-danger" role="alert">
                                             {{Session('info_deleted')}}
@@ -103,26 +103,23 @@
                                     <th>First Name</th>
                                     <th>Last Name</th>
                                     <th>Email</th>
-                                    <th>DOB</th>
                                     <th>Gender</th>
                                     <th>Joined Date</th>
-                                    <th>Role</th>
 {{--                                    <th>Status</th>--}}
                                     <th>Action</th>
                                     </thead>
                                     <tbody>
 
-                                    @foreach($users as $user)
+                                    @foreach($users as $item)
 
                                         <tr>
-                                            <td>{{$user->id}}</td>
-                                            <td>{{$user->first_name}}</td>
-                                            <td>{{$user->last_name}}</td>
-                                            <td>{{$user->email}}</td>
-                                            <td>{{$user->dob}}</td>
-                                            <td>{{$user->gender}}</td>
-                                            <td>{{$user->created_at}}</td>
-                                            <td>{{$user->name}}</td>
+                                            <td>{{$item->id}}</td>
+                                            <td>{{$item->fname}}</td>
+                                            <td>{{$item->lname}}</td>
+                                            <td>{{$item->email}}</td>
+
+                                            <td>{{$item->gender}}</td>
+                                            <td>{{$item->created_at}}</td>
 {{--                                            <td>--}}
 {{--                                                <label class="switch">--}}
 {{--                                                    <input type="checkbox" id="status" class="checkbox checkbox_list" data-id="{{ $user->id }}" value="{{ ($user->status == 1) ? 0 : 1 }}" data-url="{{route('status-user',$user->id)}}" name="status" {{ ($user->status == 1) ? 'checked' : '' }}>--}}
@@ -131,7 +128,7 @@
 {{--                                                <span style="display: none">{{ ($user->status == 1) ? 'Active' : 'false' }}</span>--}}
 {{--                                            </td>--}}
                                             <td>
-                                                    <a href="{{route('backend.delete-user',[$user->id])}}"onclick="return confirm('Are you sure?')" data-toggle="tooltip" data-placement="top" title="delete" class="far fa-trash-alt ms-text-danger"></a>
+                                                    <a href="{{route('backend.delete-user',[$item->id])}}"onclick="return confirm('Are you sure?')" data-toggle="tooltip" data-placement="top" title="delete" class="far fa-trash-alt ms-text-danger"></a>
 {{----}}
 {{--                                                    <a href="{{route('backend.edit-user',[$user->id])}}" data-toggle="tooltip" data-placement="top" title="Edit" class="fas fa-pencil-alt ms-text-primary"></a>--}}
                                             </td>

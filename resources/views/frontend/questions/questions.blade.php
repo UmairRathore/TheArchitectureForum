@@ -31,13 +31,7 @@
                             </li>
                         </ul>
 
-                        <form class="aq-form">
-                            <i class="ri-search-line"></i>
-                            <input type="text" class="form-control" placeholder="Have a question? Ask or enter a search">
-                            <button class="aq-btn">
-                                Ask Question
-                            </button>
-                        </form>
+
 
                         <div class="question-details-area">
                             <div class="question-details-content like-dislike">
