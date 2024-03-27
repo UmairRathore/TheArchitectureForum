@@ -25,7 +25,7 @@
 {{--    <!-- End About Banner Area -->--}}
 
     <!-- Start Monthly User Area -->
-    <div class="monthly-user-area">
+<div class="main-content-area ptb-100">
         <div class="container">
             <div class="monthly-user-bg pt-100 pb-70">
                 <div class="row justify-content-center">
@@ -52,11 +52,10 @@
                 </div>
             </div>
         </div>
-    </div>
+
     <!-- End Monthly User Area -->
 
     <!-- Start Why Choose Us Area -->
-    <div class="why-choose-us-area ptb-100">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -85,157 +84,11 @@
                 </div>
             </div>
         </div>
-    </div>
+<div>
+
+</div>
     <!-- End Why Choose Us Area -->
+</div>
 
-    <!-- Start Partner Area -->
-    <div class="partner-area ptb-100">
-        <div class="container">
-            <div class="partner-slide owl-carousel owl-theme">
-                <div class="partner-item">
-                    <img src="{{asset('frontend/assets/images/partner/partner-1.png')}}" alt="Image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('frontend/assets/images/partner/partner-2.png')}}" alt="Image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('frontend/assets/images/partner/partner-3.png')}}" alt="Image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('frontend/assets/images/partner/partner-4.png')}}" alt="Image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('frontend/assets/images/partner/partner-5.png')}}" alt="Image">
-                </div>
-                <div class="partner-item">
-                    <img src="{{asset('frontend/assets/images/partner/partner-6.png')}}" alt="Image">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Partner Area -->
 
-    <!-- Start team Area -->
-    <div class="team-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our leadership team</h2>
-            </div>
-
-            <div class="row justify-content-center">
-                <div class="col-xl-3 col-md-6">
-                    <div class="single-team-item">
-                        <img src="{{asset('frontend/assets/images/team/team-1.jpg')}}" alt="Image">
-                        <h3>Guillermo Brand</h3>
-                        <span>CEO</span>
-                        <ul class="d-flex justify-content-between align-items-center">
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                                <a href="https://www.twitter.com/" target="_blank">
-                                    <i class="ri-twitter-line"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <i class="ri-linkedin-fill"></i>
-                                </a>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <button class="default-btn">Follow</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="single-team-item">
-                        <img src="{{asset('frontend/assets/images/team/team-2.jpg')}}" alt="Image">
-                        <h3>Phyllis Cassidy</h3>
-                        <span>Writer</span>
-                        <ul class="d-flex justify-content-between align-items-center">
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                                <a href="https://www.twitter.com/" target="_blank">
-                                    <i class="ri-twitter-line"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <i class="ri-linkedin-fill"></i>
-                                </a>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <button class="default-btn">Follow</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="single-team-item">
-                        <img src="{{asset('frontend/assets/images/team/team-3.jpg')}}" alt="Image">
-                        <h3>Ian Martin</h3>
-                        <span>Manager</span>
-                        <ul class="d-flex justify-content-between align-items-center">
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                                <a href="https://www.twitter.com/" target="_blank">
-                                    <i class="ri-twitter-line"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <i class="ri-linkedin-fill"></i>
-                                </a>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <button class="default-btn">Follow</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="single-team-item">
-                        <img src="{{asset('frontend/assets/images/team/team-4.jpg')}}" alt="Image">
-                        <h3>Regina Mccloy</h3>
-                        <span>Writer</span>
-                        <ul class="d-flex justify-content-between align-items-center">
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <i class="ri-facebook-fill"></i>
-                                </a>
-                                <a href="https://www.twitter.com/" target="_blank">
-                                    <i class="ri-twitter-line"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <i class="ri-linkedin-fill"></i>
-                                </a>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="ri-instagram-line"></i>
-                                </a>
-                            </li>
-
-                            <li>
-                                <button class="default-btn">Follow</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End team Area -->
 @endsection

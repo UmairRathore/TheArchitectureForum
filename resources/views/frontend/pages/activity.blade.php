@@ -27,7 +27,7 @@
                             </div>
 
                             <div class="edit-btn">
-                                <a href="{{route('edit.profile')}}" class="default-btn">Edit profile</a>
+                                <a href="{{route('user.edit.profile')}}" class="default-btn">Edit profile</a>
                             </div>
                         </div>
 
@@ -191,7 +191,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Badges (0)</h3>
-                                                <p>You have no <a href="{{route('badges')}}">badges</a></p>
+                                                <p>You have no <a href="{{route('badge')}}">badges</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -202,7 +202,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Bookmarks (0)</h3>
-                                                <p>You have no <a href="{{route('badges')}}">bookmarked</a> questions.</p>
+                                                <p>You have no <a href="{{route('badge')}}">bookmarked</a> questions.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -246,7 +246,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>Votes (0)</h3>
-                                                <p>You have not cast any <a href="{{route('most.visited')}}">votes</a></p>
+                                                <p>You have not cast any <a href="{{route('most.visited.answered')}}">votes</a></p>
                                             </div>
                                         </div>
                                     </div>
