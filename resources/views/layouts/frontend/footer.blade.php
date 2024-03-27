@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="single-footer-widget style-two">
-                    <a href="{{route('home')}}">
-                        <img src="{{asset('frontend/assets/images/logo.jpg')}}" alt="Image">
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('frontend/assets/logo.jpg') }}" alt="Image" style="width: 150px; height: auto;">
                     </a>
 
                     <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.</p>
@@ -98,7 +98,7 @@
         </div>
     </div>
     <div class="footer-shape">
-        <img src="{{asset('frontend/assets/images/footer-shape.png')}}" alt="Image">
+{{--        <img src="{{asset('frontend/assets/images/footer-shape.png')}}" alt="Image">--}}
     </div>
 </div>
 <!-- End Footer Area -->
