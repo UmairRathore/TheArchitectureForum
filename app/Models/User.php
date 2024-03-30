@@ -21,7 +21,7 @@ class User extends Authenticatable
     protected $fillable = [
         'fname', 'lname', 'name', 'email', 'role', 'password', 'gender', 'location',
         'about_me', 'last_seen', 'instagram_url', 'facebook_url', 'twitter_url', 'profile_image',
-        'student_or_worker', 'student_or_worker_workplace'
+        'student_or_worker', 'student_or_worker_workplace','following','followers'
     ];
 
 
@@ -43,4 +43,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+//    public function badges()
+//    {
+//        return $this->belongsToMany(Badge::class, 'user_badges', 'user_id', 'badge_id');
+//    }
+
+    public function questions()
+    {
+        return $this->hasMany(Question::class,'user_id','id');
+    }
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class,'user_id','id');
+    }
+
 }
