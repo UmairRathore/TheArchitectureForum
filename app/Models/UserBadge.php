@@ -16,4 +16,14 @@ class UserBadge extends Model
             'badge_id',
         ];
 
+    public function users()
+    {
+        return $this->hasMany(User::class,'user_id','id');
+    }
+
+    public function badges()
+    {
+        return $this->hasMany(Badge::class,'badge_id','id');
+    }
+
 }
