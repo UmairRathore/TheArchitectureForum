@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Tags;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -13,7 +13,7 @@ class TagController extends Controller
     //
     public function __construct()
     {
-        $this->_model = new Tags();
+        $this->_model = new Tag();
         $this->setDefaultData();
     }
 

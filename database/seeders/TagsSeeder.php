@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Tags;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 
@@ -19,7 +19,7 @@ class TagsSeeder extends Seeder
         $faker = Faker::create();
 
         for ($i = 0; $i < 10; $i++) {
-            Tags::create([
+            Tag::create([
                 'title' => $faker->word,
                 'description' => $faker->sentence,
             ]);
