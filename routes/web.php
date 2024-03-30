@@ -82,11 +82,6 @@ Route::get('/all-questions',[HomeController::class, 'allQuestions'])->name('all.
 
 
 
-Route::get('/user',[HomeController::class, 'user'])->name('user');
-Route::get('/user-profile',[HomeController::class, 'userProfile'])->name('user.profile');
-Route::get('/user-edit-profile',[HomeController::class, 'userEditProfile'])->name('user.edit.profile');
-Route::get('/user-groups',[HomeController::class, 'userGroups'])->name('user.groups');
-
 
 Route::get('/activity',[HomeController::class, 'activity'])->name('activity');
 Route::get('/badge',[HomeController::class, 'badges'])->name('badge');
@@ -106,133 +101,152 @@ Route::get('/education',[HomeController::class, 'education'])->name('education')
 
 
 
+Route::group(['middleware' => 'auth'], function () {
+
+
+
+        Route::get('/user', [\App\Http\Controllers\Frontend\UserController::class, 'user'])->name('user');
+        Route::get('/user-profile/{id}', [\App\Http\Controllers\Frontend\UserController::class, 'userProfile'])->name('user.profile');
+        Route::get('/user-edit-profile', [\App\Http\Controllers\Frontend\UserController::class, 'userEditProfile'])->name('user.edit.profile');
+        Route::post('/user-update-password', [\App\Http\Controllers\Frontend\UserController::class, 'userUpdatePassword'])->name('user.update.password');
+        Route::post('/user-update-profile', [\App\Http\Controllers\Frontend\UserController::class, 'userUpdateProfile'])->name('user.update.profile');
+        Route::post('/user-delete-profile', [\App\Http\Controllers\Frontend\UserController::class, 'userDeleteProfile'])->name('user.delete.profile');
+//Route::get('/user-groups',[\App\Http\Controllers\Frontend\UserController::class, 'userGroups'])->name('user.groups');
+
+
 //   Dashboard Admin
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-
-    //DASHBOARD
-    Route::get('/dashboard', [UserController::class, 'index'])->name('backend.index');
-
-
-    Route::get('/edit-admin/{id}', [UserController::class, 'editAdmin'])->name('backend.edit-admin');
-    Route::post('/update-admin/{id}', [UserController::class, 'updateAdmin'])->name('backend.update-admin');
+    Route::group(['prefix' => 'admin'], function () {
+//DASHBOARD
+        Route::get('/dashboard', [UserController::class, 'index'])->name('backend.index');
 
 
-    //<----------CRUD User
-    Route::group(['prefix' => 'user'], function () {
+        Route::get('/edit-admin/{id}', [UserController::class, 'editAdmin'])->name('backend.edit-admin');
+        Route::post('/update-admin/{id}', [UserController::class, 'updateAdmin'])->name('backend.update-admin');
 
-        Route::get('/list-user', [UserController::class, 'index'])->name('backend.list-user');
-        Route::get('/add-user', [UserController::class, 'create']);
-        Route::post('/add-user', [UserController::class, 'store'])->name('backend.add-user');
-        Route::get('/edit-user/{id}', [UserController::class, 'edit'])->name('backend.edit-user');
-        Route::put('/update-user/{id}', [UserController::class, 'update'])->name('backend.update-user');
-        Route::get('/delete-user/{id}', [UserController::class, 'delete'])->name('backend.delete-user');
-        Route::post('/status-user/{id}', [UserController::class, 'changeStatus'])->name('status-user');
+
+        //<----------CRUD User
+        Route::group(['prefix' => 'user'], function () {
+
+            Route::get('/list-user', [UserController::class, 'index'])->name('backend.list-user');
+            Route::get('/add-user', [UserController::class, 'create']);
+            Route::post('/add-user', [UserController::class, 'store'])->name('backend.add-user');
+            Route::get('/edit-user/{id}', [UserController::class, 'edit'])->name('backend.edit-user');
+            Route::put('/update-user/{id}', [UserController::class, 'update'])->name('backend.update-user');
+            Route::get('/delete-user/{id}', [UserController::class, 'delete'])->name('backend.delete-user');
+            Route::post('/status-user/{id}', [UserController::class, 'changeStatus'])->name('status-user');
+
+        });
+        //User
+
+        //<----------CRUD topic
+        Route::group(['prefix' => 'topic'], function () {
+
+            Route::get('/list-topic', [TopicController::class, 'index'])->name('backend.topics-list');
+            Route::get('/add-topic', [TopicController::class, 'create']);
+            Route::post('/add-topic', [TopicController::class, 'store'])->name('backend.add-topics');
+            Route::get('/edit-topic/{id}', [TopicController::class, 'edit'])->name('backend.edit-topics');
+            Route::put('/update-topic/{id}', [TopicController::class, 'update'])->name('backend.update-topics');
+            Route::get('/delete-topic/{id}', [TopicController::class, 'delete'])->name('backend.delete-topics');
+
+        });
+        //topic
+
+
+        //<----------CRUD Faq
+        Route::group(['prefix' => 'faq'], function () {
+
+            Route::get('/list-faq', [FaqController::class, 'index'])->name('backend.faq-list');
+            Route::get('/add-faq', [FaqController::class, 'create'])->name('backend.add-faq');
+            Route::post('/store-faq', [FaqController::class, 'store'])->name('backend.add-faq');
+            Route::get('/edit-faq/{id}', [FaqController::class, 'edit'])->name('backend.edit-faq');
+            Route::put('/update-faq/{id}', [FaqController::class, 'update'])->name('backend.update-faq');
+            Route::get('/delete-faq/{id}', [FaqController::class, 'delete'])->name('backend.delete-faq');
+        });
+        //Faq
+
+        //<----------CRUD Aboutus
+        Route::group(['prefix' => 'aboutus'], function () {
+            Route::get('/list-aboutus', [AboutusController::class, 'index'])->name('backend.aboutus-list');
+            Route::get('/add-aboutus', [AboutusController::class, 'create'])->name('backend.add-aboutus');
+            Route::post('/store-aboutus', [AboutusController::class, 'store'])->name('backend.add-aboutus');
+            Route::get('/edit-aboutus/{id}', [AboutusController::class, 'edit'])->name('backend.edit-aboutus');
+            Route::put('/update-aboutus/{id}', [AboutusController::class, 'update'])->name('backend.update-aboutus');
+            Route::get('/delete-aboutus/{id}', [AboutusController::class, 'delete'])->name('backend.delete-aboutus');
+        });
+        //Aboutus
+
+
+        //<----------CRUD badge
+        Route::group(['prefix' => 'badge'], function () {
+
+            Route::get('/list-badge', [BadgeController::class, 'index'])->name('backend.badge-list');
+            Route::get('/add-badge', [BadgeController::class, 'create']);
+            Route::post('/add-badge', [BadgeController::class, 'store'])->name('backend.add-badge');
+            Route::get('/edit-badge/{id}', [BadgeController::class, 'edit'])->name('backend.edit-badge');
+            Route::put('/add-update/{id}', [BadgeController::class, 'update'])->name('backend.update-badge');
+            Route::get('/delete-badge/{id}', [BadgeController::class, 'delete'])->name('backend.delete-badge');
+
+        });
+        //badge
+
+
+        //<----------CRUD content-policy
+        Route::group(['prefix' => 'content-policy'], function () {
+
+            Route::get('/list-content-policy', [ContentPolicyController::class, 'index'])->name('backend.content-policy-list');
+            Route::get('/add-content-policy', [ContentPolicyController::class, 'create'])->name('backend.add-content-policy');
+            Route::post('/store-content-policy', [ContentPolicyController::class, 'store'])->name('backend.add-content-policy');
+            Route::get('/edit-content-policy/{id}', [ContentPolicyController::class, 'edit'])->name('backend.edit-content-policy');
+            Route::put('/update-content-policy/{id}', [ContentPolicyController::class, 'update'])->name('backend.update-content-policy');
+            Route::get('/delete-content-policy/{id}', [ContentPolicyController::class, 'delete'])->name('backend.delete-content-policy');
+
+        });
+        //content-policy
+
+        //<----------CRUD privacy_policy
+        Route::group(['prefix' => 'privacy-policy'], function () {
+
+            Route::get('/list-privacy-policy', [PrivacyPolicyController::class, 'index'])->name('backend.privacy-policy-list');
+            Route::get('/add-privacy-policy', [PrivacyPolicyController::class, 'create'])->name('backend.add-privacy-policy');
+            Route::post('/store-privacy-policy', [PrivacyPolicyController::class, 'store'])->name('backend.add-privacy-policy');
+            Route::get('/edit-privacy-policy/{id}', [PrivacyPolicyController::class, 'edit'])->name('backend.edit-privacy-policy');
+            Route::put('/update-privacy-policy/{id}', [PrivacyPolicyController::class, 'update'])->name('backend.update-privacy-policy');
+            Route::get('/delete-privacy-policy/{id}', [PrivacyPolicyController::class, 'delete'])->name('backend.delete-privacy-policy');
+
+        });
+        //privacy_policy
+
+        //<----------CRUD tag
+        Route::group(['prefix' => 'tag'], function () {
+            Route::get('/tag', [TagController::class, 'index'])->name('backend.tags-list');
+            Route::get('/tag/create', [TagController::class, 'create'])->name('backend.add-tags');
+            Route::post('/tag', [TagController::class, 'store'])->name('backend.add-tags');
+            Route::get('/tag/{id}/edit', [TagController::class, 'edit'])->name('backend.edit-tags');
+            Route::put('/tag/{id}', [TagController::class, 'update'])->name('backend.update-tags');
+            Route::get('/tag/{id}', [TagController::class, 'delete'])->name('backend.delete-tags');
+        });
+        //tag
+
+        //<----------CRUD User-Agreement
+        Route::group(['prefix' => 'user-agreement'], function () {
+
+            Route::get('/list-user-agreement', [PrivacyPolicyController::class, 'index'])->name('backend.user-agreement-list');
+            Route::get('/add-user-agreement', [PrivacyPolicyController::class, 'create'])->name('backend.add-user-agreement');
+            Route::post('/store-user-agreement', [PrivacyPolicyController::class, 'store'])->name('backend.add-user-agreement');
+            Route::get('/edit-user-agreement/{id}', [PrivacyPolicyController::class, 'edit'])->name('backend.edit-user-agreement');
+            Route::put('/update-user-agreement/{id}', [PrivacyPolicyController::class, 'update'])->name('backend.update-user-agreement');
+            Route::get('/delete-user-agreement/{id}', [PrivacyPolicyController::class, 'delete'])->name('backend.delete-user-agreement');
+        });
+        //User-Agreement
+
 
     });
-    //User
-
-    //<----------CRUD topic
-    Route::group(['prefix' => 'topic'], function () {
-
-        Route::get('/list-topic', [TopicController::class, 'index'])->name('backend.topics-list');
-        Route::get('/add-topic', [TopicController::class, 'create']);
-        Route::post('/add-topic', [TopicController::class, 'store'])->name('backend.add-topics');
-        Route::get('/edit-topic/{id}', [TopicController::class, 'edit'])->name('backend.edit-topics');
-        Route::put('/update-topic/{id}', [TopicController::class, 'update'])->name('backend.update-topics');
-        Route::get('/delete-topic/{id}', [TopicController::class, 'delete'])->name('backend.delete-topics');
-
-    });
-    //topic
+//   Dashboard Admin
 
 
-    //<----------CRUD Faq
-    Route::group(['prefix' => 'faq'], function () {
-
-        Route::get('/list-faq', [FaqController::class, 'index'])->name('backend.faq-list');
-        Route::get('/add-faq', [FaqController::class, 'create'])->name('backend.add-faq');
-        Route::post('/store-faq', [FaqController::class, 'store'])->name('backend.add-faq');
-        Route::get('/edit-faq/{id}', [FaqController::class, 'edit'])->name('backend.edit-faq');
-        Route::put('/update-faq/{id}', [FaqController::class, 'update'])->name('backend.update-faq');
-        Route::get('/delete-faq/{id}', [FaqController::class, 'delete'])->name('backend.delete-faq');
-    });
-    //Faq
-
-    //<----------CRUD Aboutus
-    Route::group(['prefix' => 'aboutus'], function () {
-        Route::get('/list-aboutus', [AboutusController::class, 'index'])->name('backend.aboutus-list');
-        Route::get('/add-aboutus', [AboutusController::class, 'create'])->name('backend.add-aboutus');
-        Route::post('/store-aboutus', [AboutusController::class, 'store'])->name('backend.add-aboutus');
-        Route::get('/edit-aboutus/{id}', [AboutusController::class, 'edit'])->name('backend.edit-aboutus');
-        Route::put('/update-aboutus/{id}', [AboutusController::class, 'update'])->name('backend.update-aboutus');
-        Route::get('/delete-aboutus/{id}', [AboutusController::class, 'delete'])->name('backend.delete-aboutus');
-    });
-    //Aboutus
 
 
-    //<----------CRUD badge
-    Route::group(['prefix' => 'badge'], function () {
-
-        Route::get('/list-badge', [BadgeController::class, 'index'])->name('backend.badge-list');
-        Route::get('/add-badge', [BadgeController::class, 'create']);
-        Route::post('/add-badge', [BadgeController::class, 'store'])->name('backend.add-badge');
-        Route::get('/edit-badge/{id}', [BadgeController::class, 'edit'])->name('backend.edit-badge');
-        Route::put('/add-update/{id}', [BadgeController::class, 'update'])->name('backend.update-badge');
-        Route::get('/delete-badge/{id}', [BadgeController::class, 'delete'])->name('backend.delete-badge');
-
-    });
-    //badge
-
-
-    //<----------CRUD content-policy
-    Route::group(['prefix' => 'content-policy'], function () {
-
-        Route::get('/list-content-policy', [ContentPolicyController::class, 'index'])->name('backend.content-policy-list');
-        Route::get('/add-content-policy', [ContentPolicyController::class, 'create'])->name('backend.add-content-policy');
-        Route::post('/store-content-policy', [ContentPolicyController::class, 'store'])->name('backend.add-content-policy');
-        Route::get('/edit-content-policy/{id}', [ContentPolicyController::class, 'edit'])->name('backend.edit-content-policy');
-        Route::put('/update-content-policy/{id}', [ContentPolicyController::class, 'update'])->name('backend.update-content-policy');
-        Route::get('/delete-content-policy/{id}', [ContentPolicyController::class, 'delete'])->name('backend.delete-content-policy');
-
-    });
-    //content-policy
-
-    //<----------CRUD privacy_policy
-    Route::group(['prefix' => 'privacy-policy'], function () {
-
-        Route::get('/list-privacy-policy', [PrivacyPolicyController::class, 'index'])->name('backend.privacy-policy-list');
-        Route::get('/add-privacy-policy', [PrivacyPolicyController::class, 'create'])->name('backend.add-privacy-policy');
-        Route::post('/store-privacy-policy', [PrivacyPolicyController::class, 'store'])->name('backend.add-privacy-policy');
-        Route::get('/edit-privacy-policy/{id}', [PrivacyPolicyController::class, 'edit'])->name('backend.edit-privacy-policy');
-        Route::put('/update-privacy-policy/{id}', [PrivacyPolicyController::class, 'update'])->name('backend.update-privacy-policy');
-        Route::get('/delete-privacy-policy/{id}', [PrivacyPolicyController::class, 'delete'])->name('backend.delete-privacy-policy');
-
-    });
-    //privacy_policy
-
-    //<----------CRUD tag
-    Route::group(['prefix' => 'tag'], function () {
-        Route::get('/tag', [TagController::class, 'index'])->name('backend.tags-list');
-        Route::get('/tag/create', [TagController::class, 'create'])->name('backend.add-tags');
-        Route::post('/tag', [TagController::class, 'store'])->name('backend.add-tags');
-        Route::get('/tag/{id}/edit', [TagController::class, 'edit'])->name('backend.edit-tags');
-        Route::put('/tag/{id}', [TagController::class, 'update'])->name('backend.update-tags');
-        Route::get('/tag/{id}', [TagController::class, 'delete'])->name('backend.delete-tags');
-    });
-    //tag
-
-    //<----------CRUD User-Agreement
-    Route::group(['prefix' => 'user-agreement'], function () {
-
-        Route::get('/list-user-agreement', [PrivacyPolicyController::class, 'index'])->name('backend.user-agreement-list');
-        Route::get('/add-user-agreement', [PrivacyPolicyController::class, 'create'])->name('backend.add-user-agreement');
-        Route::post('/store-user-agreement', [PrivacyPolicyController::class, 'store'])->name('backend.add-user-agreement');
-        Route::get('/edit-user-agreement/{id}', [PrivacyPolicyController::class, 'edit'])->name('backend.edit-user-agreement');
-        Route::put('/update-user-agreement/{id}', [PrivacyPolicyController::class, 'update'])->name('backend.update-user-agreement');
-        Route::get('/delete-user-agreement/{id}', [PrivacyPolicyController::class, 'delete'])->name('backend.delete-user-agreement');
-    });
-    //User-Agreement
 });
-//   Dashboard Admin
 
 
 
