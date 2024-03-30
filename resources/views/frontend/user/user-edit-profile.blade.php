@@ -238,10 +238,14 @@
                     processData: false,
                     success: function(response) {
                         console.log(response);
+                        showSuccessMessage('Profile updated successfully');
+
                         $('.imageLoaderlaoaded').html(response);
                     },
                     error: function(xhr, status, error) {
                         console.error(xhr.responseText);
+                        showErrorMessage('An error occurred while updating profile');
+
                     }
                 });
             });
@@ -259,8 +263,11 @@
                 data: formData,
                 success: function (response) {
                     console.log(response);
+                    showSuccessMessage('Password updated successfully');
+
                 },
                 error: function (xhr, status, error) {
+                    showErrorMessage('Password Did not Update successfully');
                     console.error(xhr.responseText);
                 }
             });
@@ -277,6 +284,7 @@
                     success: function (response) {
                         console.log(response);
                         if (response.status === 'success') {
+                            showSuccessMessage('Profile deleted successfully');
                             window.location.href = "{{ route('home') }}";
                         } else {
                             alert("Failed to delete user account.");
@@ -285,12 +293,29 @@
                     error: function (xhr, status, error) {
                         console.error(xhr.responseText);
                         alert("Failed to delete user account. Please try again later.");
+                        showSuccessMessage('Failed to delete user account. Please try again later.');
+
                     }
                 });
             } else {
                 console.log('Please confirm account deletion.');
             }
         });
+        function showSuccessMessage(message) {
+            toastr.success(message, '', {
+                timeOut: 5000, // 5 seconds
+                progressBar: true,
+                closeButton: true
+            });
+        }
+
+        function showErrorMessage(message) {
+            toastr.error(message, '', {
+                timeOut: 5000, // 5 seconds
+                progressBar: true,
+                closeButton: true
+            });
+        }
     </script>
 
 @endsection
