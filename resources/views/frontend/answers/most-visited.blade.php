@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-menu-wrap">
-                        @include('layouts.frontend.components.leftSideBar')
+                        @include('layouts.frontend.partials.left-SideBar')
                     </div>
                 </div>
 
@@ -25,7 +25,6 @@
                                 Most visited
                             </li>
                         </ul>
-
 
 
                         <div class="most-visited-content">
@@ -769,7 +768,7 @@
 
                 <div class="col-lg-3">
                     <div class="right-siderbar">
-                        @include('layouts.frontend.components.rightSideBar')
+                        @include('layouts.frontend.partials.right-SideBar')
                     </div>
                 </div>
 

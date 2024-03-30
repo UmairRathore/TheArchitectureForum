@@ -14,69 +14,110 @@
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <div style="background-color: white; padding: 5px;">
-                    <img src="{{ asset('frontend/assets/logo.jpg') }}" alt="logo" style="max-height: 30px;">
+                <div >
+                    <img src="{{ asset('frontend/assets/logo.jpg') }}" alt="logo" style="max-height: 60px;">
                 </div>
             </a>
-
+            <li class="nav-item" style="list-style-type: none;">
+                <p style="color:  white;">The Architecture Forum</p>
+            </li>
             <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
+
+
                     <li class="nav-item">
-                        <a href="{{route('home')}}" class="nav-link active">
+                        <a href="{{route('home')}}" class="nav-link">
                             Home
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('about')}}" class="nav-link">
-                            About Us
-                        </a>
-                    </li>
-
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#" class="nav-link dropdown-toggle">--}}
-{{--                            Blog--}}
-{{--                        </a>--}}
-
-{{--                        <ul class="dropdown-menu">--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('blog')}}" class="nav-link">Blog</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('blog.details')}}" class="nav-link">Blog Details</a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
-
-                    <li class="nav-item">
-                        <a href="{{route('contact.us')}}" class="nav-link">Contact Us</a>
                     </li>
 
                     <li class="nav-item">
                         <a href="#" class="nav-link dropdown-toggle">
-                            Pages
+                            Read
                         </a>
 
                         <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="{{route('blog')}}" class="nav-link">New Discussion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('blog.details')}}" class="nav-link">Forum</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Connect
+                        </a>
+
+                        <ul class="dropdown-menu">
+                           <?php
+                            $topics = \App\Models\Topic::all();
+                            ?>
+                            @foreach($topics as $topic)
+                            <li class="nav-item">
+                                <a href="{{route('blog')}}" class="nav-link">{{$topic->title}}</a>
+                            </li>
+                                @endforeach
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Work
+                        </a>
+
+                        <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="{{route('blog')}}" class="nav-link">Portfolio</a>
+                                </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Policies and About
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a href="{{route('contact.us')}}" class="nav-link">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('contact.us')}}" class="nav-link">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('contact.us')}}" class="nav-link">User Agreement</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="#" class="nav-link dropdown-toggle">--}}
+{{--                            Pages--}}
+{{--                        </a>--}}
+
+{{--                        <ul class="dropdown-menu">--}}
 {{--                            <li class="nav-item">--}}
 {{--                                <a href="{{route('activity')}}" class="nav-link">Activity</a>--}}
 {{--                            </li>--}}
 {{--                            <li class="nav-item">--}}
 {{--                                <a href="{{route('referral')}}" class="nav-link">Referrals</a>--}}
 {{--                            </li>--}}
-                            <li class="nav-item">
-                                <a href="{{route('privacy.policy')}}" class="nav-link">Privacy Policy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{route('terms.conditions')}}" class="nav-link">Terms & Conditions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{route('coming.soon')}}" class="nav-link">Coming Soon</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{route('notFound')}}" class="nav-link">404 Page</a>
-                            </li>
-                        </ul>
-                    </li>
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('privacy.policy')}}" class="nav-link">Privacy Policy</a>--}}
+{{--                            </li>--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('terms.conditions')}}" class="nav-link">Terms & Conditions</a>--}}
+{{--                            </li>--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('coming.soon')}}" class="nav-link">Coming Soon</a>--}}
+{{--                            </li>--}}
+{{--                            <li class="nav-item">--}}
+{{--                                <a href="{{route('notFound')}}" class="nav-link">404 Page</a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
                 </ul>
 
                 <div class="others-options">
@@ -90,25 +131,28 @@
                                 </button>
                             </form>
                         </li>
-                        @if(auth()->user()->role == 'admin')
+                        @if(auth()->check())
+                            @if(auth()->user()->role == 'admin')
 
+                                <li>
+                                    <a href="{{route('backend.index')}}">
+                                        Dashboard
+                                    </a>
+                                </li>
+                            @else
+                            @endif
+                        @else
                             <li>
-                                <a href="{{route('backend.index')}}">
-                                   Dashboard
+                                <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">
+                                    Log in
                                 </a>
                             </li>
-                        @else
-                        <li>
-                            <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">
-                                Log in
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
-                                Sign up
-                            </a>
-                        </li>
-                            @endif
+                            <li>
+                                <a href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                    Sign up
+                                </a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>

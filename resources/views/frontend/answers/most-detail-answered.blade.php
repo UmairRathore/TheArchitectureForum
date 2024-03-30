@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-menu-wrap">
-                        @include('layouts.frontend.components.leftSideBar')
+                        @include('layouts.frontend.partials.left-SideBar')
                     </div>
                 </div>
 
@@ -202,89 +202,7 @@
                                     </div>
                                 </div>
 
-                                <div class="answer-question-details">
-                                    <div class="d-flex">
-                                        <div class="link-unlike flex-shrink-0">
-                                            <a href="{{route('user')}}">
-                                                <img src="{{asset('frontend/assets/images/user/user-4.jpg')}}" alt="Image">
-                                            </a>
-                                        </div>
 
-                                        <div class="flex-grow-1 ms-3">
-                                            <ul class="latest-answer-list">
-                                                <li>
-                                                    <a href="{{route('user')}}">Jennifer Chau</a>
-                                                </li>
-                                                <li>
-                                                    <span>Latest Answer: 6 hours ago</span>
-                                                </li>
-                                                <li class="replays">
-                                                    <a href="{{route('most.answered')}}" class="replay">
-                                                        Replay
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula ante ipsum primis in faucibus orci luctus et ultrices Curae Donec velit neque.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="answer-question-details">
-                                    <div class="d-flex">
-                                        <div class="link-unlike flex-shrink-0">
-                                            <a href="{{route('user')}}">
-                                                <img src="{{asset('frontend/assets/images/user/user-5.jpg')}}" alt="Image">
-                                            </a>
-                                        </div>
-
-                                        <div class="flex-grow-1 ms-3">
-                                            <ul class="latest-answer-list">
-                                                <li>
-                                                    <a href="{{route('user')}}">Todd Merrill</a>
-                                                </li>
-                                                <li>
-                                                    <span>Latest Answer: 7 hours ago</span>
-                                                </li>
-                                                <li class="replays">
-                                                    <a href="{{route('most.answered')}}" class="replay">
-                                                        Replay
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula ante ipsum primis in faucibus orci luctus et ultrices Curae Donec velit neque.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="answer-question-details">
-                                    <div class="d-flex">
-                                        <div class="link-unlike flex-shrink-0">
-                                            <a href="{{route('user')}}">
-                                                <img src="{{asset('frontend/assets/images/user/user-6.jpg')}}" alt="Image">
-                                            </a>
-                                        </div>
-
-                                        <div class="flex-grow-1 ms-3">
-                                            <ul class="latest-answer-list">
-                                                <li>
-                                                    <a href="{{route('user')}}">Daniel Garcia</a>
-                                                </li>
-                                                <li>
-                                                    <span>Latest Answer: 12 hours ago</span>
-                                                </li>
-                                                <li class="replays">
-                                                    <a href="{{route('most.answered')}}" class="replay">
-                                                        Replay
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula ante ipsum primis in faucibus orci luctus et ultrices Curae Donec velit neque.</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
 
                             <form class="your-answer-form">
@@ -316,7 +234,7 @@
 
                 <div class="col-lg-3">
                     <div class="right-siderbar">
-                        @include('layouts.frontend.components.rightSideBar')
+                        @include('layouts.frontend.partials.right-SideBar')
                     </div>
                 </div>
 
