@@ -89,29 +89,6 @@ class HomeController extends Controller
 
 
 
-    public function user ( )
-    {
-        return view ('frontend.user.user');
-    }
-
-
-
-    public function userProfile ( )
-    {
-        return view ('frontend.user.user-profile');
-    }
-
-
-    public function userGroups ( )
-    {
-        return view ('frontend.user.user-groups');
-    }
-
-
-    public function userEditProfile ( )
-    {
-        return view ('frontend.user.edit-user-profile');
-    }
 
 
 
