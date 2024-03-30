@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="{{asset('frontend/assets/css/editor.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/assets/css/toastr.min.css')}}">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="{{asset('frontend/assets/images/logo.jpg')}}">

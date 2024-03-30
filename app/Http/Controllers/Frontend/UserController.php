@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\UserBadge;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -77,46 +78,50 @@ class UserController extends Controller
 
     public function userupdateProfile(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string',
-            'location' => 'nullable|string|max:255',
-            'profile_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'about_me' => 'nullable|string|max:500',
-            'twitter_link' => 'nullable|url|max:255',
-            'facebook_link' => 'nullable|url|max:255',
-            'instagram_link' => 'nullable|url|max:255',
-        ], [
 
-            'profile_image.image' => 'The profile image must be an image file.',
-            'profile_image.mimes' => 'The profile image must be a file of type: jpeg, png, jpg, gif.',
-            'profile_image.max' => 'The profile image may not be greater than 2MB in size.',
-            'about_me.max' => 'The About Me field may not be greater than 500 characters.',
-            'twitter_link.url' => 'The Twitter link must be a valid URL.',
-            'facebook_link.url' => 'The Facebook link must be a valid URL.',
-            'instagram_link.url' => 'The Instagram link must be a valid URL.',
-        ]);
 
         $user = User::find($request->user()->id);
         if (!$user) {
             return response()->json(['status' => 'error', 'message' => 'User not found'], 404);
         }
+        $user->name = $request->fname.' '.$request->lname;
+        $user->fname = $request->fname;
+        $user->lname = $request->lname;
+        $user->twitter_url = $request->twitter_url;
+        $user->facebook_url = $request->facebook_url;
+        $user->about_me = $request->about_me;
+        $user->location = $request->location;
+        if ($request->hasFile('profile_image'))
+        {
+            $folderName = 'profile_image';
+            $image = $request->file('profile_image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
 
-        $check = $user->create($request);
+            $directory = public_path('assets/images/' . $folderName . '/');
+
+            if (!File::exists($directory)) {
+                File::makeDirectory($directory, 0777, true, true);
+            }
+
+            $user->profile_image = $image->move($directory, $imageName);
+
+        }
+        $check = $user->save();
         if ($check) {
-            return response()->json(['status' => 'success', 'message' => 'User password updated successfully'], 200);
+            return response()->json(['status' => 'success', 'message' => 'User Profile updated successfully'], 200);
         } else {
-            return response()->json(['status' => 'error', 'message' => 'Failed to update user password'], 400);
+            return response()->json(['status' => 'error', 'message' => 'Failed to update user profile'], 400);
         }
     }
 
     public function userupdatePassword(Request $request)
     {
-        $request->validate([
-            'password' => 'required|confirmed'
-        ], [
-
-            'password.confirmed' => 'The password confirmation does not match.'
-        ]);
+//        $request->validate([
+//            'password' => 'required|confirmed'
+//        ], [
+//
+//            'password.confirmed' => 'The password confirmation does not match.'
+//        ]);
 
         $user = User::find($request->user()->id);
         if (!$user) {

@@ -6,14 +6,14 @@
 
 <body>
 <!-- Start Preloader Area -->
-<div class="preloader" id="loader-style">
-    <div class="preloader-wrap">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
+{{--<div class="preloader" id="loader-style">--}}
+{{--    <div class="preloader-wrap">--}}
+{{--        <span></span>--}}
+{{--        <span></span>--}}
+{{--        <span></span>--}}
+{{--        <span></span>--}}
+{{--    </div>--}}
+{{--</div>--}}
 <!-- End Preloader Area -->
 
 <!-- Start Navbar Area -->
@@ -326,6 +326,7 @@
 
 <!-- Links of JS File -->
 <script src="{{asset('frontend/assets/js/jquery.min.js')}}"></script>
+<script src="{{asset('frontend/assets/js/toastr.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/meanmenu.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>

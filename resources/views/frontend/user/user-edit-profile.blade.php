@@ -15,18 +15,23 @@
                 <div class="col-lg-9">
                     <div class="edit-profile-area">
                         <div class="profile-content d-flex justify-content-between align-items-center">
-                            <div class="profile-img">
-                                <img src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image">
-                                <h3>Rosemary Hamm</h3>
-                                <span>Member since 1 years ago</span>
-                                <span>Last seen this week</span>
-                                <button class="followers-btn">45 Followers</button>
-                                <button class="followers-btn">12 Following</button>
+                            <div  class="profile-img imageLoaderlaoaded">
+                                @if(isset($user->profile_image))
+                                    <img id="previewImage" src="{{asset($user->profile_image)}}" alt="Image" style="size:30px 40px">
+                                @else
+                                    <img id="previewImage" src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image" style="size:30px 40px">
+                                @endif                                <h3>{{$user->name}}</h3>
+
+                                <span>Member since {{$user->created_at->format('Y-m-d')}}</span>
+                                <span>{{$user->student_or_worker_workplace}}</span>
+                                <span>{{$user->location}}</span>
+                                <button class="followers-btn">{{$user->followers}} Followers</button>
+                                <button class="followers-btn">{{$user->following}} Following</button>
                             </div>
 
                             <div class="edit-btn">
                                 {{--                                <a href="{{route('user.edit.profile')}}" class="default-btn">--}}
-                                Edit profile</a>
+{{--                                Edit profile</a>--}}
                             </div>
                         </div>
 
@@ -52,43 +57,45 @@
                                         <form id="updateUserProfile" class="edeite-content">
                                         @csrf
 
-                                            <div class="information d-flex align-items-center">
-                                            @if(isset($user->profile_image))
-                                            <img src="{{asset($user->profile_image)}}" alt="Image">
+                                            <div  class=" imageLoaderlaoaded information d-flex align-items-center">
+                                                @if(isset($user->profile_image))
+                                                    <img id="previewImage" src="{{asset($user->profile_image)}}" alt="Image" style="size:30px 40px">
                                                 @else
-                                            <img src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image">
+                                                    <img id="previewImage" src="{{asset('frontend/assets/images/user/profile-img.jpg')}}" alt="Image" style="size:30px 40px">
                                                 @endif
 
-                                            <div class="file-upload-account-info">
-                                                <input type="file" name="file" id="file-2" class="inputfile">
-                                                <label class="upload">
-                                                    <i class="ri-link"></i>
-                                                    Upload Photo
-                                                </label>
-                                                <span>Maximum file size: 10 MB.</span>
+                                                <div class="file-upload-account-info">
+                                                    <label class="upload">
+                                                        <i class="ri-link"></i>
+                                                        <input type="file" name="profile_image" id="file-2" class="inputfile" onchange="previewFile()">
+                                                        Upload Photo
+                                                    </label>
+                                                    <span>Maximum file size: 10 MB.</span>
+                                                </div>
                                             </div>
-                                        </div>
+
 
 
 
                                             <div class="form-group">
                                                 <label>First name</label>
-                                                <input type="text" class="form-control" name="fname" id="name">
+                                                <input type="text" class="form-control" name="fname" id="fname" value="{{$user->fname}}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Last name</label>
-                                                <input type="text" class="form-control" name="lname" id="name">
+                                                <input type="text" class="form-control" name="lname" id="lname" value="{{$user->lname}}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label>Location</label>
-                                                <input type="text" class="form-control" name="location" id="location">
+                                                <input type="text" class="form-control" name="location" id="location" value="{{$user->location}}">
                                             </div>
 
                                             <div class="form-group">
                                                 <label>About me</label>
-                                                <div id="txtEditor"></div>
+{{--                                                <div id="txtEditor"></div>--}}
+                                                <textarea class="form-control"  id="txtEditor " name="about_me" rows="6" placeholder="Enter your about here?"> {{$user->about_me}}</textarea>
                                             </div>
 
                                             <div class="form-group">
@@ -96,30 +103,30 @@
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-lg-6 col-mad-6">
-                                                    <div class="form-group">
-                                                        <label>Website link</label>
-                                                        <input type="text" class="form-control" name="WebsiteLink" id="website-link">
-                                                    </div>
-                                                </div>
+{{--                                                <div class="col-lg-6 col-mad-6">--}}
+{{--                                                    <div class="form-group">--}}
+{{--                                                        <label>Website link</label>--}}
+{{--                                                        <input type="text" class="form-control" name="WebsiteLink" id="website-link">--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
                                                 <div class="col-lg-6 col-mad-6">
                                                     <div class="form-group">
                                                         <label>Twitter link</label>
-                                                        <input type="text" class="form-control" name="twitter" id="twitter">
+                                                        <input type="text" class="form-control" name="twitter_url" id="twitter" value="{{$user->twitter_url}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-mad-6">
                                                     <div class="form-group">
                                                         <label>Facebook link</label>
-                                                        <input type="text" class="form-control" name="facebook" id="facebook">
+                                                        <input type="text" class="form-control" name="facebook_url" id="facebook" value="{{$user->facebook_url}}">
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-mad-6">
-                                                    <div class="form-group">
-                                                        <label>GitHub link</label>
-                                                        <input type="text" class="form-control" name="github" id="github">
-                                                    </div>
-                                                </div>
+{{--                                                <div class="col-lg-6 col-mad-6">--}}
+{{--                                                    <div class="form-group">--}}
+{{--                                                        <label>GitHub link</label>--}}
+{{--                                                        <input type="text" class="form-control" name="github" id="github">--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
                                                 <div class="col-12">
                                                     <div class="form-group mb-0">
                                                         <button class="default-btn">Save change</button>
@@ -136,6 +143,7 @@
                                         <h3>Change password</h3>
 
                                         <form id="updatePasswordForm" class="edeite-content">
+                                            @csrf
                                             <div class="form-group">
                                                 <label for="password">Current Password</label>
                                                 <input type="password" class="form-control" name="password" id="password">
@@ -161,13 +169,13 @@
 
                                 <div class="tab-pane fade edit-profile" id="delete-account" role="tabpanel" aria-labelledby="delete-account-tab">
                                     <form id="deleteUserForm">
+                                        @csrf
                                         <div class="public-information">
                                             <h3>Delete Account</h3>
                                             <ul class="delete-account">
                                                 <li>
                                                     <div class="form-check">
-                                                        <input type="hidden" name="user_id" value="{{$user->id}}">
-                                                        <input class="form-check-input" type="checkbox" name="user_status" id="flexCheckDefault-9">
+                                                        <input class="form-check-input" type="checkbox" name="user_status" id="user_statu-9">
                                                         <label class="form-check-label" for="flexCheckDefault-9">
                                                             Delete your account?
                                                         </label>
@@ -191,9 +199,31 @@
     </div>
 
     <!-- End Mail Content Area -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
+        $(document).ready(function() {
+        //     // Initialize Editor.js
+        //     var editor = new EditorJS({
+        //         holder: 'txtEditor',
+        //         // Your Editor.js configuration options here
 
+            });
+        function previewFile() {
+            var preview = document.getElementById('previewImage');
+            var file = document.querySelector('input[type=file]').files[0];
+            var reader = new FileReader();
+
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "{{asset('frontend/assets/images/user/profile-img.jpg')}}"; // Default image if no file selected
+            }
+        }
         $(document).ready(function() {
             $('#updateUserProfile').submit(function(event) {
                 event.preventDefault();
@@ -208,6 +238,7 @@
                     processData: false,
                     success: function(response) {
                         console.log(response);
+                        $('.imageLoaderlaoaded').html(response);
                     },
                     error: function(xhr, status, error) {
                         console.error(xhr.responseText);
@@ -236,9 +267,9 @@
         });
 
 
-        document.getElementById('deleteUserBtn').addEventListener('click', function (event) {
+        $('#deleteUserBtn').on('click', function (event) {
             event.preventDefault();
-            if (document.getElementById('flexCheckDefault-9').checked) {
+            if (document.getElementById('user_statu--9').checked) {
                 $.ajax({
                     url: "{{ route('user.delete.profile') }}",
                     method: "POST",

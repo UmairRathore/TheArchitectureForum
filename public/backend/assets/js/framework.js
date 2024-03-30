@@ -51,9 +51,9 @@
     }
 
     /* Preloaders */
-    $(window).on('load', function(){
-      $('#preloader-wrap').addClass('loaded');
-    });
+    // $(window).on('load', function(){
+    //   $('#preloader-wrap').addClass('loaded');
+    // });
 
     /* Custom Keyboard Shortcuts */
     function medboardShortcuts(){
@@ -148,7 +148,7 @@
         var toggleType = $(this).data('bs-toggle');
 
         switch(toggleType) {
-          
+
         //Aside Left
         case 'slideLeft':
           $(target).toggleClass('ms-aside-open');

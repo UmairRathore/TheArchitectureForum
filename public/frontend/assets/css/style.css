@@ -3725,8 +3725,8 @@ User Area CSS
 .edit-profile-area .profile-tabs .edit-profile .public-information .information .file-upload-account-info .inputfile {
   width: 0.1px;
   height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
+  /*opacity: 0;*/
+  /*overflow: hidden;*/
   position: absolute;
   z-index: -1;
 }
