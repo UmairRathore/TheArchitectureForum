@@ -16,4 +16,9 @@ class Badge extends Model
             'description',
             'badge_image',
         ];
+
+//    public function userBadges()
+//    {
+//        return $this->belongsToMany(User::class, 'user_badges', 'badge_id', 'user_id');
+//    }
 }

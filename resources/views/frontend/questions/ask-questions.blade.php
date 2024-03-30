@@ -1,8 +1,6 @@
-
 @extends('layouts.frontend.app')
 
 @section('content')
-
 
     <!-- Start Mail Content Area -->
     <div class="main-content-area ptb-100">
@@ -10,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-menu-wrap">
-                        @include('layouts.frontend.components.leftSideBar')
+                        @include('layouts.frontend.partials.left-SideBar')
                     </div>
                 </div>
 
@@ -60,7 +58,7 @@
 
                 <div class="col-lg-3">
                     <div class="right-siderbar">
-                        @include('layouts.frontend.components.rightSideBar')
+                        @include('layouts.frontend.partials.right-SideBar')
                     </div>
                 </div>
             </div>

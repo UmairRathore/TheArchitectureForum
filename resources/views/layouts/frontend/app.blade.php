@@ -85,7 +85,7 @@
                         </div>
 
                         <div class="col-12">
-                            <p class="create">Don't have an account? <a href="{{route('user.profile')}}">Join us </a></p>
+                            <p class="create">Don't have an account? <a href="{{route('register')}}">Join us </a></p>
                         </div>
                     </div>
                 </form>

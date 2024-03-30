@@ -32,6 +32,8 @@ class CreateUsersTable extends Migration
             $table->string('profile_image')->nullable();
             $table->enum('student_or_worker',[['student','worker']])->nullable();
             $table->string('student_or_worker_workplace')->nullable();
+            $table->integer('following')->nullable();
+            $table->integer('followers')->nullable();
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

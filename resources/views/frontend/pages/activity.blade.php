@@ -1,8 +1,6 @@
-
 @extends('layouts.frontend.app')
 
 @section('content')
-
 
     <!-- Start Mail Content Area -->
     <div class="main-content-area ptb-100">
@@ -10,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-menu-wrap">
-                        @include('layouts.frontend.components.leftSideBar')
+                        @include('layouts.frontend.partials.left-SideBar')
                     </div>
                 </div>
 
@@ -112,7 +110,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>following posts (12)</h3>
-                                                <p>You are  <a href="{{route('all.questions')}}">following 12 posts.</a></p>
+                                                <p>You are <a href="{{route('all.questions')}}">following 12 posts.</a></p>
                                             </div>
                                         </div>
 
@@ -224,7 +222,7 @@
                                         <div class="col-lg-6 col-md-6">
                                             <div class="single-summary">
                                                 <h3>following posts (12)</h3>
-                                                <p>You are  <a href="{{route('user.profile')}}">following 12 posts.</a></p>
+                                                <p>You are <a href="{{route('user.profile',['id' => \auth()->user()->id])}}">following 12 posts.</a></p>
                                             </div>
                                         </div>
                                     </div>

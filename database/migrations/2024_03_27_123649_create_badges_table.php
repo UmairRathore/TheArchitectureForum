@@ -13,7 +13,7 @@ class CreateBadgesTable extends Migration
      */
     public function up()
     {
-        Schema::create('badge', function (Blueprint $table) {
+        Schema::create('badges', function (Blueprint $table) {
             $table->id();
             $table->text('badge_image')->nullable();
             $table->string('title')->nullable();
