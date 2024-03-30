@@ -1,4 +1,3 @@
-
 @extends('layouts.frontend.app')
 
 @section('content')
@@ -9,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-menu-wrap">
-                        @include('layouts.frontend.components.leftSideBar')
+                        @include('layouts.frontend.partials.left-SideBar')
                     </div>
                 </div>
 
@@ -74,6 +73,5 @@
         </div>
     </div>
     <!-- End Mail Content Area -->
-
 
 @endsection

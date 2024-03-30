@@ -38,27 +38,34 @@ class RegisterationController extends Controller
     {
 //        dd($request->all());
         $request->validate([
-            'name' => 'required',
+            'fname' => 'required',
+            'lname' => 'required',
             'email' => 'required',
             'password' => 'required',
         ]);
 
+        $name = $request->input('fname').' '. $request->input('lname');
+
+
         $this->data['user'] = $this->_model;
-        $this->data['user']->name = $request->input('name');
+        $this->data['user']->name = $name;
+        $this->data['user']->lname = $request->input('fname');
+        $this->data['user']->fname = $request->input('lname');
         $this->data['user']->email = $request->input('email');
         $this->data['user']->password = Hash::make($request->password);
-//        $this->data['user']->role_id = '2';
+        $this->data['user']->role = 'user';
 
         $check = $this->data['user']->save();
         if ($check) {
+            session()->flash('message', 'Registeration complete Login to Continue');
 
-            return response('sda');
+            return redirect()->route('login');
         }
         else
         {
             session()->flash('message', 'Failed to register');
 
-            return response('sdasdasdsasda');
+            return redirect()->back();
         }
 
     }
