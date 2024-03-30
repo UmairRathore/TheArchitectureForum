@@ -34,7 +34,7 @@
                             @if(isset($leftSidebarData))
                         @foreach($leftSidebarData  as $topic)
                                 <li>
-                                    <a href="{{route('ask.questions')}}">
+                                    <a href="{{route('tags')}}">
                                         <span class="menu-title">{{$topic->title}}</span>
                                     </a>
                                 </li>
@@ -93,7 +93,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('home')}}" class="box-style">
+                        <a href="{{route('content.policy')}}" class="box-style">
                             <span class="menu-title">
                                 <i class="ri-home-8-line"></i>
                                 Content Policy
@@ -101,7 +101,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('home')}}" class="box-style">
+                        <a href="{{route('privacy.policy')}}" class="box-style">
                             <span class="menu-title">
                                 <i class="ri-home-8-line"></i>
                                 Privacy Policy
@@ -109,7 +109,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('home')}}" class="box-style">
+                        <a href="{{route('user.agreement')}}" class="box-style">
                             <span class="menu-title">
                                 <i class="ri-home-8-line"></i>
                                 User Agreement

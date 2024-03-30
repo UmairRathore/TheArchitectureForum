@@ -38,10 +38,10 @@
 
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a href="{{route('blog')}}" class="nav-link">New Discussion</a>
+                                <a href="{{route('ask.questions')}}" class="nav-link">New Discussion</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('blog.details')}}" class="nav-link">Forum</a>
+                                <a href="{{route('home')}}" class="nav-link">Forum</a>
                             </li>
                         </ul>
                     </li>
@@ -68,7 +68,7 @@
 
                         <ul class="dropdown-menu">
                                 <li class="nav-item">
-                                    <a href="{{route('blog')}}" class="nav-link">Portfolio</a>
+                                    <a href="{{route('user.portfolio')}}" class="nav-link">Portfolio</a>
                                 </li>
                         </ul>
                     </li>
@@ -80,13 +80,13 @@
 
                         <ul class="dropdown-menu">
                             <li class="nav-item">
-                                <a href="{{route('contact.us')}}" class="nav-link">About Us</a>
+                                <a href="{{route('about')}}" class="nav-link">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('contact.us')}}" class="nav-link">Privacy Policy</a>
+                                <a href="{{route('privacy.policy')}}" class="nav-link">Privacy Policy</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{route('contact.us')}}" class="nav-link">User Agreement</a>
+                                <a href="{{route('user.agreement')}}" class="nav-link">User Agreement</a>
                             </li>
                         </ul>
                     </li>
