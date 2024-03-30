@@ -50,9 +50,9 @@ class HomeController extends Controller
         return view ('frontend.privacy-policy');
     }
 
-    public function termsConditions ( )
+    public function userAgreement ( )
     {
-        return view ('frontend.terms-conditions');
+        return view ('frontend.user-agreement');
     }
 
     public function activity ( )
@@ -93,55 +93,8 @@ class HomeController extends Controller
 
 
 
-    public function questions ( )
-    {
-        return view ('frontend.questions.questions');
-    }
 
 
-
-    public function askQuestions ( )
-    {
-        return view ('frontend.questions.ask-questions');
-    }
-
-
-
-    public function allQuestions ( )
-    {
-        return view ('frontend.questions.all-questions');
-    }
-
-
-
-    public function unanswered ( )
-    {
-        return view ('frontend.answers.unanswered');
-    }
-
-
-    public function mostVisitedAnswered ( )
-    {
-        return view ('frontend.answers.most-visited');
-    }
-
-
-    public function mostDetailAnswered ( )
-    {
-        return view ('frontend.answers.most-detail-answered');
-    }
-
-
-    public function bestAnswered ( )
-    {
-        return view ('frontend.answers.best-answered');
-    }
-
-
-    public function mostAnswered ( )
-    {
-        return view ('frontend.answers.most-answered');
-    }
 
 
 

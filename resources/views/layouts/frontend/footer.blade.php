@@ -48,7 +48,7 @@
                             <a href="{{route('privacy.policy')}}">Privacy policy</a>
                         </li>
                         <li>
-                            <a href="{{route('terms.conditions')}}">Terms & Conditions</a>
+                            <a href="{{route('user.agreement')}}">User Agreement</a>
                         </li>
                     </ul>
                 </div>
