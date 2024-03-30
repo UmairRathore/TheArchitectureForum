@@ -98,7 +98,7 @@
                                                 >
 
                                                 <label class="form-check-label" for="gridCheck">
-                                                    I agree to the <a href="{{route('terms.conditions')}}">Terms</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
+                                                    I agree to the <a href="{{route('user.agreement')}}">Terms of user agreement</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
                                                 </label>
                                                 <div class="help-block with-errors gridCheck-error"></div>
                                             </div>

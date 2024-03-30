@@ -148,7 +148,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        I agree to the <a href="{{route('terms.conditions')}}">Terms of Use</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
+                                        I agree to the <a href="{{route('user.agreement')}}">Terms of User Agreement</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
                                     </label>
                                 </div>
                             </div>
@@ -290,7 +290,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault-2">
                                     <label class="form-check-label" for="flexCheckDefault-2">
-                                        I agree to the <a href="{{route('terms.conditions')}}">Terms of Use</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
+                                        I agree to the <a href="{{route('user.agreement')}}">Terms of User Agreement</a> and <a href="{{route('privacy.policy')}}">Privacy Policy</a>
                                     </label>
                                 </div>
                             </div>
@@ -337,5 +337,7 @@
 <script src="{{asset('frontend/assets/js/editor.js')}}"></script>
 <script src="{{asset('frontend/assets/js/like-dislike.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/custom.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
 </body>
 </html>
