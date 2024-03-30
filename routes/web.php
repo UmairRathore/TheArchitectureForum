@@ -13,6 +13,7 @@ use App\Http\Controllers\Authentication\RegistrationController;
 use App\Http\Controllers\Authentication\LoginController;
 use App\Http\Controllers\Authentication\ForgetPasswordController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,8 +63,9 @@ Route::get('/blog',[HomeController::class, 'blog'])->name('blog');
 Route::get('/blog-details',[HomeController::class, 'blogDetails'])->name('blog.details');
 Route::get('/coming-soon',[HomeController::class, 'comingSoon'])->name('coming.soon');
 Route::get('/contact-us',[HomeController::class, 'contactUs'])->name('contact.us');
+Route::get('/content-policy',[HomeController::class, 'contentPolicy'])->name('content.policy');
 Route::get('/privacy-policy',[HomeController::class, 'privacyPolicy'])->name('privacy.policy');
-Route::get('/terms-conditions',[HomeController::class, 'termsConditions'])->name('terms.conditions');
+Route::get('/user-agreement',[HomeController::class, 'userAgreement'])->name('user.agreement');
 //
 ////      Answers.
 Route::get('/best-answered',[HomeController::class, 'bestAnswered'])->name('best.answered');
@@ -75,13 +77,6 @@ Route::get('/unanswered',[HomeController::class, 'unanswered'])->name('unanswere
 
 
 ////      Questions.
-Route::get('/questions',[HomeController::class, 'questions'])->name('questions');
-Route::get('/ask-questions',[HomeController::class, 'askQuestions'])->name('ask.questions');
-
-Route::get('/all-questions',[HomeController::class, 'allQuestions'])->name('all.questions');
-
-
-
 
 Route::get('/activity',[HomeController::class, 'activity'])->name('activity');
 Route::get('/badge',[HomeController::class, 'badges'])->name('badge');
@@ -108,10 +103,21 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/user', [\App\Http\Controllers\Frontend\UserController::class, 'user'])->name('user');
         Route::get('/user-profile/{id}', [\App\Http\Controllers\Frontend\UserController::class, 'userProfile'])->name('user.profile');
         Route::get('/user-edit-profile', [\App\Http\Controllers\Frontend\UserController::class, 'userEditProfile'])->name('user.edit.profile');
+        Route::post('/user-update-portfolio', [\App\Http\Controllers\Frontend\UserController::class, 'userUpdatePortfolio'])->name('user.update.portfolio');
         Route::post('/user-update-password', [\App\Http\Controllers\Frontend\UserController::class, 'userUpdatePassword'])->name('user.update.password');
         Route::post('/user-update-profile', [\App\Http\Controllers\Frontend\UserController::class, 'userUpdateProfile'])->name('user.update.profile');
         Route::post('/user-delete-profile', [\App\Http\Controllers\Frontend\UserController::class, 'userDeleteProfile'])->name('user.delete.profile');
-//Route::get('/user-groups',[\App\Http\Controllers\Frontend\UserController::class, 'userGroups'])->name('user.groups');
+
+    Route::get('/user-portfolio',[\App\Http\Controllers\Frontend\UserController::class, 'userPortfolio'])->name('user.portfolio');
+
+
+
+    Route::get('/questions',[PostController::class, 'questions'])->name('questions');
+    Route::get('/ask-questions',[PostController::class, 'askQuestions'])->name('ask.questions');
+    Route::post('/store-questions',[PostController::class, 'storeQuestion'])->name('store.questions');
+
+    Route::get('/all-questions',[PostController::class, 'allQuestions'])->name('all.questions');
+
 
 
 //   Dashboard Admin

@@ -46,6 +46,9 @@
                                 </li>
 
                                 <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="portfolio-account-tab" data-bs-toggle="tab" data-bs-target="#portfolio-account" type="button" role="tab" aria-controls="portfolio-account" aria-selected="false">Portfolio</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="delete-account-tab" data-bs-toggle="tab" data-bs-target="#delete-account" type="button" role="tab" aria-controls="delete-account" aria-selected="false">Delete Account</button>
                                 </li>
                             </ul>
@@ -165,6 +168,26 @@
                                         </form>
                                     </div>
                                 </div>
+                                <div class="tab-pane fade edit-profile" id="portfolio-account" role="tabpanel" aria-labelledby="portfolio-account-tab">
+                                    <form id="portfolioUserForm" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="public-information">
+                                            <h3>Portfolio Update</h3>
+                                            <ul class="portfolio-account">
+                                                <li>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="file" name="user_portfolio" id="user_portfolio" accept=".pdf">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <button class="default-btn" type="button" id="submitPortfolio">
+                                                        Update Portfolio
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
 
 
                                 <div class="tab-pane fade edit-profile" id="delete-account" role="tabpanel" aria-labelledby="delete-account-tab">
@@ -224,6 +247,31 @@
                 preview.src = "{{asset('frontend/assets/images/user/profile-img.jpg')}}"; // Default image if no file selected
             }
         }
+
+        $(document).ready(function() {
+            $('#submitPortfolio').click(function() {
+                var formData = new FormData($('#portfolioUserForm')[0]);
+
+                $.ajax({
+                    url: '{{ route("user.update.portfolio") }}',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        console.log('Upload successful:', response);
+                        showSuccessMessage('Portfolio updated successfully');
+
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Upload failed:', xhr.responseText);
+                        showErrorMessage('An error occurred while updating Portfolio');
+                    }
+                });
+            });
+        });
+
+
         $(document).ready(function() {
             $('#updateUserProfile').submit(function(event) {
                 event.preventDefault();

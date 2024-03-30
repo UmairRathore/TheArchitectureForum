@@ -1,7 +1,30 @@
 @extends('layouts.frontend.app')
 
 @section('content')
+    <style>
 
+        .pdf-container {
+            height: 500px; /* Set a fixed height for the container */
+            overflow-y: auto; /* Enable vertical scrolling */
+            border: 1px solid #ccc; /* Add border for better visibility */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
+        }#pdfViewer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .page-wrapper {
+            width: 45%; /* Adjust width as needed */
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            width: 100%;
+            border: 1px solid #ccc; /* Add border for better visibility */
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
+        }
+    </style>
     <!-- Start Mail Content Area -->
     <div class="main-content-area ptb-100">
         <div class="container">
@@ -32,8 +55,14 @@
                                 </div>
 
                                 <div class="edit-btn">
-                                    <button id="openPdfBtn" class="default-btn">Click this to see Portfolio</button>
+                                    <button id="loadPdfBtn" class="default-btn">Click this to see Portfolio</button>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="pdf-container">
+                            <div id="pdfViewer"></div>
+                            <div class="page-slider">
+                                <input type="range" min="1" max="10" value="1" class="slider" id="pageSlider">
                             </div>
                         </div>
                     </div>
@@ -58,9 +87,14 @@
                                 </div>
 
                                 <div class="edit-btn">
-                                    {{--                                <a href="{{route('user.edit.profile')}}" class="default-btn">--}}
-                                    Edit profile</a>
+                                    <button id="loadPdfBtn" class="default-btn">Click this to see Portfolio</button>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="pdf-container">
+                            <div id="pdfViewer"></div>
+                            <div class="page-slider">
+                                <input type="range" min="1" max="10" value="1" class="slider" id="pageSlider">
                             </div>
                         </div>
                     </div>
@@ -70,17 +104,124 @@
     </div>
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var openPdfBtn = document.getElementById('openPdfBtn');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
 
-            openPdfBtn.addEventListener('click', function () {
-                var pdfPath = 'path/to/your/pdf/file.pdf';
+<script>
 
-                window.open('/pdf-viewer?url=' + encodeURIComponent(pdfPath), '_blank');
+    document.addEventListener('DOMContentLoaded', function() {
+        const loadPdfBtn = document.getElementById('loadPdfBtn');
+
+        loadPdfBtn.addEventListener('click', function() {
+            const url = '{{ asset("/assets/images/portfoliopdf/dummy.pdf") }}';
+            const loadingTask = pdfjsLib.getDocument(url);
+
+            loadingTask.promise.then(function(pdf) {
+                const viewer = document.getElementById('pdfViewer');
+                const pageSlider = document.getElementById('pageSlider');
+                const numPages = pdf.numPages;
+                let currentPage = 1;
+
+                function renderPage(pageNumber) {
+                    pdf.getPage(pageNumber).then(function(page) {
+                        const canvasWrapper = document.createElement('div');
+                        canvasWrapper.classList.add('page-wrapper');
+                        const canvas = document.createElement('canvas');
+                        canvasWrapper.appendChild(canvas);
+                        viewer.appendChild(canvasWrapper);
+
+                        const viewport = page.getViewport({ scale: 1.5 });
+                        const canvasContext = canvas.getContext('2d');
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        const renderContext = {
+                            canvasContext,
+                            viewport
+                        };
+                        page.render(renderContext);
+                    });
+                }
+
+                function renderPages(startPage) {
+                    viewer.innerHTML = '';
+                    for (let pageNumber = startPage; pageNumber <= numPages && pageNumber < startPage + 2; pageNumber++) {
+                        renderPage(pageNumber);
+                    }
+                }
+
+                renderPages(currentPage);
+
+                const updateSlider = () => {
+                    pageSlider.setAttribute('max', numPages);
+                    pageSlider.value = currentPage;
+                };
+
+                updateSlider();
+
+                pageSlider.addEventListener('input', function() {
+                    currentPage = parseInt(pageSlider.value);
+                    renderPages(currentPage);
+                });
             });
         });
+    });
 
-    </script>
+
+</script>
+
+{{--    loadingTask.promise.then(function(pdf) {--}}
+{{--        // Get the total number of pages in the PDF--}}
+{{--        const numPages = pdf.numPages;--}}
+
+{{--        // Create a PDF viewer--}}
+{{--        const viewer = document.getElementById('pdfViewer');--}}
+
+{{--        // Render each page of the PDF in a booklet format--}}
+{{--        for (let pageNumber = 1; pageNumber <= numPages; pageNumber += 2) {--}}
+{{--            // Create a canvas element for each pair of pages (booklet format)--}}
+{{--            const canvasWrapper = document.createElement('div');--}}
+{{--            canvasWrapper.classList.add('page-wrapper');--}}
+{{--            const canvas = document.createElement('canvas');--}}
+{{--            canvasWrapper.appendChild(canvas);--}}
+{{--            viewer.appendChild(canvasWrapper);--}}
+
+{{--            // Render the current page--}}
+{{--            pdf.getPage(pageNumber).then(function(page) {--}}
+{{--                const viewport = page.getViewport({ scale: 1.5 });--}}
+{{--                const canvasContext = canvas.getContext('2d');--}}
+{{--                canvas.height = viewport.height;--}}
+{{--                canvas.width = viewport.width;--}}
+
+{{--                const renderContext = {--}}
+{{--                    canvasContext,--}}
+{{--                    viewport--}}
+{{--                };--}}
+{{--                page.render(renderContext);--}}
+{{--            });--}}
+
+{{--            // Render the next page (if it exists)--}}
+{{--            if (pageNumber + 1 <= numPages) {--}}
+{{--                const nextCanvasWrapper = document.createElement('div');--}}
+{{--                nextCanvasWrapper.classList.add('page-wrapper');--}}
+{{--                const nextCanvas = document.createElement('canvas');--}}
+{{--                nextCanvasWrapper.appendChild(nextCanvas);--}}
+{{--                viewer.appendChild(nextCanvasWrapper);--}}
+
+{{--                pdf.getPage(pageNumber + 1).then(function(nextPage) {--}}
+{{--                    const viewport = nextPage.getViewport({ scale: 1.5 });--}}
+{{--                    const canvasContext = nextCanvas.getContext('2d');--}}
+{{--                    nextCanvas.height = viewport.height;--}}
+{{--                    nextCanvas.width = viewport.width;--}}
+
+{{--                    const renderContext = {--}}
+{{--                        canvasContext,--}}
+{{--                        viewport--}}
+{{--                    };--}}
+{{--                    nextPage.render(renderContext);--}}
+{{--                });--}}
+{{--            }--}}
+{{--        }--}}
+{{--    });--}}
+{{--</script>--}}
 
 @endsection

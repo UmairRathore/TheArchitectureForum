@@ -63,9 +63,11 @@ class UserController extends Controller
 
 
 
-    public function userGroups ( )
+    public function userPortfolio ( )
     {
-        return view ('frontend.user.user-groups');
+        $pdfURl = User::select('users.portfolio')
+            ->where('id',auth()->user()->id)->first();
+        return view ('frontend.user.user-portfolio',$pdfURl);
     }
 
 
@@ -109,6 +111,37 @@ class UserController extends Controller
         $check = $user->save();
         if ($check) {
             return response()->json(['status' => 'success', 'message' => 'User Profile updated successfully'], 200);
+        } else {
+            return response()->json(['status' => 'error', 'message' => 'Failed to update user profile'], 400);
+        }
+    }
+
+    public function userUpdatePortfolio(Request $request)
+    {
+        $user = User::find($request->user()->id);
+        if (!$user) {
+            return response()->json(['status' => 'error', 'message' => 'User not found'], 404);
+        }
+        dd($request->file('user_portfolio'));
+        if ($request->hasFile('user_portfolio'))
+        {
+            $folderName = 'user_portfolio';
+            $image = $request->file('user_portfolio');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+
+            $directory = public_path('assets/images/' . $folderName . '/');
+
+            if (!File::exists($directory)) {
+                File::makeDirectory($directory, 0777, true, true);
+            }
+
+            $user->portfolio = $image->move($directory, $imageName);
+
+        }
+        dd($user);
+        $check = $user->save();
+        if ($check) {
+            return response()->json(['status' => 'success', 'message' => 'User Profile updated successfully','data'=>$user->portfolio], 200);
         } else {
             return response()->json(['status' => 'error', 'message' => 'Failed to update user profile'], 400);
         }
