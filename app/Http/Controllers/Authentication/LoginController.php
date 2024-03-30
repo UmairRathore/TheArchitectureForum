@@ -31,7 +31,7 @@ class LoginController extends Controller
         if (Auth::guard('user')->check() && auth('user')->user()->role == 1) /* admin */ {
             return redirect('/dashboard');
         } elseif (Auth::guard('user')->check() && auth('user')->user()->role == 2) /* user */ {
-            return redirect()->route('edit.user.profile', ['id' => \auth()->user()->id]);
+            return redirect()->route('edit.user.profile', [\auth()->user()->id]);
         }
 
         return view('auth.login');
@@ -43,17 +43,16 @@ class LoginController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-
         $credentials = $request->only('email', 'password');
-//dd($credentials);
+
         if (Auth::guard('user')->attempt($credentials, true)) {
             $user = auth('user')->user();
 //            dd($user);
 
-            if ($user->role == 1) {
+            if ($user->role == 'admin') {
                 return view('backend.index');
             }
-            if ($user->role == 2) {
+            if ($user->role == 'user') {
                 // Check if email is verified
 //                $isEmailVerified = EmailVerify::where('email', $user->email)->exists();
 //                if (!$isEmailVerified) {

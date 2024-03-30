@@ -25,12 +25,11 @@ class LoginController extends Controller
     function Login()
     {
 
-        if (Auth::guard('user')->check() && auth('user')->user()->role_id == 1) /* admin */ {
+        if (Auth::guard('user')->check() && auth('user')->user()->role == 'admin') /* admin */ {
             return redirect('/dashboard');
-        } elseif (Auth::guard('user')->check() && auth('user')->user()->role_id == 2) /* user */ {
+        } elseif (Auth::guard('user')->check() && auth('user')->user()->role == 'user') /* user */ {
             return redirect('/');;
         }
-        return response('sad');
 
 //        return view('auth.login');
     }
@@ -43,14 +42,14 @@ class LoginController extends Controller
         ]);
 
         $credentials = $request->only('email', 'password');
-
+dd($credentials);
         if (Auth::guard('user')->attempt($credentials, true)) {
             $user = auth('user')->user();
 
-            if ($user->role_id == 1) {
+            if ($user->role == 'admin') {
                 return redirect('/dashboard');
             }
-            if ($user->role_id == 2) {
+            if ($user->role == 'user') {
                 $isEmailVerified = User::where('email_verified_at','=',Null)->exists();
                 if (!$isEmailVerified) {
                     Auth::guard('user')->logout();

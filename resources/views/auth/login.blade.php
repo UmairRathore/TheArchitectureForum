@@ -27,7 +27,7 @@
 
         <p class="signup-link">
             No account?
-            <a href="{{ route('registeration') }}">Register Account Here</a>
+            <a href="{{ route('register') }}">Register Account Here</a>
 
         </p>
 
