@@ -1,8 +1,6 @@
-
 @extends('layouts.frontend.app')
 
 @section('content')
-
 
     <!-- Start Mail Content Area -->
     <div class="main-content-area ptb-100">
@@ -10,7 +8,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-menu-wrap">
-                        @include('layouts.frontend.components.leftSideBar')
+                        @include('layouts.frontend.partials.left-SideBar')
                     </div>
                 </div>
 
@@ -29,7 +27,6 @@
                         </ul>
 
 
-
                         <div class="accordion mb-0" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
@@ -44,35 +41,34 @@
                                     </div>
                                 </div>
                             </div>
-@foreach($faqs as $faq)
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        {{$faq->title}}
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>
-{{$faq->description}}
-                                        </p>
+                            @foreach($faqs as $faq)
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            {{$faq->title}}
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>
+                                                {{$faq->description}}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                       @endforeach
+                            @endforeach
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-3">
                     <div class="right-siderbar">
-                        @include('layouts.frontend.components.rightSideBar')
+                        @include('layouts.frontend.partials.right-SideBar')
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Mail Content Area -->
-
 
 @endsection
