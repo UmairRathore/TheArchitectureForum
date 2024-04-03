@@ -14,6 +14,8 @@ class Question extends Model
     protected $fillable = [
         'user_id',
         'title',
+        'down_vote',
+        'up_vote',
         'description',
         'question_image',
         'tag_id', //upto 5

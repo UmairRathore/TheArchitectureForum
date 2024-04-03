@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Question;
+use App\Models\QuestionVote;
 use App\Models\Tag;
 use App\Models\Topic;
 use Illuminate\Http\Request;
@@ -13,13 +14,46 @@ class PostController extends Controller
 {
     //
 
-    public function questions ( )
+//    public function questions ( )
+//    {
+//        $tags = Tag::all();
+//        $topics = Topic::all();
+//        $data = [
+//            'tags' => $tags,
+//            'topics' => $topics
+//        ];
+//        return view ('frontend.questions.questions');
+//    }
+
+    public function oneQuestion()
     {
+        $questions = Question::
+        select('users.name as userName', 'users.profile_image as userProfileImage',
+            'users.id as userID', 'questions.*', 'topics.id as topicID',
+            'topics.title as topicName', 'question_votes.up_votes as questionUpVote',
+            'question_votes.down_votes as questionDownVote')
+            ->join('users', 'users.id', '=', 'questions.user_id')
+            ->join('topics', 'topics.id', '=', 'questions.topic_id')
+            ->join('question_votes', 'question_votes.question_id', '=', 'questions.id')
+            ->take(10)
+            ->get();
+
+        $allTags = [];
+        foreach ($questions as $question) {
+            $tagIDs = explode(',', $question->tag_id);
+            $question->tags = Tag::whereIn('id', $tagIDs)->get();
+
+            $allTags = array_merge($allTags, $question->tags->toArray());
+
+            $totalQuestionVotes = $question->questionUpVote + $question->questionDownVote;
+            $question->totalVotes = $totalQuestionVotes;
+        }
         $tags = Tag::all();
         $topics = Topic::all();
         $data = [
             'tags' => $tags,
-            'topics' => $topics
+            'topics' => $topics,
+            'questions' => $questions
         ];
         return view ('frontend.questions.questions');
     }
@@ -49,22 +83,12 @@ class PostController extends Controller
 
     public function storeQuestion(Request $request)
     {
-//        $request->validate([
-//            'title' => 'required|string',
-//            'category' => 'required',
-//            'tags' => 'required|string',
-//            // Add more validation rules as needed
-//        ]);
-
 
         $question = new Question();
         $question->title = $request->title;
         $question->user_id= auth()->user()->id;
         $question->description = $request->description;
-        if ($request->tags) {
-            $question->tag_id = explode(',', $request->tags);
-        }
-
+        $question->tag_id =$request->tags;
         $question->topic_id = $request->topic;
 
         if ($request->hasFile('file')) {
@@ -84,13 +108,40 @@ class PostController extends Controller
 
         $question->save();
 
-        // Optionally, handle tags and category relations
 
         return response()->json(['message' => 'Question posted successfully'], 200);
     }
 
 
+    public function vote(Request $request, $questionID)
+    {
+        $voteType = $request->input('vote_type');
 
+        // Check if the user has already voted on this question
+        $existingVote = QuestionVote::where('question_id', $questionID)
+            ->where('user_id', auth()->user()->id)
+            ->first();
+
+        if (!$existingVote) {
+            // If the user hasn't voted yet, create a new vote record
+            $question = new QuestionVote();
+            $question->question_id = $questionID;
+            $question->user_id = auth()->user()->id;
+
+            if ($voteType == 'up') {
+                $question->up_votes = 1;
+            } elseif ($voteType == 'down') {
+                $question->down_votes = 1;
+            } else {
+                return response()->json(['error' => 'Invalid vote type'], 400);
+            }
+
+            $question->save();
+            return response()->json(['message' => ucfirst($voteType) . ' vote added successfully']);
+        } else {
+            return response()->json(['error' => 'You cannot vote again']);
+        }
+    }
 
 
 

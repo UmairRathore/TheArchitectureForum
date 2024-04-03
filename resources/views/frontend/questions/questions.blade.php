@@ -258,23 +258,12 @@
                                 </div>
                             </div>
 
-                            <form class="your-answer-form">
+                            <form class="your-answer-form" id="answerForm">
                                 <div class="form-group">
                                     <h3>Your Answer</h3>
                                 </div>
                                 <div class="form-group">
                                     <div id="txtEditor"></div>
-                                </div>
-                                <div class="form-group">
-                                    <h3>Post as a guest</h3>
-                                </div>
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="default-btn">Post your answer</button>
