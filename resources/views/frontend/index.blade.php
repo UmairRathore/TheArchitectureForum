@@ -7,52 +7,44 @@
     <!-- Start Mail Content Area -->
     <div class="main-content-area ptb-100">
         <div class="container" style="margin-bottom: 20px">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height: 300px;">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="card">
-                                    <img src="{{asset('frontend/assets/images/badges/badges-1.png')}}" class="card-img-top" alt="Image 1" style="max-width: 35%; height: 50%;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Question 1</h5>
-                                        <p class="card-text">Answer of the this question is no 1</p>
+                    @foreach ($data['questions']->chunk(3) as $key => $chunk)
+                        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                            <div class="row">
+                                @foreach ($chunk as $question)
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-header" style="padding: 0;">
+                                                @if($question->question_image)
+                                                <img src="{{ asset($question->question_image) }}" class="card-img-top" alt="Image {{$loop->iteration}}" style="height: 200px; object-fit: cover;">
+                                                @else
+                                                <img src="{{ asset('frontend/assets/images/badges/badges-1.png') }}" class="card-img-top" alt="Image {{$loop->iteration}}" style="height: 200px; object-fit: cover;">
+                                                @endif
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{ $question->title }}</h5>
+                                                <p class="card-text">{{ $question->description }}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <img src="{{asset('frontend/assets/images/badges/badges-1.png')}}" class="card-img-top" alt="Image 1" style="max-width: 35%; height: 50%;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Question 2</h5>
-                                        <p class="card-text">Answer of the this question is no 2</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <img src="{{asset('frontend/assets/images/badges/badges-1.png')}}" class="card-img-top" alt="Image 1" style="max-width: 35%; height: 50%;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Question 1</h5>
-                                        <p class="card-text">Answer of the this question is no 2</p>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
-                    </div>
-                    <!-- Add more carousel items as needed -->
+                    @endforeach
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="left: -55px; top:-20px; background: none; color: black; margin-top: -15px;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%); height: 40px;width: 40px;"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" style="right: -55px; top: -7%; background: none; color: black;  margin-top: -15px;">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%); height: 40px;width: 40px;"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </div>
-        <div>
+
+
+            <div>
 
 
         </div>
