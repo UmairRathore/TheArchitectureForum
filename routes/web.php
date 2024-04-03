@@ -113,8 +113,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     Route::get('/questions',[PostController::class, 'questions'])->name('questions');
+
+    Route::get('/question/{id}',[PostController::class, 'oneQuestion'])->name('oneQuestion');
     Route::get('/ask-questions',[PostController::class, 'askQuestions'])->name('ask.questions');
     Route::post('/store-questions',[PostController::class, 'storeQuestion'])->name('store.questions');
+    Route::post('/questions/{question}/vote',[PostController::class, 'vote'])->name('questions.vote');
 
     Route::get('/all-questions',[PostController::class, 'allQuestions'])->name('all.questions');
 
@@ -142,7 +145,7 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/status-user/{id}', [UserController::class, 'changeStatus'])->name('status-user');
 
         });
-        //User
+        //Useruser.profile
 
         //<----------CRUD topic
         Route::group(['prefix' => 'topic'], function () {

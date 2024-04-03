@@ -129,12 +129,13 @@
 
         <ul>
             @if(isset($recentQuestions))
+{{--            {{dd($recentQuestions)}}--}}
                 @foreach($recentQuestions as $recentQuestion)
                     <li>
                         <a href="{{route('most.answered')}}">
                             {{$recentQuestion->title}}
                         </a>
-                        <p>{{$recentQuestion->created_at}}8 hours ago by <a href="{{route('user')}}">{{$recentQuestion->user->name}}</a></p>
+                        <p>{{$recentQuestion->created_at}}8 hours ago by <a href="{{route('user')}}">{{$recentQuestion->users->name}}</a></p>
                     </li>
                 @endforeach
             @else
