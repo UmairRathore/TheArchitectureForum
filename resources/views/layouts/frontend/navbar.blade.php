@@ -14,11 +14,12 @@
 <div class="desktop-nav">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="{{ route('home') }}">
-                <div >
-                    <img src="{{ asset('frontend/assets/logo.jpg') }}" alt="logo" style="max-height: 60px;">
-                </div>
-            </a>
+            <div style="position: absolute; left: 20px; top: 40px; z-index: 1000; border: 3px solid white; padding: 0; margin: 0; width: 120px; height: 115px">
+                <a href="{{ route('home') }}">
+                        <img src="{{ asset('frontend/assets/logo.jpg') }}" alt="logo" style="max-width: 100%; max-height: 100%;  transition: transform 0.3s ease;">
+                </a>
+            </div>
+
             <li class="nav-item" style="list-style-type: none;">
                 <p style="color:  white;">The Architecture Forum</p>
             </li>
@@ -78,50 +79,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link dropdown-toggle">
-                            Policies and About
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <a href="{{route('about')}}" class="nav-link">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{route('privacy.policy')}}" class="nav-link">Privacy Policy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{route('user.agreement')}}" class="nav-link">User Agreement</a>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="{{route('about')}}" class="nav-link">About Us</a>
                     </li>
 
 
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="#" class="nav-link dropdown-toggle">--}}
-{{--                            Pages--}}
-{{--                        </a>--}}
-
-{{--                        <ul class="dropdown-menu">--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('activity')}}" class="nav-link">Activity</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('referral')}}" class="nav-link">Referrals</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('privacy.policy')}}" class="nav-link">Privacy Policy</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('terms.conditions')}}" class="nav-link">Terms & Conditions</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('coming.soon')}}" class="nav-link">Coming Soon</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="nav-item">--}}
-{{--                                <a href="{{route('notFound')}}" class="nav-link">404 Page</a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
                 </ul>
 
                 <div class="others-options">
@@ -135,6 +97,7 @@
                                 </button>
                             </form>
                         </li>
+
                         @if(auth()->check())
                             @if(auth()->user()->role == 'admin')
 
@@ -143,7 +106,6 @@
                                         Dashboard
                                     </a>
                                 </li>
-                            @else
                             @endif
                         @else
                             <li>
@@ -159,6 +121,31 @@
                         @endif
                     </ul>
                 </div>
+                @if(auth()->check())
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" >
+                                Account
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="{{ route('user.edit.profile') }}" class="nav-link">Settings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a role="button"  class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                @endif
             </div>
         </nav>
     </div>
