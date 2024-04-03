@@ -4,6 +4,7 @@
             <div class="logo">
                 <a href="{{route('home')}}">
                     <img src="{{asset('frontend/assets/logo.jpg')}}" alt="logo">
+{{--                    <img src="{{asset('frontend/assets/rotatedlogo.jpg')}}" alt="logo">--}}
                 </a>
             </div>
         </div>
@@ -51,14 +52,17 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                           <?php
-                            $topics = \App\Models\Topic::all();
-                            ?>
-                            @foreach($topics as $topic)
+<!--                           --><?php
+//                            $topics = \App\Models\Topic::all();
+//                            ?>
+{{--                            /@foreach($topics as $topic)--}}
                             <li class="nav-item">
-                                <a href="{{route('blog')}}" class="nav-link">{{$topic->title}}</a>
+                                <a href="#" class="nav-link">Architecture</a>
                             </li>
-                                @endforeach
+                            <li>
+                                <a href="#" class="nav-link">Interior</a>
+                            </li>
+{{--                                @endforeach--}}
                         </ul>
                     </li>
                     <li class="nav-item">
