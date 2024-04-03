@@ -334,7 +334,7 @@
 <script src="{{asset('frontend/assets/js/contact-form-script.js')}}"></script>
 <script src="{{asset('frontend/assets/js/ajaxchimp.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/metismenu.js')}}"></script>
-<script src="{{asset('frontend/assets/js/editor.js')}}"></script>
+{{--<script src="{{asset('frontend/assets/js/editor.js')}}"></script>--}}
 <script src="{{asset('frontend/assets/js/like-dislike.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/custom.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>

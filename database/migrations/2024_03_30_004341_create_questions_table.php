@@ -18,7 +18,6 @@ class CreateQuestionsTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('question_image')->nullable();
-            $table->boolean('vote')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('tag_id');
             $table->unsignedBigInteger('topic_id');
