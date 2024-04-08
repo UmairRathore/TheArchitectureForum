@@ -83,7 +83,7 @@ class PostController extends Controller
 
     public function storeQuestion(Request $request)
     {
-
+dd($request->all());
         $question = new Question();
         $question->title = $request->title;
         $question->user_id= auth()->user()->id;

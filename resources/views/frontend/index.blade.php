@@ -42,8 +42,6 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
-
             <div>
 
 
@@ -103,7 +101,7 @@
                                     <div class="col-md-12 mb-6">
                                         <label for="description">Description</label>
                                         <textarea name="description" id="description"  class="form-control form-control-lg" placeholder="Enter Description">{{ old('Description') }}</textarea>
-{{--                                      --}}
+                                        {{--                                      --}}
                                     </div>
                                     <div class="form-group">
                                         <div  class="file-upload-account-info btn btn-primary" style="color: white; background-color: black">
@@ -116,7 +114,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="default-btn">Post your Question</button>
+                                        <button type="button" id="submitQuestionModal" class="default-btn">Post your Question</button>
                                     </div>
                                 </form>
                             </div>
@@ -166,34 +164,32 @@
                                         <div class="single-qa-box like-dislike">
                                             <div class="d-flex">
                                                 <div class="link-unlike flex-shrink-0">
-                                                    <a
-                                                        href="{{route('user.profile',[$question->user_id])}}"
-                                                    >
+                                                    <a href="{{route('user.profile',[$question->user_id])}}">
                                                         @if(isset($question->userProfileImage))
                                                         <img src="{{asset($question->userProfileImage)}}" alt="Image">
                                                         @else
                                                         <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
                                                             @endif
                                                     </a>
-<div id="voteingdiv">
-                                                    <div class="donet-like-list">
-                                                        <!-- Upvote Button -->
-                                                        <button class="like-unlink-count like" data-question-id="{{ $question->id }}" data-vote-type="up">
-                                                            <i class="ri-thumb-up-fill"></i>
-                                                            <span id>{{ $question->questionUpVote ?? '0' }}</span>
-                                                        </button>
+                                                    <div id="voteingdiv">
+                                                        <div class="donet-like-list">
+                                                            <!-- Upvote Button -->
+                                                            <button class="like-unlink-count like" data-question-id="{{ $question->id }}" data-vote-type="up">
+                                                                <i class="ri-thumb-up-fill"></i>
+                                                                <span id>{{ $question->questionUpVote ?? '0' }}</span>
+                                                            </button>
 
+                                                        </div>
+
+                                                        <div class="donet-like-list">
+                                                            <!-- Downvote Button -->
+                                                            <button class="like-unlink-count dislike" data-question-id="{{ $question->id }}" data-vote-type="down">
+                                                                <i class="ri-thumb-down-fill"></i>
+                                                                <span>{{ $question->questionDownVote ?? '0' }}</span>
+                                                            </button>
+
+                                                        </div>
                                                     </div>
-
-                                                    <div class="donet-like-list">
-                                                        <!-- Downvote Button -->
-                                                        <button class="like-unlink-count dislike" data-question-id="{{ $question->id }}" data-vote-type="down">
-                                                            <i class="ri-thumb-down-fill"></i>
-                                                            <span>{{ $question->questionDownVote ?? '0' }}</span>
-                                                        </button>
-
-                                                    </div>
-</div>
                                                 </div>
 
                                                 <div class="flex-grow-1 ms-3">
@@ -816,65 +812,76 @@
             </div>
         </div>
     </div>
+
     <!-- End Mail Content Area -->
 @endsection
-<!-- End Mail Content Area -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-<!-- Include CKEditor script -->
 
 
-<script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+        @section('indexjs')
 
 
-<script>
-        ClassicEditor
-        .create(document.querySelector('#description'))
-        .catch(error => {
-        console.error(error);
-    });
-
-    $(document).ready(function() {
-        $('#questionModalForm').submit(function(event) {
-            event.preventDefault();
-
-            // Retrieve CKEditor instance and its content
-            var editor = ClassicEditor.instances.description;
-            var descriptionContent = editor.getData();
-
-            // Create FormData object and append form data
-            var formData = new FormData();
-            formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
-            formData.append('title', $('#title').val());
-            formData.append('category', $('#category').val());
-            formData.append('tags', $('#tags').val());
-            formData.append('topic', $('#topic').val());
-            formData.append('description', descriptionContent); // Append CKEditor content
-            formData.append('file', $('#file-2')[0].files[0]);
-
-            // Make AJAX request
-            $.ajax({
-                url: '{{ route('store.questions') }}', // Specify your server endpoint
-                type: 'POST',
-                data: formData,
-                contentType: false,
-                processData: false,
-                success: function(response) {
-                    console.log(response);
-                    // Show success message using Toastr.js or any other notification library
-                    toastr.success('Question posted successfully');
-                    // Optionally, reset the form after successful submission
-                    $('#questionModalForm')[0].reset();
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                    // Show error message using Toastr.js or any other notification library
-                    toastr.error('An error occurred while posting question');
+        <script>
+            window.onload = function() {
+                var descriptionTextarea = document.querySelector('#description');
+                if (descriptionTextarea) {
+                    ClassicEditor
+                        .create(descriptionTextarea)
+                        .then(editor => {
+                            console.log('Editor initialized');
+                            setupAjax(editor);
+                        })
+                        .catch(error => {
+                            console.error(error);
+                        });
+                } else {
+                    console.error("Textarea with id 'description' not found.");
                 }
-            });
-        });
-    });
+            };
 
+            // Function to setup AJAX call
+            function setupAjax(editor) {
+                $('#submitQuestionModal').click(function(event) {
+                    event.preventDefault();
+
+                    if (editor) {
+                        var descriptionContent = editor.getData();
+                        console.log(descriptionContent);
+
+                        // Create FormData object and append form data
+                        var formData = new FormData();
+                        formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+                        formData.append('title', $('#title').val());
+                        formData.append('category', $('#category').val());
+                        formData.append('tags', $('#tags').val());
+                        formData.append('topic', $('#topic').val());
+                        formData.append('description', descriptionContent); // Append CKEditor content
+                        formData.append('file', $('#file-2')[0].files[0]);
+
+                        // Make AJAX request
+                        $.ajax({
+                            url: '{{ route('store.questions') }}', // Specify your server endpoint
+                            type: 'POST',
+                            data: formData,
+                            contentType: false,
+                            processData: false,
+                            success: function(response) {
+                                console.log(response);
+                                // Show success message using Toastr.js or any other notification library
+                                toastr.success('Question posted successfully');
+                                // Optionally, reset the form after successful submission
+                                $('#questionModalForm')[0].reset();
+                            },
+                            error: function(xhr, status, error) {
+                                console.error(xhr.responseText);
+                                // Show error message using Toastr.js or any other notification library
+                                toastr.error('An error occurred while posting question');
+                            }
+                        });
+                    } else {
+                        console.error("CKEditor instance not available");
+                    }
+                });
+            }
 
 
     $(document).ready(function() {
@@ -927,3 +934,6 @@
 
 
 </script>
+
+
+    @endsection

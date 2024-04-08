@@ -1,5 +1,5 @@
 <!-- Start Footer Area -->
-<div class="footer-area pt-100 pb-70">
+<div id="checkFooterNavbar" class="footer-area pt-100 pb-70">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-sm-6">

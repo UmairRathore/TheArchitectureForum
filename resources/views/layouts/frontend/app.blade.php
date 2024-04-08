@@ -17,7 +17,7 @@
 <!-- End Preloader Area -->
 
 <!-- Start Navbar Area -->
-<div class="navbar-area">
+<div  class="navbar-area navbar">
   @include('layouts.frontend.navbar')
 </div>
 <!-- End Navbar Area -->
@@ -320,9 +320,35 @@
 </div>
 <!-- End Go Top Area -->
 
+<script>
 
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
+    function handleNavbarVisibility() {
+        var footer = document.getElementById('checkFooterNavbar');
+        var navbar = document.querySelector('.navbar');
 
+        if (isInViewport(footer)) {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'block';
+        }
+    }
+
+    window.addEventListener('scroll', function () {
+        handleNavbarVisibility();
+    });
+
+    handleNavbarVisibility();
+</script>
 
 <!-- Links of JS File -->
 <script src="{{asset('frontend/assets/js/jquery.min.js')}}"></script>
@@ -334,10 +360,48 @@
 <script src="{{asset('frontend/assets/js/contact-form-script.js')}}"></script>
 <script src="{{asset('frontend/assets/js/ajaxchimp.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/metismenu.js')}}"></script>
-{{--<script src="{{asset('frontend/assets/js/editor.js')}}"></script>--}}
+<script src="{{asset('frontend/assets/js/editor.js')}}"></script>
 <script src="{{asset('frontend/assets/js/like-dislike.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/custom.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+{{--<script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>--}}
+<script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
+
+
+
+<script>
+
+    function isInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    function handleNavbarVisibility() {
+        var footer = document.getElementById('checkFooterNavbar');
+        var navbar = document.querySelector('.navbar');
+
+        if (isInViewport(footer)) {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'block';
+        }
+    }
+
+    window.addEventListener('scroll', function () {
+        handleNavbarVisibility();
+    });
+
+    handleNavbarVisibility();
+</script>
+
+
+
+@yield('indexjs')
 
 </body>
 </html>
