@@ -14,7 +14,7 @@
 
                 <div class="col-lg-6">
                     <div class="middull-content">
-                        <form<form class="your-answer-form" id="questionModalForm">
+                       <form class="your-answer-form" id="questionModalForm">
                             @csrf
                             <div class="form-group">
                                 <h3>Create a question</h3>
@@ -51,11 +51,10 @@
                                     @endif
                                 </select>
                             </div>
-                            <div class="col-md-12 mb-6">
-                                <label for="description">Description</label>
-                                <textarea name="description" id="description"  class="form-control form-control-lg" placeholder="Enter Description">{{ old('Description') }}</textarea>
-                                {{--                                      --}}
-                            </div>
+                           <div class="col-md-12 mb-6">
+                               <label for="description">Description</label>
+                               <textarea name="description" id="description"  class="form-control form-control-lg" placeholder="Enter Description">{{ old('Description') }}</textarea>
+                           </div>
                             <div class="form-group">
                                 <div  class="file-upload-account-info btn btn-primary" style="color: white; background-color: black">
                                     <label class="upload">
@@ -67,7 +66,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="default-btn">Post your Question</button>
+                                <button type="button" id="submitQuestion" class="default-btn">Post your Question</button>
                             </div>
                         </form>
 
@@ -85,60 +84,75 @@
     <!-- End Mail Content Area -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
 
     <script>
+        window.onload = function() {
+            var descriptionTextarea = document.querySelector('#description');
+            if (descriptionTextarea) {
+                ClassicEditor
+                    .create(descriptionTextarea)
+                    .then(editor => {
+                        console.log('Editor initialized');
+                        setupAjax(editor);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            } else {
+                console.error("Textarea with id 'description' not found.");
+            }
+        };
+@if(auth()->user())
+        function setupAjax(editor) {
+            $('#submitQuestion').click(function(event) {
+                event.preventDefault();
+
+                if (editor) {
+                    var descriptionContent = editor.getData();
+                    console.log(descriptionContent);
+
+                    var formData = new FormData();
+                    formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+                    formData.append('title', $('#title').val());
+                    formData.append('category', $('#category').val());
+                    formData.append('tags', $('#tags').val());
+                    formData.append('topic', $('#topic').val());
+                    formData.append('description', descriptionContent); // Append CKEditor content
+                    formData.append('file', $('#file-2')[0].files[0]);
+
+                    $.ajax({
+                        url: '{{ route('store.question') }}', // Specify your server endpoint
+                        type: 'POST',
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            console.log(response);
+                            toastr.success('Question posted successfully');
+                            $('#questionModalForm')[0].reset();
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(xhr.responseText);
+                            toastr.error('An error occurred while posting question');
+                        }
+                    });
+                } else {
+                    console.error("CKEditor instance not available");
+                }
+            });
+        }
+        @else
+        $('#submitQuestion').click(function(event) {
+            toastr.success('Please Login first');
+        });
+
+        @endif
+
         $(document).ready(function() {
             $('#tags').select2({
                 placeholder: "Select tags",
                 maximumSelectionLength: 5
             });
         });
-        ClassicEditor
-            .create(document.querySelector('#description'))
-            .catch(error => {
-                console.error(error);
-            });
-
-        $(document).ready(function() {
-            $('#questionModalForm').submit(function(event) {
-                event.preventDefault();
-
-                // Retrieve CKEditor instance and its content
-                var editor = ClassicEditor.instances.description;
-                var descriptionContent = editor.getData();
-
-                // Create FormData object and append form data
-                var formData = new FormData();
-                formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
-                formData.append('title', $('#title').val());
-                formData.append('category', $('#category').val());
-                formData.append('tags', $('#tags').val());
-                formData.append('topic', $('#topic').val());
-                formData.append('description', descriptionContent); // Append CKEditor content
-                formData.append('file', $('#file-2')[0].files[0]);
-
-                // Make AJAX request
-                $.ajax({
-                    url: '{{ route('store.questions') }}', // Specify your server endpoint
-                    type: 'POST',
-                    data: formData,
-                    contentType: false,
-                    processData: false,
-                    success: function(response) {
-                        console.log(response);
-                        // Show success message using Toastr.js or any other notification library
-                        toastr.success('Question posted successfully');
-                        // Optionally, reset the form after successful submission
-                        $('#questionModalForm')[0].reset();
-                    },
-                    error: function(xhr, status, error) {
-                        console.error(xhr.responseText);
-                        // Show error message using Toastr.js or any other notification library
-                        toastr.error('An error occurred while posting question');
-                    }
-                });
-            });
-        });
-</script>
-@endsection
+    </script>
+        @endsection
