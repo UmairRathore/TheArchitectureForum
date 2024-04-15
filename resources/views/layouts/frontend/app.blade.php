@@ -363,8 +363,8 @@
 <script src="{{asset('frontend/assets/js/editor.js')}}"></script>
 <script src="{{asset('frontend/assets/js/like-dislike.min.js')}}"></script>
 <script src="{{asset('frontend/assets/js/custom.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 {{--<script src="https://cdn.ckeditor.com/4.17.2/standard/ckeditor.js"></script>--}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"></script>
 
 
@@ -402,6 +402,8 @@
 
 
 @yield('indexjs')
+@yield('answer')
+@yield('questionjs')
 
 </body>
 </html>
