@@ -34,77 +34,79 @@
                             <div class="question-details-content like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="{{route('user')}}">
-                                            <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
+                                        <a href="{{route('user.profile',[$question->user_id])}}">
+                                            @if(isset($question->userProfileImage))
+                                                <img src="{{asset($question->userProfileImage)}}" alt="Image">
+                                            @else
+                                                <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
+                                            @endif
                                         </a>
+                                        <div id="voteingdiv">
+                                            <div class="donet-like-list">
+                                                <!-- Upvote Button -->
+                                                <button class="like-unlink-count like" data-question-id="{{ $question->id }}" data-vote-type="up" data-vote="question">
+                                                    <i class="ri-thumb-up-fill"></i>
+                                                    <span id>{{ $question->questionUpVote ?? '0' }}</span>
+                                                </button>
 
-                                        <div class="donet-like-list">
-                                            <button class="like-unlink-count like">
-                                                <i class="ri-thumb-up-fill"></i>
-                                                <span>4974</span>
-                                            </button>
-                                        </div>
+                                            </div>
 
-                                        <div class="donet-like-list">
-                                            <button class="like-unlink-count dislike">
-                                                <i class="ri-thumb-down-fill"></i>
-                                                <span>25</span>
-                                            </button>
+                                            <div class="donet-like-list">
+                                                <!-- Downvote Button -->
+                                                <button class="like-unlink-count dislike"
+                                                        data-question-id="{{ $question->id }}" data-vote-type="down" data-vote="question">
+                                                    <i class="ri-thumb-down-fill"></i>
+                                                    <span>{{ $question->questionDownVote ?? '0' }}</span>
+                                                </button>
+
+                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="graphic-design">
                                             <li>
-                                                <a href="{{route('user')}}">Teresa Klein</a>
+                                                <a href="{{route('user.profile',[$question->user_id])}}">
+                                                    {{$question->name}}</a>
                                             </li>
                                             <li>
-                                                <span>Latest Answer: 14 hours ago</span>
+                                                <span>Latest Answer: {{ \Carbon\Carbon::parse($question->created_at)->diffForHumans() }}</span>
                                             </li>
                                             <li>
                                                 <span>In:</span>
-                                                <a href="{{route('tags')}}" class="graphic">
-                                                    Graphic design
+                                                <a
+                                                    class="graphic">
+                                                    {{$question->topicName}}
                                                 </a>
                                             </li>
                                         </ul>
 
                                         <h3>
                                             <a href="{{route('questions')}}">
-                                                If you open Illustrator by dragging the Photoshop file, why it becomes a JPG file
+                                                {{ $question->title }}
                                             </a>
                                         </h3>
 
-                                        <p>Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada.</p>
+                                        <p>
+                                            {!! $question->description !!}
 
-                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                                        </p>
 
-                                        <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id posuere blandit. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-
-                                        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
 
                                         <ul class="tag-list">
-                                            <li>
-                                                <a href="{{route('tags')}}">Discussion</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{route('tags')}}">Photoshop</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{route('tags')}}">Analytics</a>
-                                            </li>
+                                            @foreach($question->tags as $tag)
+                                                <li>
+                                                    <a href="#">{{$tag->title}}</a>
+                                                </li>
+                                            @endforeach
+
                                         </ul>
 
                                         <div class="d-flex justify-content-between align-items-center">
                                             <ul class="anser-list">
                                                 <li>
-                                                    <a href="{{route('polls')}}">
-                                                        24 Vote
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{route('most.answered')}}">
-                                                        2 Answer
+                                                    <a href="#">
+                                                        {{$question->totalVotes}} Vote
                                                     </a>
                                                 </li>
                                                 <li>
@@ -115,9 +117,9 @@
                                                 <li>
                                                     <ul class="qa-share">
                                                         <li class="share-option">
-																<span>
-																	<i class="ri-share-fill"></i>
-																</span>
+																	<span>
+																		<i class="ri-share-fill"></i>
+																	</span>
 
                                                             <ul class="social-icon">
                                                                 <li>
@@ -146,7 +148,7 @@
                                                 </li>
                                             </ul>
 
-                                            <a href="{{route('most.answered')}}" class="default-btn">
+                                            <a href="{{route('oneQuestion',[$question->id])}}" class="default-btn">
                                                 Answer
                                             </a>
                                         </div>
@@ -156,36 +158,43 @@
 
                             <ul class="answerss d-flex justify-content-between align-items-center">
                                 <li>
-                                    <h3>2 Answers</h3>
+                                    <h3>{{$counts}} Answers</h3>
                                 </li>
-                                <li>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>All answer</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </li>
+{{--                                <li>--}}
+{{--                                    <select class="form-select" aria-label="Default select example">--}}
+{{--                                        <option selected>All answer</option>--}}
+{{--                                        <option value="1">One</option>--}}
+{{--                                        <option value="2">Two</option>--}}
+{{--                                        <option value="3">Three</option>--}}
+{{--                                    </select>--}}
+{{--                                </li>--}}
                             </ul>
 
+                            @if(isset($answers))
+                                @foreach($answers as $answer)
                             <div class="answer-question-details like-dislike">
                                 <div class="d-flex">
                                     <div class="link-unlike flex-shrink-0">
-                                        <a href="{{route('user')}}">
-                                            <img src="{{asset('frontend/assets/images/user/user-13.jpg')}}" alt="Image">
+                                        <a href="{{route('user.profile',[$answer->user_id])}}">
+                                            @if(isset($answer->userProfileImage))
+                                                <img src="{{asset($answer->userProfileImage)}}" alt="Image">
+                                            @else
+                                                <img src="{{asset('frontend/assets/images/user/user-1.jpg')}}" alt="Image">
+                                            @endif
                                         </a>
 
                                         <div class="donet-like-list">
-                                            <button class="like-unlink-count like">
+                                            <button class="like-unlink-count like" data-answer-id="{{ $answer->id }}" data-vote-type="up" data-vote="answer">
                                                 <i class="ri-thumb-up-fill"></i>
-                                                <span>197</span>
+                                                <span id>{{ $answer->answerUpVote ?? '0' }}</span>
                                             </button>
+
                                         </div>
 
                                         <div class="donet-like-list">
-                                            <button class="like-unlink-count dislike">
+                                            <button class="like-unlink-count dislike" data-answer-id="{{ $answer->id }}" data-vote-type="down" data-vote="answer">
                                                 <i class="ri-thumb-down-fill"></i>
-                                                <span>2</span>
+                                                <span>{{ $answer->answerDownVote ?? '0' }}</span>
                                             </button>
                                         </div>
                                     </div>
@@ -193,10 +202,11 @@
                                     <div class="flex-grow-1 ms-3">
                                         <ul class="latest-answer-list">
                                             <li>
-                                                <a href="{{route('user')}}">Elsa Feldman</a>
+                                                <a href="{{route('user.profile',[$answer->user_id])}}">
+                                                    {{$answer->name}}</a>
                                             </li>
                                             <li>
-                                                <span>Latest Answer: 2 hours ago</span>
+                                                <span>Latest Answer: {{ \Carbon\Carbon::parse($answer->created_at)->diffForHumans() }}</span>
                                             </li>
                                             <li class="reports">
                                                 <a href="{{route('referral')}}" class="report">
@@ -206,67 +216,84 @@
                                             </li>
                                         </ul>
 
-                                        <p>Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada Donec velit neque.</p>
-
-                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                                        <p>
+{!! $answer->description !!}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+                           @endforeach
+                            @else
+                                <div class="answer-question-details like-dislike">
+                                    <div class="d-flex">
+                                        <div class="link-unlike flex-shrink-0">
+                                            <a href="{{route('user')}}">
+                                                <img src="{{asset('frontend/assets/images/user/user-13.jpg')}}" alt="Image">
+                                            </a>
 
-                            <div class="answer-question-details like-dislike">
-                                <div class="d-flex">
-                                    <div class="link-unlike flex-shrink-0">
-                                        <a href="{{route('user')}}">
-                                            <img src="{{asset('frontend/assets/images/user/user-14.jpg')}}" alt="Image">
-                                        </a>
+                                            <div class="donet-like-list">
+                                                <button class="like-unlink-count like">
+                                                    <i class="ri-thumb-up-fill"></i>
+                                                    <span>197</span>
+                                                </button>
+                                            </div>
 
-                                        <div class="donet-like-list">
-                                            <button class="like-unlink-count like">
-                                                <i class="ri-thumb-up-fill"></i>
-                                                <span>84</span>
-                                            </button>
+                                            <div class="donet-like-list">
+                                                <button class="like-unlink-count dislike">
+                                                    <i class="ri-thumb-down-fill"></i>
+                                                    <span>2</span>
+                                                </button>
+                                            </div>
                                         </div>
 
-                                        <div class="donet-like-list">
-                                            <button class="like-unlink-count dislike">
-                                                <i class="ri-thumb-down-fill"></i>
-                                                <span>1</span>
-                                            </button>
+                                        <div class="flex-grow-1 ms-3">
+                                            <ul class="latest-answer-list">
+                                                <li>
+                                                    <a href="{{route('user')}}">Elsa Feldman</a>
+                                                </li>
+                                                <li>
+                                                    <span>Latest Answer: 2 hours ago</span>
+                                                </li>
+                                                <li class="reports">
+                                                    <a href="{{route('referral')}}" class="report">
+                                                        <i class="ri-error-warning-line"></i>
+                                                        Report
+                                                    </a>
+                                                </li>
+                                            </ul>
+
+                                            <p>Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada Donec velit neque.</p>
+
+                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
                                         </div>
-                                    </div>
-
-                                    <div class="flex-grow-1 ms-3">
-                                        <ul class="latest-answer-list">
-                                            <li>
-                                                <a href="{{route('user')}}">Lance Loftis</a>
-                                            </li>
-                                            <li>
-                                                <span>Latest Answer: 5 hours ago</span>
-                                            </li>
-                                            <li class="reports">
-                                                <a href="{{route('referral')}}" class="report">
-                                                    <i class="ri-error-warning-line"></i>
-                                                    Report
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <p>Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada Donec velit neque.</p>
-
-                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
                                     </div>
                                 </div>
-                            </div>
+
+                                @endif
+
+
 
                             <form class="your-answer-form" id="answerForm">
                                 <div class="form-group">
                                     <h3>Your Answer</h3>
                                 </div>
-                                <div class="form-group">
-                                    <div id="txtEditor"></div>
+                                <input type="hidden" name="questionID" id="questionID" value="{{$question->id}}">
+                                <div class="col-md-12 mb-6">
+                                    <label for="description">Description</label>
+                                    <textarea name="description" id="description"  class="form-control form-control-lg" placeholder="Enter Description">{{ old('Description') }}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="default-btn">Post your answer</button>
+                                    <div  class="file-upload-account-info btn btn-primary" style="color: white; background-color: black">
+                                        <label class="upload">
+                                            <i class="ri-link">
+                                                <input type="file" name="file" id="file-2" class="inputfile">
+                                                Upload Photo
+                                            </i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" id="answerSubmit" class="default-btn">Post your answer</button>
                                 </div>
                             </form>
                         </div>
@@ -283,4 +310,149 @@
     </div>
     <!-- End Mail Content Area -->
 
+@endsection
+@section('answer')
+    <script>
+        window.onload = function() {
+            var descriptionTextarea = document.querySelector('#description');
+            if (descriptionTextarea) {
+                ClassicEditor
+                    .create(descriptionTextarea)
+                    .then(editor => {
+                        console.log('Editor initialized');
+                        setupAjax(editor);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
+            } else {
+                console.error("Textarea with id 'description' not found.");
+            }
+        };
+        @if(auth()->check())
+        function setupAjax(editor) {
+            $('#answerSubmit').click(function(event) {
+                event.preventDefault();
+
+                if (editor) {
+                    var descriptionContent = editor.getData();
+                    console.log(descriptionContent);
+
+                    var formData = new FormData();
+                    formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+                    formData.append('questionID', $('#questionID').val());
+
+                    formData.append('description', descriptionContent); // Append CKEditor content
+                    formData.append('file', $('#file-2')[0].files[0]);
+
+                    $.ajax({
+                        url: '{{ route('store.answers') }}', // Specify your server endpoint
+                        type: 'POST',
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            console.log(response);
+                            toastr.success('answers posted successfully');
+                        },
+                        error: function(xhr, status, error) {
+                            console.error(xhr.responseText);
+                            toastr.error('An error occurred while posting question');
+                        }
+                    });
+                } else {
+                    console.error("CKEditor instance not available");
+                }
+            });
+        }
+        $(document).ready(function() {
+            $('.like-unlink-count').on('click', function() {
+                var answerId = $(this).data('answer-id');
+                var questionId = $(this).data('question-id');
+                var voteType = $(this).data('vote-type');
+                var vote = $(this).data('vote');
+
+                if(vote === 'answer')
+                {
+                $.ajax({
+                    url: '/answers/' + answerId + '/vote',
+                    type: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        vote_type: voteType
+                    },
+                    success: function(response) {
+                        console.dir(response);
+                        alert(response);
+
+
+                        if(response.error)
+                        {
+                            toastr.error(response.error);
+                        }else
+                        {
+                            toastr.success(response.message);
+
+
+                            $('#progressbar').css('width', '0%').attr('aria-valuenow', 0);
+                            $('#crossbutton').hide();
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Show error message using toastr
+                        toastr.error(xhr.responseJSON.error);
+
+                        // Reset the progress bar and hide the cross button
+                        $('#progressbar').css('width', '0%').attr('aria-valuenow', 0);
+                        $('#crossbutton').hide();
+                    }
+                });
+
+                } else if(vote === 'question')
+                {
+                    $.ajax({
+                        url: '/questions/' + questionId + '/vote',
+                        type: 'POST',
+                        data: {
+                            _token: '{{ csrf_token() }}',
+                            vote_type: voteType
+                        },
+                        success: function(response) {
+                            console.dir(response);
+                            alert(response);
+
+
+                            if(response.error)
+                            {
+                                toastr.error(response.error);
+                            }else
+                            {
+                                toastr.success(response.message);
+
+
+                                $('#progressbar').css('width', '0%').attr('aria-valuenow', 0);
+                                $('#crossbutton').hide();
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            // Show error message using toastr
+                            toastr.error(xhr.responseJSON.error);
+
+                            // Reset the progress bar and hide the cross button
+                            $('#progressbar').css('width', '0%').attr('aria-valuenow', 0);
+                            $('#crossbutton').hide();
+                        }
+                    });
+                }
+            });
+        });
+        @else
+        $('#answerSubmit').click(function(event) {
+            toastr.success('Please Login first');
+        });
+        $('.like-unlink-count').on('click', function() {
+        toastr.success('Please Login first');
+        });
+        @endif
+    </script>
 @endsection

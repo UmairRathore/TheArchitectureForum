@@ -98,6 +98,7 @@ Route::get('/education',[HomeController::class, 'education'])->name('education')
 
 Route::group(['middleware' => 'auth'], function () {
 
+    Route::post('/store-questions',[PostController::class, 'storeQuestion'])->name('store.question');
 
 
         Route::get('/user', [\App\Http\Controllers\Frontend\UserController::class, 'user'])->name('user');
@@ -116,8 +117,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/question/{id}',[PostController::class, 'oneQuestion'])->name('oneQuestion');
     Route::get('/ask-questions',[PostController::class, 'askQuestions'])->name('ask.questions');
-    Route::post('/store-questions',[PostController::class, 'storeQuestion'])->name('store.questions');
+    Route::post('/store-questions',[PostController::class, 'storeAnswer'])->name('store.answers');
     Route::post('/questions/{question}/vote',[PostController::class, 'vote'])->name('questions.vote');
+    Route::post('/answers/{answer}/vote',[PostController::class, 'voteAnswer'])->name('answers.vote');
 
     Route::get('/all-questions',[PostController::class, 'allQuestions'])->name('all.questions');
 
