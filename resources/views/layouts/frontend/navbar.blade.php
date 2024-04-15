@@ -109,12 +109,14 @@
                             @endif
                         @else
                             <li>
-                                <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">
+{{--                                <a href="{{route('login')}}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">--}}
+                                <a href="{{route('login')}}" >
                                     Log in
                                 </a>
                             </li>
                             <li>
-                                <a href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+{{--                                <a href="{{route('register')}}" data-bs-toggle="modal" data-bs-target="#exampleModal-2">--}}
+                                <a href="{{route('register')}}" >
                                     Sign up
                                 </a>
                             </li>
