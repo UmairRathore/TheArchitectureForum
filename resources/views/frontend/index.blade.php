@@ -61,62 +61,73 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body mx-auto" style="padding: 20px;">
-                                <form class="your-answer-form" id="questionModalForm">
-                                    @csrf
-                                    <div class="form-group">
-                                        <h3>Create a question</h3>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Title</label>
-                                        <input type="text" class="form-control" id="title">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="topic"></label>
-                                        <select name="topic" class="form-select form-control" id="topic">
-                                            <option selected disabled>Select Topic</option>
-                                            @if(isset($data['topics']))
-                                                @foreach($data['topics'] as $topic)
-                                                    <option value="{{$topic->id}}">{{$topic->title}}</option>
-                                                @endforeach
-                                            @else
-                                                <option value="">no topics available</option>
-                                            @endif
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="tags"> Tags (Add
-                                            {{--                                    /p to 5 *// --}}
-                                            tags to describe what your question is about)</label>
-                                        <select class="form-select form-control" name="tags[]" id="tags" multiple="multiple">
-                                            <option selected disabled>Select Tag</option>
-                                            @if(isset($data['tags']))
-                                                @foreach($data['tags'] as $tag)
-                                                    <option value="{{$tag->id}}">{{$tag->title}}</option>
-                                                @endforeach
-                                            @else
-                                                <option value="">No tags available</option>
-                                            @endif
-                                        </select>
-                                    </div>
-                                    <div class="col-md-12 mb-6">
-                                        <label for="description">Description</label>
-                                        <textarea name="description" id="description"  class="form-control form-control-lg" placeholder="Enter Description">{{ old('Description') }}</textarea>
-                                        {{--                                      --}}
-                                    </div>
-                                    <div class="form-group">
-                                        <div  class="file-upload-account-info btn btn-primary" style="color: white; background-color: black">
-                                            <label class="upload">
-                                                <i class="ri-link">
-                                                    <input type="file" name="file" id="file-2" class="inputfile">
-                                                    Upload Photo
-                                                </i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="button" id="submitQuestionModal" class="default-btn">Post your Question</button>
-                                    </div>
-                                </form>
+{{--                                <div class="col-lg-6">--}}
+                                    <div class="middull-content">
+                                        <form class="your-answer-form" id="questionModalForm">
+                                            @csrf
+                                            <div class="form-group">
+                                                <h3>Create a question</h3>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Title</label>
+                                                <input type="text" class="form-control" id="title">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="topic"></label>
+                                                <select name="topic" class="form-select form-control" id="topic">
+                                                    <option selected disabled>Select Topic</option>
+                                                    @if(isset($data['topics']))
+                                                        @foreach($data['topics'] as $topic)
+                                                            <option value="{{$topic->id}}">{{$topic->title}}</option>
+                                                        @endforeach
+                                                    @else
+                                                        <option value="">no topics available</option>
+                                                    @endif
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="tags"> Tags (Add
+                                                    {{--                                    /p to 5 *// --}}
+                                                    tags to describe what your question is about)</label>
+                                                <select class="form-select form-control" name="tags[]" id="tags" multiple="multiple">
+                                                    <option selected disabled>Select Tag</option>
+                                                    @if(isset($data['tags']))
+                                                        @foreach($data['tags'] as $tag)
+                                                            <option value="{{$tag->id}}">{{$tag->title}}</option>
+                                                        @endforeach
+                                                    @else
+                                                        <option value="">No tags available</option>
+                                                    @endif
+                                                </select>
+                                            </div>
+                                            <div class="col-md-12 mb-6">
+                                                <label for="description">Description</label>
+                                                <textarea name="description" id="description"  class="form-control form-control-lg" placeholder="Enter Description">{{ old('Description') }}</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <div  class="file-upload-account-info btn btn-primary" style="color: white; background-color: black">
+                                                    <label class="upload">
+                                                        <i class="ri-link">
+                                                            <input type="file" name="file" id="file-2" class="inputfile">
+                                                            Upload Photo
+                                                        </i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="default-btn">Post your Question</button>
+                                            </div>
+                                        </form>
+
+{{--                                    </div>--}}
+                                </div>
+{{--                                <form class="your-answer-form" id="questionModalForm">--}}
+{{--                                    @csrf--}}
+{{--                                   --}}
+{{--                                    <div class="form-group">--}}
+{{--                                        <button type="button" id="submitQuestionModal" class="default-btn">Post your Question</button>--}}
+{{--                                    </div>--}}
+{{--                                </form>--}}
                             </div>
                         </div>
                     </div>
@@ -217,7 +228,8 @@
                                                     </h3>
 
                                                     <p>
-                                                        {{ $question->description}}
+                                                        {!! $question->description !!}
+
                                                     </p>
 
 
@@ -838,6 +850,7 @@
                 }
             };
 
+            @if(auth()->check())
             // Function to setup AJAX call
             function setupAjax(editor) {
                 $('#submitQuestionModal').click(function(event) {
@@ -859,7 +872,7 @@
 
                         // Make AJAX request
                         $.ajax({
-                            url: '{{ route('store.questions') }}', // Specify your server endpoint
+                            url: '{{ route('store.question') }}', // Specify your server endpoint
                             type: 'POST',
                             data: formData,
                             contentType: false,
@@ -882,14 +895,6 @@
                     }
                 });
             }
-
-
-    $(document).ready(function() {
-        $('#tags').select2({
-            placeholder: "Select tags",
-            maximumSelectionLength: 5
-        });
-    });
     $(document).ready(function() {
         $('.like-unlink-count').on('click', function() {
             var questionId = $(this).data('question-id');
@@ -928,6 +933,22 @@
                     $('#crossbutton').hide();
                 }
             });
+        });
+    });
+            @else
+            $('#submitQuestionModal').click(function(event) {
+                toastr.success('Please Login first');
+            });
+            $('.like-unlink-count').on('click', function() {
+                toastr.success('Please Login first');
+            });
+
+            @endif
+
+    $(document).ready(function() {
+        $('#tags').select2({
+            placeholder: "Select tags",
+            maximumSelectionLength: 5
         });
     });
 
