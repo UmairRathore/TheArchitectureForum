@@ -121,7 +121,7 @@
                     formData.append('file', $('#file-2')[0].files[0]);
 
                     $.ajax({
-                        url: '{{ route('store.question') }}', // Specify your server endpoint
+                        {{--url: '{{ route('store.question') }}', // Specify your server endpoint--}}
                         type: 'POST',
                         data: formData,
                         contentType: false,

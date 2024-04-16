@@ -88,15 +88,15 @@
 
                 <div class="others-options">
                     <ul>
-                        <li>
-                            <form class="search-box">
-                                <input type="text" name="Search" placeholder="Search for..." class="form-control">
+{{--                        <li>--}}
+{{--                            <form class="search-box">--}}
+{{--                                <input type="text" name="Search" placeholder="Search for..." class="form-control">--}}
 
-                                <button type="submit" class="search-btn">
-                                    <i class="ri-search-line"></i>
-                                </button>
-                            </form>
-                        </li>
+{{--                                <button type="submit" class="search-btn">--}}
+{{--                                    <i class="ri-search-line"></i>--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                        </li>--}}
 
                         @if(auth()->check())
                             @if(auth()->user()->role == 'admin')

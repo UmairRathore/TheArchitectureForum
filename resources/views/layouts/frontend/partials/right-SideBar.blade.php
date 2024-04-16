@@ -37,14 +37,14 @@
             ->join('answers', 'answers.question_id', '=', 'questions.id')
             ->join('answer_comments', 'answer_comments.answer_id', '=', 'answers.id')
             ->selectRaw('COUNT(answer_comments.id) AS total_answers')
-            ->groupBy('questions.id') // Group by non-aggregated columns
+            ->groupBy('questions.id')
             ->orderByDesc('total_answers')
             ->limit(5)
             ->get();
         ?>
         <ul>
-            @if($top->isNotEmpty())
-                @foreach($top as $question)
+{{--            @if($top->isNotEmpty())--}}
+{{--                @foreach($top as $question)--}}
                     <li>
                         <a href="{{ route('questions') }}">
                             {{ $question->title }}
